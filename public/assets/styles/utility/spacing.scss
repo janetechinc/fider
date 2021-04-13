@@ -1,0 +1,51 @@
+@for $i from 0 through 4 {
+  // Margin
+  .m-#{$i} {
+    margin: spacing($i);
+  }
+  .mb-#{$i} {
+    margin-bottom: spacing($i);
+  }
+  .mt-#{$i} {
+    margin-top: spacing($i);
+  }
+  .ml-#{$i} {
+    margin-left: spacing($i);
+  }
+  .mt-#{$i} {
+    margin-right: spacing($i);
+  }
+  .mx-#{$i} {
+    margin-left: spacing($i);
+    margin-right: spacing($i);
+  }
+  .my-#{$i} {
+    margin-bottom: spacing($i);
+    margin-top: spacing($i);
+  }
+
+  // Padding
+  .p-#{$i} {
+    margin: spacing($i);
+  }
+  .pb-#{$i} {
+    margin-bottom: spacing($i);
+  }
+  .pt-#{$i} {
+    margin-top: spacing($i);
+  }
+  .pl-#{$i} {
+    margin-left: spacing($i);
+  }
+  .pt-#{$i} {
+    margin-right: spacing($i);
+  }
+  .px-#{$i} {
+    margin-left: spacing($i);
+    margin-right: spacing($i);
+  }
+  .py-#{$i} {
+    margin-bottom: spacing($i);
+    margin-top: spacing($i);
+  }
+}

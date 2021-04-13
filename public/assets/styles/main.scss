@@ -180,14 +180,8 @@ html [type="button"] {
 
 .page {
   flex: 1 0 auto;
-  margin-top: 10px;
-  padding-bottom: 20px;
-}
-
-.page::after {
-  content: "";
-  clear: both;
-  display: table;
+  padding-top: spacing(4);
+  padding-bottom: spacing(4);
 }
 
 noscript {
