@@ -1,0 +1,8 @@
+@for $i from 0 through 4 {
+  .w-#{$i} {
+    width: sizing($i);
+  }
+  .h-#{$i} {
+    height: sizing($i);
+  }
+}

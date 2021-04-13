@@ -1,11 +1,11 @@
 @import "~@fider/assets/styles/variables.scss";
 
 .c-message {
-  padding: 12px;
-  margin-bottom: 8px;
+  padding: spacing(3);
+  margin-bottom: spacing(2);
 
   svg {
-    width: 18px;
+    width: sizing(5);
   }
 
   &.m-success {

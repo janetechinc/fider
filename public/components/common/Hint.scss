@@ -2,14 +2,14 @@
 
 .c-hint {
   position: relative;
-  padding: 12px;
-  margin-bottom: 8px;
+  padding: spacing(3);
+  margin-bottom: spacing(2);
   color: get("colors.blue.800");
   border-left: 2px solid get("colors.blue.800");
   background-color: get("colors.blue.50");
 
   svg {
-    width: 18px;
+    width: sizing(5);
   }
 
   svg.c-hint-close {

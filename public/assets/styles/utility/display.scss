@@ -6,13 +6,13 @@
 .flex-y {
   flex-direction: column;
   > * + * {
-    margin-top: 4px;
+    margin-top: spacing(1);
   }
 }
 
 .flex-x {
   flex-direction: row;
   > * + * {
-    margin-left: 4px;
+    margin-left: spacing(1);
   }
 }
