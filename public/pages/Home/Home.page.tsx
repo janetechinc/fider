@@ -28,9 +28,7 @@ const Lonely = () => {
         It&apos;s recommended that you post <strong>at least 3</strong> suggestions here before sharing this site. The initial content is key to start the
         interactions with your audience.
       </Hint>
-      <p>
-        <img alt="No Posts" height="100" src={NoDataIllustration} />
-      </p>
+      <NoDataIllustration height="150" />
       <p>No posts have been created yet.</p>
     </div>
   )

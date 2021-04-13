@@ -2,11 +2,10 @@
 
 .c-message {
   padding: 12px;
-  display: flex;
-  align-items: center;
+  margin-bottom: 8px;
 
-  .icon {
-    margin-right: 4px;
+  svg {
+    width: 18px;
   }
 
   &.m-success {

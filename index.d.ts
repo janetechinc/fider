@@ -7,6 +7,6 @@ declare let __webpack_nonce__: string
 declare let __webpack_public_path__: string
 
 declare module "*.svg" {
-  const content: string
+  const content: React.FC<any>
   export default content
 }

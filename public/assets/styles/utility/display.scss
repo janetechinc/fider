@@ -1,0 +1,18 @@
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.flex-y {
+  flex-direction: column;
+  > * + * {
+    margin-top: 4px;
+  }
+}
+
+.flex-x {
+  flex-direction: row;
+  > * + * {
+    margin-left: 4px;
+  }
+}

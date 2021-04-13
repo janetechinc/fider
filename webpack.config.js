@@ -71,12 +71,20 @@ module.exports = {
         },
       },
       {
-        test: /\.(svg?)(\?[a-z0-9=&.]+)?$/,
+        test: /\.svg$/,
         include: publicFolder,
-        loader: "file-loader",
-        options: {
-          name: "images/[name].[hash].[ext]",
-        },
+        use: [
+          {
+            loader: "@svgr/webpack",
+            options: {
+              svgoConfig: {
+                plugins: {
+                  removeViewBox: false,
+                },
+              },
+            },
+          },
+        ],
       },
     ],
   },

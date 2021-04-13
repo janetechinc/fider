@@ -23,9 +23,7 @@ export const DiscussionPanel = (props: DiscussionPanelProps) => {
         ))}
         {props.comments.length === 0 && (
           <div className="center">
-            <p>
-              <img alt="No Posts" height="100" src={PostIllustration} />
-            </p>
+            <PostIllustration height="150" />
             <p>No one has commented yet.</p>
           </div>
         )}

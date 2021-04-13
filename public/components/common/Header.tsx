@@ -3,7 +3,6 @@ import "./Header.scss"
 import React, { useState, useEffect } from "react"
 import { SignInModal, Avatar, TenantLogo, DevBanner } from "@fider/components"
 import { actions } from "@fider/services"
-import { FaUser, FaCog, FaCaretDown } from "react-icons/fa"
 import { useFider } from "@fider/hooks"
 
 export const Header = () => {
@@ -32,7 +31,7 @@ export const Header = () => {
   const items = fider.session.isAuthenticated && (
     <div className="c-menu-user">
       <div className="c-menu-user-heading">
-        <FaUser /> <span>{fider.session.user.name}</span>
+        <span>{fider.session.user.name}</span>
       </div>
       <a href="/settings" className="c-menu-user-item">
         Settings
@@ -44,7 +43,7 @@ export const Header = () => {
       <div className="c-menu-user-divider" />
       {fider.session.user.isCollaborator && [
         <div key={1} className="c-menu-user-heading">
-          <FaCog /> <span>Administration</span>
+          <span>Administration</span>
         </div>,
         <a key={2} href="/admin" className="c-menu-user-item">
           Site Settings
@@ -74,7 +73,6 @@ export const Header = () => {
                 {fider.session.isAuthenticated && <Avatar user={fider.session.user} />}
                 {unreadNotifications > 0 && <div className="c-unread-dot" />}
                 {!fider.session.isAuthenticated && <span>Sign in</span>}
-                {fider.session.isAuthenticated && <FaCaretDown />}
                 {items}
               </div>
             )}

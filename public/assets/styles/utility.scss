@@ -1,8 +1,6 @@
-$space: 5px;
+@import "./utility/display.scss";
 
-.mb-1 {
-  margin-bottom: $space;
-}
+$space: 5px;
 
 .mb-2 {
   margin-bottom: $space * 2;

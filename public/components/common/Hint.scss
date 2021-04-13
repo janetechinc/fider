@@ -2,17 +2,20 @@
 
 .c-hint {
   position: relative;
-  padding: 15px 35px 15px 15px;
-  margin-bottom: 10px;
+  padding: 12px;
+  margin-bottom: 8px;
   color: get("colors.blue.800");
   border-left: 2px solid get("colors.blue.800");
   background-color: get("colors.blue.50");
 
-  .close {
+  svg {
+    width: 18px;
+  }
+
+  svg.c-hint-close {
     position: absolute;
-    right: 15px;
-    top: 15px;
-    font-size: $font-size-large;
     cursor: pointer;
+    right: 12px;
+    top: 12px;
   }
 }

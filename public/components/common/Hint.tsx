@@ -1,9 +1,11 @@
 import "./Hint.scss"
 
 import React, { useState } from "react"
-import { FaTimes } from "react-icons/fa"
+import IconX from "@fider/assets/images/heroicons-x.svg"
+import IconInformationCircle from "@fider/assets/images/heroicons-information-circle.svg"
 
 import { cache } from "@fider/services"
+import { HStack } from "./layout"
 
 interface HintProps {
   permanentCloseKey?: string
@@ -25,9 +27,9 @@ export const Hint: React.FC<HintProps> = (props) => {
     return null
   }
   return (
-    <p className="c-hint">
-      <strong>HINT:</strong> {props.children}
-      {cacheKey && <FaTimes onClick={close} className="close" />}
-    </p>
+    <HStack className="c-hint">
+      <IconInformationCircle height="16" /> <span>{props.children}</span>
+      {cacheKey && <IconX onClick={close} className="c-hint-close" />}
+    </HStack>
   )
 }
