@@ -1,0 +1,12 @@
+@import "~@fider/assets/styles/variables.scss";
+
+.c-dev-banner {
+  position: fixed;
+  top: 4px;
+  left: 4px;
+  font-size: $font-size;
+  padding: 8px;
+  color: get("colors.red.700");
+  border: 2px solid get("colors.red.700");
+  background-color: get("colors.red.50");
+}

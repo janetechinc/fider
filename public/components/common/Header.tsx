@@ -1,7 +1,7 @@
 import "./Header.scss"
 
 import React, { useState, useEffect } from "react"
-import { SignInModal, EnvironmentInfo, Avatar, TenantLogo } from "@fider/components"
+import { SignInModal, Avatar, TenantLogo, DevBanner } from "@fider/components"
 import { actions } from "@fider/services"
 import { FaUser, FaCog, FaCaretDown } from "react-icons/fa"
 import { useFider } from "@fider/hooks"
@@ -59,26 +59,28 @@ export const Header = () => {
 
   const showRightMenu = fider.session.isAuthenticated || !fider.session.tenant.isPrivate
   return (
-    <div id="c-header">
-      <EnvironmentInfo />
-      <SignInModal isOpen={isSignInModalOpen} onClose={hideModal} />
-      <div className="c-menu">
-        <div className="container">
-          <a href="/" className="c-menu-item-title">
-            <TenantLogo size={100} />
-            <h1>{fider.session.tenant.name}</h1>
-          </a>
-          {showRightMenu && (
-            <div onClick={showModal} className="c-menu-item-signin">
-              {fider.session.isAuthenticated && <Avatar user={fider.session.user} />}
-              {unreadNotifications > 0 && <div className="c-unread-dot" />}
-              {!fider.session.isAuthenticated && <span>Sign in</span>}
-              {fider.session.isAuthenticated && <FaCaretDown />}
-              {items}
-            </div>
-          )}
+    <>
+      <DevBanner />
+      <div id="c-header">
+        <SignInModal isOpen={isSignInModalOpen} onClose={hideModal} />
+        <div className="c-menu">
+          <div className="container">
+            <a href="/" className="c-menu-item-title">
+              <TenantLogo size={100} />
+              <h1>{fider.session.tenant.name}</h1>
+            </a>
+            {showRightMenu && (
+              <div onClick={showModal} className="c-menu-item-signin">
+                {fider.session.isAuthenticated && <Avatar user={fider.session.user} />}
+                {unreadNotifications > 0 && <div className="c-unread-dot" />}
+                {!fider.session.isAuthenticated && <span>Sign in</span>}
+                {fider.session.isAuthenticated && <FaCaretDown />}
+                {items}
+              </div>
+            )}
+          </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
