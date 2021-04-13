@@ -4,7 +4,6 @@ import React from "react"
 
 import { Button, ButtonClickEvent, TextArea, Form, Input, ImageUploader } from "@fider/components/common"
 import { actions, Failure, Fider } from "@fider/services"
-import { FaCogs } from "react-icons/fa"
 import { AdminBasePage } from "../components/AdminBasePage"
 import { ImageUpload } from "@fider/models"
 
@@ -20,7 +19,6 @@ interface GeneralSettingsPageState {
 export default class GeneralSettingsPage extends AdminBasePage<any, GeneralSettingsPageState> {
   public id = "p-admin-general"
   public name = "general"
-  public icon = FaCogs
   public title = "General"
   public subtitle = "Manage your site settings"
 

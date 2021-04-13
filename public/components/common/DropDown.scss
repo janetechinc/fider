@@ -14,7 +14,7 @@
 
   &.is-open {
     .c-dropdown-arrow {
-      border-color: transparent transparent $gray-400;
+      border-color: transparent transparent get("colors.gray.400");
       border-width: 0 5px 5px;
     }
   }
@@ -27,11 +27,7 @@
 
   &.m-style-normal {
     .c-dropdown-control {
-      border: 1px solid $gray-300;
-
-      &:hover {
-        box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
-      }
+      border: 1px solid get("colors.gray.300");
     }
   }
 
@@ -42,7 +38,7 @@
     background-color: transparent;
     border-radius: 3px;
     box-sizing: border-box;
-    color: $gray-900;
+    color: get("colors.gray.900");
     outline: none;
     padding: 8px 52px 8px 10px;
     transition: all 200ms ease;
@@ -53,11 +49,11 @@
     }
 
     .c-dropdown-placeholder {
-      color: $gray-300;
+      color: get("colors.gray.300");
     }
 
     .c-dropdown-arrow {
-      border-color: $gray-500 transparent transparent;
+      border-color: get("colors.gray.500") transparent transparent;
       border-style: solid;
       border-width: 5px 5px 0;
       content: " ";
@@ -72,9 +68,9 @@
   }
 
   .c-dropdown-menu {
-    background-color: $white;
-    border: 1px solid $gray-300;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06);
+    background-color: get("colors.white");
+    border: 1px solid get("colors.gray.300");
+    box-shadow: 0 1px 0 get("colors.gray.100");
     box-sizing: border-box;
     margin-top: -1px;
     overflow-y: auto;
@@ -112,7 +108,7 @@
       }
 
       &:hover {
-        background-color: $gray-100;
+        background-color: get("colors.gray.100");
       }
 
       &.is-selected {
@@ -122,7 +118,7 @@
 
     .c-dropdown-noresults {
       box-sizing: border-box;
-      color: $gray-400;
+      color: get("colors.gray.400");
       cursor: default;
       display: block;
       padding: 8px 10px;

@@ -4,7 +4,7 @@ import { Segment, List, ListItem, Button, Heading, OAuthProviderLogo } from "@fi
 import { OAuthConfig, OAuthProviderOption } from "@fider/models"
 import { OAuthForm } from "../components/OAuthForm"
 import { actions, notify, Fider } from "@fider/services"
-import { FaEdit, FaPlay, FaSignInAlt } from "react-icons/fa"
+import { FaEdit, FaPlay } from "react-icons/fa"
 import { AdminBasePage } from "../components/AdminBasePage"
 
 import "./ManageAuthentication.page.scss"
@@ -21,7 +21,6 @@ interface ManageAuthenticationPageState {
 export default class ManageAuthenticationPage extends AdminBasePage<ManageAuthenticationPageProps, ManageAuthenticationPageState> {
   public id = "p-admin-authentication"
   public name = "authentication"
-  public icon = FaSignInAlt
   public title = "Authentication"
   public subtitle = "Manage your site authentication"
 
@@ -68,11 +67,7 @@ export default class ManageAuthenticationPage extends AdminBasePage<ManageAuthen
 
     return (
       <>
-        <Heading
-          title="OAuth Providers"
-          subtitle="You can use these section to add any authentication provider thats supports the OAuth2 protocol."
-          size="small"
-        />
+        <Heading title="OAuth Providers" subtitle="You can use these section to add any authentication provider thats supports the OAuth2 protocol." />
         <p className="info">
           Additional information is available in our{" "}
           <a rel="noopener" target="_blank" href="https://getfider.com/docs/configuring-oauth/">

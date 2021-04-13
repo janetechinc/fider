@@ -6,9 +6,9 @@ input[type="file"] {
 
 .c-logo-upload {
   img {
-    background-color: $white;
+    background-color: get("colors.white");
     padding: 10px;
-    border: 1px solid rgba(34, 36, 38, 0.15);
+    border: 1px solid get("colors.gray.300");
     border-radius: 3px;
     max-width: 200px;
     min-width: 200px;

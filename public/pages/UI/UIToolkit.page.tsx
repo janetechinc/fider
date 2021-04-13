@@ -30,7 +30,7 @@ import {
 import { User, UserRole, Tag } from "@fider/models"
 import { notify, Failure } from "@fider/services"
 import { DropDown, DropDownItem } from "@fider/components"
-import { FaSearch, FaRegLightbulb, FaCogs } from "react-icons/fa"
+import { FaSearch, FaRegLightbulb } from "react-icons/fa"
 
 const jonSnow: User = {
   id: 0,
@@ -104,7 +104,9 @@ const UIToolkitPage = () => {
     <div id="p-ui-toolkit" className="page container">
       <div className="color-scale">
         <div className="color gray-900" />
+        <div className="color gray-800" />
         <div className="color gray-700" />
+        <div className="color gray-600" />
         <div className="color gray-500" />
         <div className="color gray-400" />
         <div className="color gray-300" />
@@ -114,7 +116,9 @@ const UIToolkitPage = () => {
       </div>
       <div className="color-scale">
         <div className="color green-900" />
+        <div className="color green-800" />
         <div className="color green-700" />
+        <div className="color green-600" />
         <div className="color green-500" />
         <div className="color green-400" />
         <div className="color green-300" />
@@ -124,7 +128,9 @@ const UIToolkitPage = () => {
       </div>
       <div className="color-scale">
         <div className="color red-900" />
+        <div className="color red-800" />
         <div className="color red-700" />
+        <div className="color red-600" />
         <div className="color red-500" />
         <div className="color red-400" />
         <div className="color red-300" />
@@ -134,7 +140,9 @@ const UIToolkitPage = () => {
       </div>
       <div className="color-scale">
         <div className="color blue-900" />
+        <div className="color blue-800" />
         <div className="color blue-700" />
+        <div className="color blue-600" />
         <div className="color blue-500" />
         <div className="color blue-400" />
         <div className="color blue-300" />
@@ -144,7 +152,9 @@ const UIToolkitPage = () => {
       </div>
       <div className="color-scale">
         <div className="color yellow-900" />
+        <div className="color yellow-800" />
         <div className="color yellow-700" />
+        <div className="color yellow-600" />
         <div className="color yellow-500" />
         <div className="color yellow-400" />
         <div className="color yellow-300" />
@@ -188,9 +198,7 @@ const UIToolkitPage = () => {
         </ListItem>
       </List>
 
-      <Heading title="Page Heading" icon={FaCogs} subtitle="This is a page heading" />
-
-      <Heading title="Section Heading" icon={FaRegLightbulb} subtitle="This is a page heading" size="small" dividing={true} />
+      <Heading title="Page Title" subtitle="This is a page subtitle" />
 
       <h1>Buttons</h1>
       <List>

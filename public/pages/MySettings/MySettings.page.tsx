@@ -6,7 +6,6 @@ import { Modal, Form, Button, Heading, Input, Select, SelectOption, ImageUploade
 
 import { UserSettings, UserAvatarType, ImageUpload } from "@fider/models"
 import { Failure, actions, Fider } from "@fider/services"
-import { FaRegAddressCard } from "react-icons/fa"
 import { NotificationSettings } from "./components/NotificationSettings"
 import { APIKeyForm } from "./components/APIKeyForm"
 import { DangerZone } from "./components/DangerZone"
@@ -129,7 +128,7 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
           </Modal.Content>
         </Modal.Window>
 
-        <Heading title="Settings" subtitle="Manage your profile settings" icon={FaRegAddressCard} />
+        <Heading title="Settings" subtitle="Manage your profile settings" />
 
         <div className="row">
           <div className="col-lg-7">

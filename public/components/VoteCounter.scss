@@ -15,10 +15,10 @@
     text-align: center;
     margin: 0 auto;
     padding: 0 0;
-    color: $gray-700;
+    color: get("colors.gray.700");
 
     .icon {
-      color: $gray-400;
+      color: get("colors.gray.400");
       margin-bottom: -3px;
     }
   }
@@ -30,10 +30,10 @@
 
   button.m-voted,
   button.no-touch:hover {
-    color: $main-color;
+    color: get("colors.primary");
 
     .icon {
-      color: $main-color;
+      color: get("colors.primary");
     }
   }
 

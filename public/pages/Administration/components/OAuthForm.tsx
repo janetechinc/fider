@@ -70,7 +70,7 @@ export const OAuthForm: React.FC<OAuthFormProps> = (props) => {
   const title = props.config ? `OAuth Provider: ${props.config.displayName}` : "New OAuth Provider"
   return (
     <>
-      <Heading title={title} size="small" />
+      <Heading title={title} />
       <Form error={error}>
         <div className="row">
           <div className="col-sm-9">

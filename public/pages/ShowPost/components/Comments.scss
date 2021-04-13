@@ -1,7 +1,6 @@
 @import "~@fider/assets/styles/variables.scss";
 
 .c-comment-list {
-
   .c-comment {
     margin: 20px 0 0 0;
     display: flex;
@@ -11,7 +10,7 @@
 
     .c-comment-content {
       flex-grow: 1;
-      background-color: $gray-50;
+      background-color: get("colors.gray.50");
       border-radius: 4px;
       padding: 8px;
 
@@ -24,7 +23,7 @@
           .c-comment-metadata {
             display: inline-block;
             font-size: $font-size-tiny;
-            color: $gray-700;
+            color: get("colors.gray.700");
           }
         }
 
@@ -48,20 +47,20 @@
         }
 
         .icon {
-          color: $gray-500;
+          color: get("colors.gray.500");
           font-size: 12px;
         }
 
         &:hover {
           .icon {
-            color: $gray-900;
+            color: get("colors.gray.900");
           }
         }
 
         &.is-open {
           display: inline-block !important;
           .icon {
-            color: $gray-900;
+            color: get("colors.gray.900");
           }
         }
       }

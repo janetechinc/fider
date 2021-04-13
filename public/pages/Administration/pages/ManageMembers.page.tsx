@@ -4,7 +4,7 @@ import React from "react"
 import { Segment, List, Input, ListItem, Avatar, UserName, DropDown, DropDownItem } from "@fider/components/common"
 import { User, UserRole, UserStatus } from "@fider/models"
 import { AdminBasePage } from "../components/AdminBasePage"
-import { FaUsers, FaTimes, FaSearch } from "react-icons/fa"
+import { FaTimes, FaSearch } from "react-icons/fa"
 import { actions, Fider } from "@fider/services"
 
 interface ManageMembersPageState {
@@ -73,7 +73,6 @@ const UserListItem = (props: UserListItemProps) => {
 export default class ManageMembersPage extends AdminBasePage<ManageMembersPageProps, ManageMembersPageState> {
   public id = "p-admin-members"
   public name = "members"
-  public icon = FaUsers
   public title = "Members"
   public subtitle = "Manage your site administrators and collaborators"
 

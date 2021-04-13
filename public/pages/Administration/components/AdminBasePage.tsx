@@ -3,12 +3,10 @@ import "./AdminBasePage.scss"
 import React from "react"
 import { Heading } from "@fider/components"
 import { SideMenu, SideMenuToggler } from "./SideMenu"
-import { IconType } from "react-icons"
 
 export abstract class AdminBasePage<P, S> extends React.Component<P, S> {
   public abstract id: string
   public abstract name: string
-  public abstract icon: IconType
   public abstract title: string
   public abstract subtitle: string
   public abstract content(): JSX.Element
@@ -23,7 +21,7 @@ export abstract class AdminBasePage<P, S> extends React.Component<P, S> {
   public render() {
     return (
       <div id={this.id} className="page container">
-        <Heading title={this.title} icon={this.icon} subtitle={this.subtitle} className="l-admin-heading" />
+        <Heading title={this.title} subtitle={this.subtitle} className="l-admin-heading" />
         <SideMenuToggler onToggle={this.toggleSideMenu} />
 
         <div className="row">

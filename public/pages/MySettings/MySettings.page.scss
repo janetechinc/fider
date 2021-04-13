@@ -20,7 +20,7 @@
   .l-danger-zone {
     h4 {
       margin-top: 50px;
-      color: $red-400;
+      color: get("colors.red.400");
     }
   }
 
@@ -30,7 +30,7 @@
     }
     code {
       padding: 5px;
-      background-color: $gray-200;
+      background-color: get("colors.gray.200");
     }
   }
 }

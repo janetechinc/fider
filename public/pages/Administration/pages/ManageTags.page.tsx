@@ -5,7 +5,6 @@ import { Button, Segment, List, ListItem, Heading } from "@fider/components"
 
 import { Tag } from "@fider/models"
 import { actions, Failure, Fider } from "@fider/services"
-import { FaTags } from "react-icons/fa"
 import { AdminBasePage } from "../components/AdminBasePage"
 import { TagFormState, TagForm } from "../components/TagForm"
 import { TagListItem } from "../components/TagListItem"
@@ -33,7 +32,6 @@ const tagSorter = (t1: Tag, t2: Tag) => {
 export default class ManageTagsPage extends AdminBasePage<ManageTagsPageProps, ManageTagsPageState> {
   public id = "p-admin-tags"
   public name = "tags"
-  public icon = FaTags
   public title = "Tags"
   public subtitle = "Manage your site tags"
 
@@ -109,7 +107,7 @@ export default class ManageTagsPage extends AdminBasePage<ManageTagsPageProps, M
         <Segment>
           <List divided={true}>
             <ListItem>
-              <Heading size="small" title="Public Tags" subtitle="These tags are visible to all visitors." />
+              <Heading title="Public Tags" subtitle="These tags are visible to all visitors." />
             </ListItem>
             {publicTaglist.length === 0 ? <ListItem>There aren’t any public tags yet.</ListItem> : publicTaglist}
           </List>
@@ -118,7 +116,7 @@ export default class ManageTagsPage extends AdminBasePage<ManageTagsPageProps, M
         <Segment>
           <List divided={true}>
             <ListItem>
-              <Heading size="small" title="Private Tags" subtitle="These tags are only visible for members of this site." />
+              <Heading title="Private Tags" subtitle="These tags are only visible for members of this site." />
             </ListItem>
             {privateTagList.length === 0 ? <ListItem>There aren’t any private tags yet.</ListItem> : privateTagList}
           </List>

@@ -17,9 +17,9 @@
     padding: 2px;
     border-radius: 0px;
     font-size: 10px;
-    color: $red-900;
-    border-bottom: 1px solid $red-900;
-    background-color: rgba($red-400, 0.05);
+    color: get("colors.red.900");
+    border-bottom: 1px solid get("colors.red.900");
+    background-color: get("colors.red.50");
   }
 
   .c-menu {
@@ -28,7 +28,7 @@
     border-radius: 0px;
     border: none;
     display: flex;
-    box-shadow: 0 1px 2px 0 rgba(34, 36, 38, 0.15);
+    box-shadow: 0 1px 2px 0 get("colors.gray.200");
     margin-bottom: 10px;
 
     .container {
@@ -46,7 +46,7 @@
 
     .c-menu-item-title {
       @include menu-item;
-      color: #484848;
+      color: get("colors.gray.900");
       img {
         margin-right: 10px;
         width: auto;
@@ -78,12 +78,12 @@
       > span {
         font-weight: 600;
         text-transform: uppercase;
-        color: $gray-700;
+        color: get("colors.gray.700");
       }
 
       &:hover {
         > span {
-          color: $gray-900;
+          color: get("colors.gray.900");
         }
       }
 
@@ -96,9 +96,9 @@
         top: 100% !important;
         opacity: 1;
         z-index: 11;
-        background-color: $white;
-        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.08);
-        border: 1px solid rgba(34, 36, 38, 0.15);
+        background-color: get("colors.white");
+        box-shadow: 0 1px 3px 0 get("colors.gray.200");
+        border: 1px solid get("colors.gray.200");
         min-width: 160px;
         border-radius: 0px 0px 5px 5px;
 
@@ -111,7 +111,7 @@
           font-size: $font-size-mini;
           padding: 10px;
           display: block;
-          color: $gray-900;
+          color: get("colors.gray.900");
           text-transform: uppercase;
           font-weight: 600;
           cursor: default;
@@ -121,13 +121,13 @@
           font-size: $font-size-small;
           padding: 10px;
           display: block;
-          color: $gray-900;
+          color: get("colors.gray.900");
           &:hover {
-            background-color: $gray-200;
+            background-color: get("colors.gray.200");
           }
         }
         .c-menu-user-divider {
-          border-top: 1px solid rgba(34, 36, 38, 0.1);
+          border-top: 1px solid get("colors.gray.100");
           display: block;
           cursor: default;
         }
@@ -147,17 +147,17 @@
         border-radius: 5px;
         margin-left: -10px;
         margin-top: -25px;
-        background-color: $red-500;
-        border: 1px solid $white !important;
+        background-color: get("colors.red.500");
+        border: 1px solid get("colors.white") !important;
       }
 
       .c-unread-count {
         display: inline-block;
-        background-color: $red-500;
+        background-color: get("colors.red.500");
         position: absolute;
         right: 5px;
         padding: 2px 8px;
-        color: $white;
+        color: get("colors.white");
         border-radius: 100px;
         font-size: $font-size-mini;
         text-align: center;
