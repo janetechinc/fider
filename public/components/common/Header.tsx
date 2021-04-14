@@ -62,7 +62,7 @@ export const Header = () => {
       <DevBanner />
       <div id="c-header">
         <SignInModal isOpen={isSignInModalOpen} onClose={hideModal} />
-        <div className="c-menu">
+        <div className="c-menu shadow">
           <div className="container">
             <a href="/" className="c-menu-item-title">
               <TenantLogo size={100} />

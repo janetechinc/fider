@@ -9,13 +9,13 @@ interface PageTitleLogo {
 
 export const PageTitle = (props: PageTitleLogo) => {
   const className = classSet({
-    "mb-2": true,
+    "mb-4": true,
     [`${props.className}`]: props.className,
   })
 
   return (
     <div className={className}>
-      <div className="text-display2 mb-2">{props.title}</div>
+      <div className="text-display2 mb-1">{props.title}</div>
       <div className="text-gray-700">{props.subtitle}</div>
     </div>
   )

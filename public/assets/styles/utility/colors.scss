@@ -7,7 +7,7 @@
       background-color: #{$shades};
     }
   } @else {
-    @each $shade, $color in $colors {
+    @each $shade, $color in $shades {
       .text-#{$name}-#{$shade} {
         color: #{$color};
       }
