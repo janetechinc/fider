@@ -20,13 +20,16 @@ import {
   MultiImageUploader,
   ImageViewer,
 } from "@fider/components"
-import { FaSave, FaTimes, FaEdit } from "react-icons/fa"
 import { ResponseForm } from "./components/ResponseForm"
 import { TagsPanel } from "./components/TagsPanel"
 import { NotificationsPanel } from "./components/NotificationsPanel"
 import { ModerationPanel } from "./components/ModerationPanel"
 import { DiscussionPanel } from "./components/DiscussionPanel"
 import { VotesPanel } from "./components/VotesPanel"
+
+import IconX from "@fider/assets/images/heroicons-x.svg"
+import IconPencilAlt from "@fider/assets/images/heroicons-pencil-alt.svg"
+import IconCheck from "@fider/assets/images/heroicons-check.svg"
 
 interface ShowPostPageProps {
   post: Post
@@ -142,12 +145,12 @@ export default class ShowPostPage extends React.Component<ShowPostPageProps, Sho
                 <List key={1}>
                   <ListItem>
                     <Button className="save" color="positive" fluid={true} onClick={this.saveChanges}>
-                      <FaSave /> Save
+                      <IconCheck /> <span>Save</span>
                     </Button>
                   </ListItem>
                   <ListItem>
                     <Button className="cancel" fluid={true} onClick={this.cancelEdit}>
-                      <FaTimes /> Cancel
+                      <IconX /> <span>Cancel</span>
                     </Button>
                   </ListItem>
                 </List>
@@ -155,7 +158,7 @@ export default class ShowPostPage extends React.Component<ShowPostPageProps, Sho
                 <List key={1}>
                   <ListItem>
                     <Button className="edit" fluid={true} onClick={this.startEdit}>
-                      <FaEdit /> Edit
+                      <IconPencilAlt /> <span>Edit</span>
                     </Button>
                   </ListItem>
                   <ListItem>

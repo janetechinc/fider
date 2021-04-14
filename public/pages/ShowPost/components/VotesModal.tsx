@@ -4,7 +4,8 @@ import React from "react"
 import { Post, Vote } from "@fider/models"
 import { Modal, Button, Loader, List, ListItem, Avatar, UserName, Moment, Input } from "@fider/components"
 import { actions } from "@fider/services"
-import { FaTimes, FaSearch } from "react-icons/fa"
+import IconSearch from "@fider/assets/images/heroicons-search.svg"
+import IconX from "@fider/assets/images/heroicons-x.svg"
 
 interface VotesModalProps {
   isOpen: boolean
@@ -70,7 +71,7 @@ export class VotesModal extends React.Component<VotesModalProps, VotesModalState
             <>
               <Input
                 field="query"
-                icon={this.state.query ? FaTimes : FaSearch}
+                icon={this.state.query ? IconX : IconSearch}
                 onIconClick={this.state.query ? this.clearSearch : undefined}
                 placeholder="Search for users by name..."
                 value={this.state.query}

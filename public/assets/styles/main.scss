@@ -175,6 +175,7 @@ svg.icon {
 
 .clickable {
   cursor: pointer;
+  pointer-events: inherit;
 }
 
 .markdown-body {

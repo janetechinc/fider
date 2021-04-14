@@ -4,8 +4,8 @@ import { Modal, Button, DisplayError, Select, Form, TextArea, Field, SelectOptio
 import { Post, PostStatus } from "@fider/models"
 
 import { actions, Failure } from "@fider/services"
-import { FaBullhorn } from "react-icons/fa"
 import { PostSearch } from "./PostSearch"
+import IconSpeakerPhone from "@fider/assets/images/heroicons-speakerphone.svg"
 
 interface ResponseFormProps {
   post: Post
@@ -67,7 +67,7 @@ export class ResponseForm extends React.Component<ResponseFormProps, ResponseFor
   public render() {
     const button = (
       <Button className="respond" fluid={true} onClick={this.showModal}>
-        <FaBullhorn /> Respond
+        <IconSpeakerPhone /> <span>Respond</span>
       </Button>
     )
 

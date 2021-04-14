@@ -3,7 +3,8 @@ import "./ListPosts.scss"
 import React from "react"
 import { Post, Tag, CurrentUser } from "@fider/models"
 import { ShowTag, ShowPostResponse, VoteCounter, MultiLineText, ListItem, List } from "@fider/components"
-import { FaRegComments } from "react-icons/fa"
+import IconChatAlt2 from "@fider/assets/images/heroicons-chat-alt-2.svg"
+import { HStack } from "@fider/components/common/layout"
 
 interface ListPostsProps {
   posts?: Post[]
@@ -17,9 +18,9 @@ const ListPostItem = (props: { post: Post; user?: CurrentUser; tags: Tag[] }) =>
       <VoteCounter post={props.post} />
       <div className="c-list-item-content">
         {props.post.commentsCount > 0 && (
-          <div className="text-muted right">
-            {props.post.commentsCount} <FaRegComments />
-          </div>
+          <HStack className="text-muted right">
+            {props.post.commentsCount} <IconChatAlt2 className="h-4 ml-1" />
+          </HStack>
         )}
         <a className="c-list-item-title text-title" href={`/posts/${props.post.number}/${props.post.slug}`}>
           {props.post.title}

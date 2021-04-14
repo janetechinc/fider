@@ -57,23 +57,14 @@
       cursor: not-allowed;
     }
 
-    & + .icon {
-      pointer-events: none;
-      cursor: default;
+    & + svg {
       position: absolute;
-      opacity: 0.5;
-      width: 35px;
-      height: 100%;
-      padding: 12px 0px;
+      position: absolute;
+      width: 36px;
+      padding: 8px;
       margin: 0;
       top: 0;
       right: 0;
-      position: absolute;
-
-      &.link {
-        cursor: pointer;
-        pointer-events: inherit;
-      }
     }
   }
 

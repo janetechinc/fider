@@ -5,8 +5,8 @@ import { ValidationContext } from "./Form"
 import { DisplayError, hasError } from "./DisplayError"
 import { classSet, fileToBase64, uploadedImageURL } from "@fider/services"
 import { Button, Modal } from "@fider/components"
-import { FaRegImage } from "react-icons/fa"
 import { ImageUpload } from "@fider/models"
+import IconPhotograph from "@fider/assets/images/heroicons-photograph.svg"
 
 const hardFileSizeLimit = 5 * 1024 * 1024
 
@@ -155,8 +155,8 @@ export class ImageUploader extends React.Component<ImageUploaderProps, ImageUplo
             <DisplayError fields={[this.props.field]} error={ctx.error} />
             {!hasFile && (
               <div className="c-form-field-wrapper">
-                <Button onClick={this.selectFile} disabled={this.props.disabled}>
-                  <FaRegImage />
+                <Button onClick={this.selectFile} size="large" disabled={this.props.disabled}>
+                  <IconPhotograph />
                 </Button>
               </div>
             )}

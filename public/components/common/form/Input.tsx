@@ -2,7 +2,6 @@ import React from "react"
 import { classSet } from "@fider/services"
 import { ValidationContext } from "./Form"
 import { DisplayError, hasError } from "./DisplayError"
-import { IconType } from "react-icons"
 
 interface InputProps {
   field: string
@@ -12,7 +11,7 @@ interface InputProps {
   autoFocus?: boolean
   noTabFocus?: boolean
   afterLabel?: JSX.Element
-  icon?: IconType
+  icon?: React.FC<any>
   maxLength?: number
   value?: string
   disabled?: boolean
@@ -34,9 +33,9 @@ export const Input: React.FunctionComponent<InputProps> = (props) => {
   const suffix = typeof props.suffix === "string" ? <span className="c-form-input-suffix">{props.suffix}</span> : props.suffix
 
   const icon = props.icon
-    ? React.createElement(props.icon, {
+    ? props.icon({
         onClick: props.onIconClick,
-        className: classSet({ link: !!props.onIconClick }),
+        className: classSet({ clickable: !!props.onIconClick }),
       })
     : undefined
 

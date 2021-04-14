@@ -4,7 +4,8 @@ import React from "react"
 import { Segment, List, Input, ListItem, Avatar, UserName, DropDown, DropDownItem } from "@fider/components/common"
 import { User, UserRole, UserStatus } from "@fider/models"
 import { AdminBasePage } from "../components/AdminBasePage"
-import { FaTimes, FaSearch } from "react-icons/fa"
+import IconSearch from "@fider/assets/images/heroicons-search.svg"
+import IconX from "@fider/assets/images/heroicons-x.svg"
 import { actions, Fider } from "@fider/services"
 
 interface ManageMembersPageState {
@@ -155,7 +156,7 @@ export default class ManageMembersPage extends AdminBasePage<ManageMembersPagePr
       <>
         <Input
           field="query"
-          icon={this.state.query ? FaTimes : FaSearch}
+          icon={this.state.query ? IconX : IconSearch}
           onIconClick={this.state.query ? this.clearSearch : undefined}
           placeholder="Search for users by name..."
           value={this.state.query}

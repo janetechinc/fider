@@ -2,8 +2,9 @@ import React, { useState } from "react"
 import { Post } from "@fider/models"
 import { Button, List, ListItem } from "@fider/components"
 import { actions } from "@fider/services"
-import { FaVolumeUp, FaVolumeMute } from "react-icons/fa"
 import { useFider } from "@fider/hooks"
+import IconVolumeOn from "@fider/assets/images/heroicons-volume-on.svg"
+import IconVolumeOff from "@fider/assets/images/heroicons-volume-off.svg"
 
 interface NotificationsPanelProps {
   post: Post
@@ -29,11 +30,11 @@ export const NotificationsPanel = (props: NotificationsPanelProps) => {
 
   const button = subscribed ? (
     <Button fluid={true} onClick={subscribeOrUnsubscribe}>
-      <FaVolumeMute /> Unsubscribe
+      <IconVolumeOff /> <span>Unsubscribe</span>
     </Button>
   ) : (
     <Button fluid={true} onClick={subscribeOrUnsubscribe}>
-      <FaVolumeUp /> Subscribe
+      <IconVolumeOn /> <span>Subscribe</span>
     </Button>
   )
 

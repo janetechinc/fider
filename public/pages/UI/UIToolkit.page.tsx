@@ -30,8 +30,9 @@ import {
 import { User, UserRole, Tag } from "@fider/models"
 import { notify, Failure } from "@fider/services"
 import { DropDown, DropDownItem } from "@fider/components"
-import { FaSearch, FaRegLightbulb } from "react-icons/fa"
 import { HStack, VStack } from "@fider/components/common/layout"
+import IconLightBulb from "@fider/assets/images/heroicons-light-bulb.svg"
+import IconSearch from "@fider/assets/images/heroicons-search.svg"
 
 const jonSnow: User = {
   id: 0,
@@ -214,10 +215,10 @@ const UIToolkitPage = () => {
 
       <h2 className="text-display2 mb-3 mt-6">6. Buttons</h2>
 
-      <List>
-        <ListItem>
+      <VStack>
+        <HStack>
           <Button size="large">
-            <FaRegLightbulb /> Large Icon
+            <IconLightBulb /> <span>Large Icon</span>
           </Button>
           <Button size="large">Large Default</Button>
           <Button color="positive" size="large">
@@ -229,11 +230,11 @@ const UIToolkitPage = () => {
           <Button color="cancel" size="large">
             Large Cancel
           </Button>
-        </ListItem>
+        </HStack>
 
-        <ListItem>
+        <HStack>
           <Button size="normal">
-            <FaRegLightbulb /> Normal Icon
+            <IconLightBulb /> <span>Normal Icon</span>
           </Button>
           <Button size="normal">Normal Default</Button>
           <Button color="positive" size="normal">
@@ -245,11 +246,11 @@ const UIToolkitPage = () => {
           <Button color="cancel" size="normal">
             Normal Cancel
           </Button>
-        </ListItem>
+        </HStack>
 
-        <ListItem>
+        <HStack>
           <Button size="small">
-            <FaRegLightbulb /> Small Icon
+            <IconLightBulb /> <span>Small Icon</span>
           </Button>
           <Button size="small">Small Default</Button>
           <Button color="positive" size="small">
@@ -261,11 +262,11 @@ const UIToolkitPage = () => {
           <Button color="cancel" size="small">
             Small Cancel
           </Button>
-        </ListItem>
+        </HStack>
 
-        <ListItem>
+        <HStack>
           <Button size="tiny">
-            <FaRegLightbulb /> Tiny Icon
+            <IconLightBulb /> <span>Tiny Icon</span>
           </Button>
           <Button size="tiny">Tiny Default</Button>
           <Button color="positive" size="tiny">
@@ -277,11 +278,11 @@ const UIToolkitPage = () => {
           <Button color="cancel" size="tiny">
             Tiny Cancel
           </Button>
-        </ListItem>
+        </HStack>
 
-        <ListItem>
+        <HStack>
           <Button size="mini">
-            <FaRegLightbulb /> Mini Icon
+            <IconLightBulb /> <span>Mini Icon</span>
           </Button>
           <Button size="mini">Mini Default</Button>
           <Button color="positive" size="mini">
@@ -293,11 +294,11 @@ const UIToolkitPage = () => {
           <Button color="cancel" size="mini">
             Mini Cancel
           </Button>
-        </ListItem>
+        </HStack>
 
-        <ListItem>
+        <HStack>
           <Button href="#">
-            <FaRegLightbulb /> Link
+            <IconLightBulb /> <span>Link</span>
           </Button>
           <Button href="#">Link</Button>
           <Button href="#" color="positive">
@@ -306,11 +307,11 @@ const UIToolkitPage = () => {
           <Button href="#" color="danger">
             Link
           </Button>
-        </ListItem>
+        </HStack>
 
-        <ListItem>
+        <HStack>
           <Button disabled={true}>
-            <FaRegLightbulb /> Default
+            <IconLightBulb /> <span>Default</span>
           </Button>
           <Button disabled={true}>Default</Button>
           <Button disabled={true} color="positive">
@@ -319,11 +320,11 @@ const UIToolkitPage = () => {
           <Button disabled={true} color="danger">
             Danger
           </Button>
-        </ListItem>
+        </HStack>
 
-        <ListItem>
+        <HStack>
           <Button onClick={showLoading}>
-            <FaRegLightbulb /> Loading
+            <IconLightBulb /> <span>Loading</span>
           </Button>
           <Button onClick={showLoading}>Loading</Button>
           <Button color="positive" onClick={showLoading}>
@@ -332,8 +333,8 @@ const UIToolkitPage = () => {
           <Button color="danger" onClick={showLoading}>
             Loading
           </Button>
-        </ListItem>
-      </List>
+        </HStack>
+      </VStack>
 
       <h2 className="text-display2 mb-3 mt-6">7. Toggle</h2>
 
@@ -511,10 +512,9 @@ const UIToolkitPage = () => {
         <Button onClick={forceError}>Save</Button>
       </Form>
 
-      <Segment>
-        <h1>Search</h1>
-        <Input field="search" placeholder="Search..." icon={FaSearch} />
-      </Segment>
+      <h2 className="text-display2 mb-3 mt-6">15. Search</h2>
+
+      <Input field="search" placeholder="Search..." icon={IconSearch} />
     </div>
   )
 }

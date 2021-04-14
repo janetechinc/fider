@@ -2,18 +2,18 @@
 
 .c-button {
   line-height: 1.15;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   cursor: pointer;
   font-size: $font-size-base;
   border-radius: 3px;
   border: none;
   margin: 0 4px 0 0;
   padding: 8px 16px;
-  text-align: left;
   font-weight: 600;
 
-  .icon {
-    margin-top: -3px;
+  svg + * {
+    margin-left: spacing(1);
   }
 
   &.m-cancel {
@@ -60,30 +60,49 @@
   &.m-mini {
     padding: 6px 12px;
     font-size: $font-size-tiny;
+
+    svg {
+      height: sizing(2);
+    }
   }
 
   &.m-tiny {
     padding: 7px 14px;
     font-size: $font-size-tiny;
+
+    svg {
+      height: sizing(3);
+    }
   }
 
   &.m-small {
     padding: 8px 16px;
     font-size: $font-size-small;
+
+    svg {
+      height: sizing(4);
+    }
   }
 
   &.m-normal {
     padding: 9px 18px;
     font-size: $font-size-base;
+
+    svg {
+      height: sizing(4);
+    }
   }
 
   &.m-large {
     padding: 10px 20px;
     font-size: $font-size-large;
+
+    svg {
+      height: sizing(5);
+    }
   }
 
   &.m-fluid {
-    display: block;
     width: 100%;
   }
 
