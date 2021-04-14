@@ -1,17 +1,5 @@
 @import "~@fider/assets/styles/variables.scss";
 
-@mixin menu-item {
-  position: relative;
-  vertical-align: middle;
-  line-height: 1;
-  text-decoration: none;
-  flex: 0 0 auto;
-  user-select: none;
-  padding: 15px 10px;
-  display: flex;
-  align-items: center;
-}
-
 #c-header {
   .c-menu {
     margin-top: 0px;
@@ -36,8 +24,9 @@
     }
 
     .c-menu-item-title {
-      @include menu-item;
-      color: get("colors.gray.900");
+      display: flex;
+      align-items: center;
+
       img {
         margin-right: 10px;
         width: auto;
@@ -48,19 +37,11 @@
           margin-right: 5px;
         }
       }
-      h1 {
-        font-size: $font-size-big;
-        margin: 0 0 0 0;
-        font-weight: 600;
-        @include media("sm") {
-          font-size: $font-size;
-          max-width: 240px;
-        }
-      }
     }
 
     .c-menu-item-signin {
-      @include menu-item;
+      display: flex;
+      align-items: center;
       cursor: pointer;
       font-size: 90%;
       margin-left: auto !important;
@@ -99,7 +80,7 @@
 
         .c-menu-user-heading {
           white-space: nowrap;
-          font-size: $font-size-mini;
+          font-size: $font-size-tiny;
           padding: 10px;
           display: block;
           color: get("colors.gray.900");
@@ -150,7 +131,7 @@
         padding: 2px 8px;
         color: get("colors.white");
         border-radius: 100px;
-        font-size: $font-size-mini;
+        font-size: $font-size-tiny;
         text-align: center;
       }
     }

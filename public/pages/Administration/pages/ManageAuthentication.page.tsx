@@ -68,7 +68,7 @@ export default class ManageAuthenticationPage extends AdminBasePage<ManageAuthen
     return (
       <>
         <Heading title="OAuth Providers" subtitle="You can use these section to add any authentication provider thats supports the OAuth2 protocol." />
-        <p className="info">
+        <p className="text-muted">
           Additional information is available in our{" "}
           <a rel="noopener" target="_blank" href="https://getfider.com/docs/configuring-oauth/">
             OAuth Documentation
@@ -99,7 +99,7 @@ export default class ManageAuthenticationPage extends AdminBasePage<ManageAuthen
                   {o.isEnabled ? enabled : disabled}
                 </div>
                 {o.isCustomProvider && (
-                  <span className="info">
+                  <span className="text-muted">
                     <strong>Client ID:</strong> {o.clientID} <br />
                     <strong>Callback URL:</strong> {o.callbackURL}
                   </span>

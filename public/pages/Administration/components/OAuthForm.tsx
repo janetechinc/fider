@@ -91,7 +91,7 @@ export const OAuthForm: React.FC<OAuthFormProps> = (props) => {
               disabled={!fider.session.user.isAdministrator}
               onChange={handleLogoChange}
             >
-              <p className="info">
+              <p className="text-muted">
                 We accept JPG, GIF and PNG images, smaller than 50KB and with an aspect ratio of 1:1 with minimum dimensions of 24x24 pixels.
               </p>
             </ImageUploader>
@@ -115,8 +115,8 @@ export const OAuthForm: React.FC<OAuthFormProps> = (props) => {
           afterLabel={
             !clientSecretEnabled ? (
               <>
-                <span className="info">omitted for security reasons.</span>
-                <span className="info clickable" onClick={enableClientSecret}>
+                <span className="text-muted">omitted for security reasons.</span>
+                <span className="text-muted clickable" onClick={enableClientSecret}>
                   change
                 </span>
               </>
@@ -134,14 +134,14 @@ export const OAuthForm: React.FC<OAuthFormProps> = (props) => {
         <Input field="tokenURL" label="Token URL" maxLength={300} value={tokenURL} disabled={!fider.session.user.isAdministrator} onChange={setTokenURL} />
 
         <Input field="scope" label="Scope" maxLength={100} value={scope} disabled={!fider.session.user.isAdministrator} onChange={setScope}>
-          <p className="info">
+          <p className="text-muted">
             It is recommended to only request the minimum scopes we need to fetch the user <strong>id</strong>, <strong>name</strong> and <strong>email</strong>
             . Multiple scopes must be separated by space.
           </p>
         </Input>
 
         <h3>User Profile</h3>
-        <p className="info">This section is used to configure how Fider will fetch user after the authentication process.</p>
+        <p className="text-muted">This section is used to configure how Fider will fetch user after the authentication process.</p>
 
         <Input
           field="profileURL"
@@ -151,7 +151,7 @@ export const OAuthForm: React.FC<OAuthFormProps> = (props) => {
           disabled={!fider.session.user.isAdministrator}
           onChange={setProfileURL}
         >
-          <p className="info">The URL to fetch the authenticated user info. If empty, Fider will try to parse the user info from the Access Token.</p>
+          <p className="text-muted">The URL to fetch the authenticated user info. If empty, Fider will try to parse the user info from the Access Token.</p>
         </Input>
 
         <h4>JSON Path</h4>
@@ -166,7 +166,7 @@ export const OAuthForm: React.FC<OAuthFormProps> = (props) => {
             disabled={!fider.session.user.isAdministrator}
             onChange={setJSONUserIDPath}
           >
-            <p className="info">
+            <p className="text-muted">
               Path to extract User ID from the JSON. This ID <strong>must</strong> be unique within the provider or unexpected side effects might happen. For
               example below, the path would be <strong>id</strong>.
             </p>
@@ -180,7 +180,7 @@ export const OAuthForm: React.FC<OAuthFormProps> = (props) => {
             disabled={!fider.session.user.isAdministrator}
             onChange={setJSONUserNamePath}
           >
-            <p className="info">
+            <p className="text-muted">
               Path to extract user Display Name from the JSON. This is optional, but <strong>highly</strong> recommended. For the example below, the path would
               be <strong>profile.name</strong>.
             </p>
@@ -194,7 +194,7 @@ export const OAuthForm: React.FC<OAuthFormProps> = (props) => {
             disabled={!fider.session.user.isAdministrator}
             onChange={setJSONUserEmailPath}
           >
-            <p className="info">
+            <p className="text-muted">
               Path to extract user Email from the JSON. This is optional, but <strong>highly</strong> recommended. For the example below, the path would be{" "}
               <strong>profile.emails[0]</strong>.
             </p>
@@ -223,12 +223,12 @@ export const OAuthForm: React.FC<OAuthFormProps> = (props) => {
               <Toggle active={enabled} onToggle={setEnabled} />
               <span>{enabled ? "Enabled" : "Disabled"}</span>
               {enabled && (
-                <p className="info">
+                <p className="text-muted">
                   This provider will be available for everyone to use during the sign in process. It is recommended that you keep it disable and test it before
                   enabling it. The Test button is available after saving this configuration.
                 </p>
               )}
-              {!enabled && <p className="info">Users won&apos;t be able to sign in with this Provider.</p>}
+              {!enabled && <p className="text-muted">Users won&apos;t be able to sign in with this Provider.</p>}
             </Field>
           </div>
         </div>

@@ -6,7 +6,6 @@ html,
 body {
   height: 100%;
   box-sizing: border-box;
-  -ms-overflow-style: scrollbar;
 }
 
 *,
@@ -20,9 +19,9 @@ body {
   padding: 0px;
   overflow-x: hidden;
   min-width: 320px;
-  font-family: $font-site;
   color: get("colors.gray.900");
-  font-size: $font-size;
+  font-size: $font-size-base;
+  font-family: $font-base;
 }
 
 button,
@@ -30,54 +29,24 @@ input,
 optgroup,
 select,
 textarea {
-  font-family: $font-site;
-  font-size: $font-size;
+  font-family: $font-base;
+  font-size: $font-size-base;
 }
 
-/*******************************
-             Headers
-*******************************/
+a {
+  color: get("colors.gray.900");
+  text-decoration: none;
+}
 
 h1,
 h2,
 h3,
 h4,
-h5 {
-  line-height: 120%;
-  margin: 25px 0em 14px;
-  font-weight: 600;
-  padding: 0;
-  font-weight: 600;
-}
-
-h1 {
-  font-size: 28px;
-}
-h2 {
-  font-size: 24px;
-}
-h3 {
-  font-size: 20px;
-}
-h4 {
-  font-size: 16px;
-}
-h5 {
-  font-size: 14px;
-}
-h1:first-child,
-h2:first-child,
-h3:first-child,
-h4:first-child,
-h5:first-child {
-  margin-top: 0;
-}
-h1:last-child,
-h2:last-child,
-h3:last-child,
-h4:last-child,
-h5:last-child {
-  margin-bottom: 0;
+h5,
+h6 {
+  margin: 0;
+  font-weight: 400;
+  font-size: $font-size-base;
 }
 
 /*******************************
@@ -88,9 +57,11 @@ p {
   margin: 0 0 14px;
   line-height: 1.5;
 }
+
 p:first-child {
   margin-top: 0;
 }
+
 p:last-child {
   margin-bottom: 0;
 }
@@ -102,19 +73,6 @@ ul {
 }
 
 /*******************************
-             Links
-*******************************/
-
-a {
-  color: get("colors.blue.600");
-  text-decoration: none;
-}
-a:hover {
-  color: get("colors.blue.800");
-  text-decoration: none;
-}
-
-/*******************************
              Stauses
 *******************************/
 
@@ -123,7 +81,7 @@ a:hover {
   display: inline-block;
   line-height: 1;
   font-weight: 600;
-  font-size: $font-size-mini;
+  font-size: $font-size-tiny;
 }
 
 .status-open {
@@ -203,19 +161,9 @@ input {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.info {
-  font-size: 90%;
-  font-weight: 400;
-  color: get("colors.gray.700");
-}
-
 .right {
   float: right;
   vertical-align: middle;
-}
-
-.center {
-  text-align: center;
 }
 
 svg.icon {
@@ -227,33 +175,6 @@ svg.icon {
 
 .clickable {
   cursor: pointer;
-}
-
-.subtitle {
-  font-size: $font-size-mini;
-  margin: 10px 0 5px 0;
-  font-weight: 600;
-  letter-spacing: 0.3px;
-  text-transform: uppercase;
-  color: get("colors.gray.500");
-  display: block;
-  &.active {
-    cursor: pointer;
-    &:hover {
-      color: get("colors.primary");
-    }
-    svg.icon {
-      float: right;
-    }
-  }
-
-  &:first-child {
-    margin-top: 0;
-  }
-
-  &:last-child {
-    margin-bottom: 0;
-  }
 }
 
 .markdown-body {

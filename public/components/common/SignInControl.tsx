@@ -54,7 +54,7 @@ export const SignInControl: React.FunctionComponent<SignInControlProps> = (props
               </React.Fragment>
             ))}
           </div>
-          <p className="info">We will never post to these accounts on your behalf.</p>
+          <p className="text-muted">We will never post to these accounts on your behalf.</p>
         </div>
       )}
 

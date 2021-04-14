@@ -70,7 +70,7 @@ export class TagForm extends React.Component<TagFormProps, TagFormState> {
 
   public render() {
     const randomizer = (
-      <span className="info clickable" onClick={this.randomize}>
+      <span className="text-muted clickable" onClick={this.randomize}>
         randomize
       </span>
     )

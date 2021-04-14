@@ -2,20 +2,7 @@
 
 #p-show-post {
   .post-header {
-    width: 100%;
-    h1 {
-      font-weight: 400;
-      margin: 0px;
-      font-size: $font-size-xlarge;
-      margin-bottom: 2px;
-      @include media("sm") {
-        font-size: $font-size-big;
-      }
-    }
-    .c-avatar {
-      width: 24px;
-      height: 24px;
-    }
+    flex-grow: 1;
   }
 
   @include media(">=md") {
@@ -40,10 +27,6 @@
     margin-bottom: 20px;
     @include media(">=md") {
       width: 240px;
-    }
-
-    .subtitle + .c-list {
-      margin-bottom: 10px;
     }
   }
 

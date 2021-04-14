@@ -87,7 +87,7 @@ export class ResponseForm extends React.Component<ResponseFormProps, ResponseFor
                   <PostSearch exclude={[this.props.post.number]} onChanged={this.setOriginalNumber} />
                 </Field>
                 <DisplayError fields={["originalNumber"]} error={this.state.error} />
-                <span className="info">Votes from this post will be merged into original post.</span>
+                <span className="text-muted">Votes from this post will be merged into original post.</span>
               </>
             ) : (
               <TextArea

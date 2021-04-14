@@ -58,11 +58,11 @@ export class DangerZone extends React.Component<any, DangerZoneState> {
         </Modal.Window>
 
         <h4>Delete account</h4>
-        <p className="info">
+        <p className="text-muted">
           When you choose to delete your account, we will erase all your personal information forever. The content you have published will remain, but it will
           be anonymised.
         </p>
-        <p className="info">This process is irreversible. Please be certain.</p>
+        <p className="text-muted">This process is irreversible. Please be certain.</p>
         <Button color="danger" size="tiny" onClick={this.onClickDelete}>
           Delete My Account
         </Button>

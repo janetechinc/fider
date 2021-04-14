@@ -81,7 +81,7 @@ export default class GeneralSettingsPage extends AdminBasePage<any, GeneralSetti
     return (
       <Form error={this.state.error}>
         <Input field="title" label="Title" maxLength={60} value={this.state.title} disabled={!Fider.session.user.isAdministrator} onChange={this.setTitle}>
-          <p className="info">
+          <p className="text-muted">
             The title is used on the header, emails, notifications and SEO content. Keep it short and simple. The product/service name is usually the best
             choice.
           </p>
@@ -94,7 +94,7 @@ export default class GeneralSettingsPage extends AdminBasePage<any, GeneralSetti
           disabled={!Fider.session.user.isAdministrator}
           onChange={this.setWelcomeMessage}
         >
-          <p className="info">
+          <p className="text-muted">
             The message is shown on this site&apos;s home page. Use it to help visitors understad what this space is about and the importance of their feedback.
             Leave it empty for a default message.
           </p>
@@ -109,7 +109,7 @@ export default class GeneralSettingsPage extends AdminBasePage<any, GeneralSetti
           placeholder="Enter your suggestion here..."
           onChange={this.setInvitation}
         >
-          <p className="info">
+          <p className="text-muted">
             This text is used as a placeholder for the suggestion&apos;s text box. Use it to invite your visitors into sharing their suggestions and feedback.
             Leave it empty for a default message.
           </p>
@@ -123,7 +123,7 @@ export default class GeneralSettingsPage extends AdminBasePage<any, GeneralSetti
           disabled={!Fider.session.user.isAdministrator}
           onChange={this.setLogo}
         >
-          <p className="info">
+          <p className="text-muted">
             We accept JPG, GIF and PNG images, smaller than 100KB and with an aspect ratio of 1:1 with minimum dimensions of 200x200 pixels.
           </p>
         </ImageUploader>
@@ -138,7 +138,7 @@ export default class GeneralSettingsPage extends AdminBasePage<any, GeneralSetti
             disabled={!Fider.session.user.isAdministrator}
             onChange={this.setCNAME}
           >
-            <div className="info">
+            <div className="text-muted">
               {this.state.cname ? (
                 [
                   <p key={0}>Enter the following record into your DNS zone records:</p>,

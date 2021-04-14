@@ -82,9 +82,9 @@ export class VotesModal extends React.Component<VotesModalProps, VotesModalState
                     <Avatar user={x.user} />
                     <span className="l-user">
                       <UserName user={x.user} />
-                      <span className="info">{x.user.email}</span>
+                      <span className="text-muted">{x.user.email}</span>
                     </span>
-                    <span className="l-date info">
+                    <span className="l-date text-muted">
                       <Moment date={x.createdAt} />
                     </span>
                   </ListItem>

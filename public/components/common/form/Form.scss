@@ -32,13 +32,6 @@
     display: block;
     margin: 0 0 5px;
     font-weight: 600;
-
-    .info {
-      padding: 5px 0px 0px 5px;
-    }
-    .info.clickable {
-      color: get("colors.blue.600");
-    }
   }
 
   .c-form-field-wrapper {

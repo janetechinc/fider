@@ -102,17 +102,17 @@ export default class ShowPostPage extends React.Component<ShowPostPageProps, Sho
                     <Input field="title" maxLength={100} value={this.state.newTitle} onChange={this.setNewTitle} />
                   </Form>
                 ) : (
-                  <h1>{this.props.post.title}</h1>
+                  <h1 className="text-display2">{this.props.post.title}</h1>
                 )}
 
-                <span className="info">
+                <span className="text-muted">
                   Posted by <UserName user={this.props.post.user} /> &middot; <Moment date={this.props.post.createdAt} />
                 </span>
               </div>
             </ListItem>
           </List>
 
-          <span className="subtitle">Description</span>
+          <span className="text-category">Description</span>
           {this.state.editMode ? (
             <Form error={this.state.error}>
               <TextArea field="description" value={this.state.newDescription} onChange={this.setNewDescription} />
@@ -121,7 +121,7 @@ export default class ShowPostPage extends React.Component<ShowPostPageProps, Sho
           ) : (
             <>
               {this.props.post.description && <MultiLineText className="description" text={this.props.post.description} style="full" />}
-              {!this.props.post.description && <em className="info">No description provided.</em>}
+              {!this.props.post.description && <em className="text-muted">No description provided.</em>}
               {this.props.attachments.map((x) => (
                 <ImageViewer key={x} bkey={x} />
               ))}
@@ -135,7 +135,7 @@ export default class ShowPostPage extends React.Component<ShowPostPageProps, Sho
 
           {Fider.session.isAuthenticated &&
             Fider.session.user.isCollaborator && [
-              <span key={0} className="subtitle">
+              <span key={0} className="text-category">
                 Actions
               </span>,
               this.state.editMode ? (

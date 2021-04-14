@@ -39,7 +39,7 @@ export default class MyNotificationsPage extends React.Component<MyNotifications
         <ListItem key={n.id}>
           <a href={`/notifications/${n.id}`}>
             <MultiLineText text={n.title} style="full" />
-            <span className="info">
+            <span className="text-muted">
               <Moment date={n.createdAt} />
             </span>
           </a>
@@ -70,7 +70,7 @@ export default class MyNotificationsPage extends React.Component<MyNotifications
         </h4>
         <List>
           {this.state.unread.length > 0 && this.items(this.state.unread)}
-          {this.state.unread.length === 0 && <span className="info">No unread notifications.</span>}
+          {this.state.unread.length === 0 && <span className="text-muted">No unread notifications.</span>}
         </List>
         {this.state.recent.length > 0 && (
           <>

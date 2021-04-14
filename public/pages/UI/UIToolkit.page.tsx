@@ -31,6 +31,7 @@ import { User, UserRole, Tag } from "@fider/models"
 import { notify, Failure } from "@fider/services"
 import { DropDown, DropDownItem } from "@fider/components"
 import { FaSearch, FaRegLightbulb } from "react-icons/fa"
+import { HStack, VStack } from "@fider/components/common/layout"
 
 const jonSnow: User = {
   id: 0,
@@ -102,6 +103,8 @@ const UIToolkitPage = () => {
 
   return (
     <div id="p-ui-toolkit" className="page container">
+      <h2 className="text-display2 mb-2">1. Colors</h2>
+
       <div className="color-scale">
         <div className="color gray-900" />
         <div className="color gray-800" />
@@ -163,14 +166,19 @@ const UIToolkitPage = () => {
         <div className="color yellow-50" />
       </div>
 
-      <h1>Heading 1</h1>
-      <h2>Heading 2</h2>
-      <h3>Heading 3</h3>
-      <h4>Heading 4</h4>
-      <h5>Heading 5</h5>
-      <h6>Heading 6</h6>
-      <p>General Text Paragraph</p>
-      <p className="info">Info Text</p>
+      <h2 className="text-display2 mb-3 mt-6">2. Text</h2>
+
+      <VStack>
+        <span className="text-display2">text-display2</span>
+        <span className="text-display">text-display</span>
+        <span className="text-title">text-title</span>
+        <span className="text-body">text-body</span>
+        <span className="text-caption">text-caption</span>
+        <span className="text-muted">text-muted</span>
+        <span className="text-category">text-category</span>
+      </VStack>
+
+      <h2 className="text-display2 mb-3 mt-6">3. Segments</h2>
 
       <Segment>
         <h2>The title</h2>
@@ -189,18 +197,23 @@ const UIToolkitPage = () => {
         </Segment>
       </Segments>
 
-      <List>
-        <ListItem>
+      <h2 className="text-display2 mb-3 mt-6">4. Avatars</h2>
+
+      <VStack>
+        <HStack>
           <Avatar user={jonSnow} /> <UserName user={jonSnow} />
-        </ListItem>
-        <ListItem>
+        </HStack>
+        <HStack>
           <Avatar user={aryaStark} /> <UserName user={aryaStark} />
-        </ListItem>
-      </List>
+        </HStack>
+      </VStack>
+
+      <h2 className="text-display2 mb-3 mt-6">5. Page Title</h2>
 
       <Heading title="Page Title" subtitle="This is a page subtitle" />
 
-      <h1>Buttons</h1>
+      <h2 className="text-display2 mb-3 mt-6">6. Buttons</h2>
+
       <List>
         <ListItem>
           <Button size="large">
@@ -322,7 +335,8 @@ const UIToolkitPage = () => {
         </ListItem>
       </List>
 
-      <h1>Toggle</h1>
+      <h2 className="text-display2 mb-3 mt-6">7. Toggle</h2>
+
       <List>
         <ListItem>
           <Toggle active={true} label="Active" />
@@ -335,7 +349,8 @@ const UIToolkitPage = () => {
         </ListItem>
       </List>
 
-      <h1>Statuses</h1>
+      <h2 className="text-display2 mb-3 mt-6">8. Statuses</h2>
+
       <List>
         <ListItem>
           <ShowPostStatus status={PostStatus.Open} />
@@ -357,7 +372,8 @@ const UIToolkitPage = () => {
         </ListItem>
       </List>
 
-      <h1>Tags</h1>
+      <h2 className="text-display2 mb-3 mt-6">9. Tags</h2>
+
       <List>
         <ListItem>
           <ShowTag tag={easyTag} />
@@ -367,7 +383,8 @@ const UIToolkitPage = () => {
         </ListItem>
       </List>
 
-      <h1>Notification</h1>
+      <h2 className="text-display2 mb-3 mt-6">10. Notification</h2>
+
       <List>
         <ListItem>
           <Button onClick={notifySuccess}>Success</Button>
@@ -375,7 +392,8 @@ const UIToolkitPage = () => {
         </ListItem>
       </List>
 
-      <h1>Moment</h1>
+      <h2 className="text-display2 mb-3 mt-6">11. Moment</h2>
+
       <List>
         <ListItem>
           Relative: <Moment date="2017-06-03T16:55:06.815042Z" format="relative" />
@@ -388,10 +406,12 @@ const UIToolkitPage = () => {
         </ListItem>
       </List>
 
-      <h1>Loader</h1>
+      <h2 className="text-display2 mb-3 mt-6">12. Loader</h2>
+
       <Loader />
 
-      <h1>Message Box</h1>
+      <h2 className="text-display2 mb-3 mt-6">13. Message</h2>
+
       <Message showIcon={true} type="error">
         Something went wrong.
       </Message>
@@ -402,21 +422,23 @@ const UIToolkitPage = () => {
         Your order has been confirmed.
       </Message>
 
-      <h1>Hints</h1>
+      <h2 className="text-display2 mb-3 mt-6">14. Hints</h2>
+
       <Hint permanentCloseKey="ui-toolkip-example">Did you know that you can close this permanently?</Hint>
       <Hint>You can&apos;t close this one :)</Hint>
 
-      <h1>Form</h1>
+      <h2 className="text-display2 mb-3 mt-6">15. Form</h2>
+
       <Form error={error}>
         <Input label="Title" field="title">
-          <p className="info">This is the explanation for the field above.</p>
+          <p className="text-muted">This is the explanation for the field above.</p>
         </Input>
         <Input label="Disabled!" field="unamed" disabled={true} value={"you can't change this!"} />
         <Input label="Name" field="name" placeholder={"Your name goes here..."} />
         <Input label="Subdomain" field="subdomain" suffix="fider.io" />
         <Input label="Email" field="email" suffix={<Button color="positive">Sign in</Button>} />
         <TextArea label="Description" field="description" minRows={5}>
-          <p className="info">This textarea resizes as you type.</p>
+          <p className="text-muted">This textarea resizes as you type.</p>
         </TextArea>
         <Input field="age" placeholder="This field doesn't have a label" />
 

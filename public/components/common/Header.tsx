@@ -66,7 +66,7 @@ export const Header = () => {
           <div className="container">
             <a href="/" className="c-menu-item-title">
               <TenantLogo size={100} />
-              <h1>{fider.session.tenant.name}</h1>
+              <h1 className="text-display">{fider.session.tenant.name}</h1>
             </a>
             {showRightMenu && (
               <div onClick={showModal} className="c-menu-item-signin">

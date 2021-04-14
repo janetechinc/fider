@@ -55,7 +55,7 @@ export default class OAuthEchoPage extends React.Component<OAuthEchoPageProps, a
             <p>
               {idOk ? ok : error}
               <strong>ID:</strong> {this.props.profile && this.props.profile.id}
-              {!idOk && <p className="info">ID is required. If not found, users will see an error during sign in process.</p>}
+              {!idOk && <p className="text-muted">ID is required. If not found, users will see an error during sign in process.</p>}
             </p>
           </Segment>
           <Segment>
@@ -63,7 +63,7 @@ export default class OAuthEchoPage extends React.Component<OAuthEchoPageProps, a
               {nameOk ? ok : warn}
               <strong>Name:</strong> {this.props.profile && this.props.profile.name}
               {!nameOk && (
-                <p className="info">
+                <p className="text-muted">
                   Name is required, if not found we&apos;ll use <strong>Anonymous</strong> as the name of every new user.
                 </p>
               )}
@@ -74,7 +74,7 @@ export default class OAuthEchoPage extends React.Component<OAuthEchoPageProps, a
               {emailOk ? ok : warn}
               <strong>Email:</strong> {this.props.profile && this.props.profile.email}
               {!emailOk && (
-                <p className="info">
+                <p className="text-muted">
                   Email is not required, but highly recommended. If invalid or not found, new users won&apos;t be able to receive notifications.
                 </p>
               )}

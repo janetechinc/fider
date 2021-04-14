@@ -2,22 +2,12 @@
 @import "_colors";
 @import "_spacing";
 @import "_sizing";
+@import "_text";
 
 $all: (
   colors: $colors,
+  font: $font,
 );
-
-$font-size-micro: 9px;
-$font-size-mini: 11px;
-$font-size-tiny: 12px;
-$font-size-small: 13px;
-$font-size: 14px;
-$font-size-large: 16px;
-$font-size-big: 18px;
-$font-size-xlarge: 22px;
-
-$font-site: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, "Helvetica Neue", Helvetica, sans-serif;
-$font-code: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
 
 // Queries
 $sm-width: 576px;

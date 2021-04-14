@@ -100,7 +100,7 @@
       cursor: pointer;
       display: block;
       padding: 12px 10px;
-      line-height: $font-size;
+      line-height: $font-size-base;
 
       &:last-child {
         border-bottom-right-radius: 3px;

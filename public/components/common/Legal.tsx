@@ -37,7 +37,7 @@ export const LegalNotice: React.FunctionComponent<any> = () => {
 
   if (fider.settings.hasLegal) {
     return (
-      <p className="info">
+      <p className="text-muted">
         By signing in, you agree to the <PrivacyPolicy /> and <TermsOfService />.
       </p>
     )

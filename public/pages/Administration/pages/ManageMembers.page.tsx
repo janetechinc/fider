@@ -169,7 +169,7 @@ export default class ManageMembersPage extends AdminBasePage<ManageMembersPagePr
             ))}
           </List>
         </Segment>
-        <p className="info">
+        <p className="text-muted">
           {!this.state.query && (
             <>
               Showing {this.state.visibleUsers.length} of {this.state.users.length} registered users
@@ -186,7 +186,7 @@ export default class ManageMembersPage extends AdminBasePage<ManageMembersPagePr
             </a>
           )}
         </p>
-        <ul className="l-legend info">
+        <ul className="l-legend text-muted">
           <li>
             <strong>&middot; Administrators</strong>have full access to edit and manage content, permissions and all site settings.
           </li>

@@ -46,7 +46,7 @@ export const PostFilter = (props: PostFilterProps) => {
 
   return (
     <div>
-      <span className="subtitle">View</span>
+      <span className="text-category">View</span>
       <DropDown
         header="What do you want to see?"
         className="l-post-filter"

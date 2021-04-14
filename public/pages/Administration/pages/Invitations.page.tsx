@@ -88,7 +88,7 @@ ${Fider.session.user.name} (${Fider.session.tenant.name})`,
           value={this.state.rawRecipients}
           onChange={this.setRecipients}
         >
-          <div className="info">
+          <div className="text-muted">
             <p>
               Input the list of all email addresses you wish to invite. Separate each address with either <strong>semicolon</strong>, <strong>comma</strong>,{" "}
               <strong>whitespace</strong> or <strong>line break</strong>.
@@ -98,11 +98,11 @@ ${Fider.session.user.name} (${Fider.session.tenant.name})`,
         </TextArea>
 
         <Input field="subject" label="Subject" value={this.state.subject} maxLength={70} onChange={this.setSubject}>
-          <p className="info">This is the subject that will be used on the invitation email. Keep it short and sweet.</p>
+          <p className="text-muted">This is the subject that will be used on the invitation email. Keep it short and sweet.</p>
         </Input>
 
         <TextArea field="message" label="Message" minRows={8} value={this.state.message} onChange={this.setMessage}>
-          <div className="info">
+          <div className="text-muted">
             <p>
               This is the content of the invite. Be polite and explain what this invite is for, otherwise there&apos;s a high change people will ignore your
               message.
@@ -114,7 +114,7 @@ ${Fider.session.user.name} (${Fider.session.tenant.name})`,
         </TextArea>
 
         <Field label="Sample Invite">
-          <p className="info">
+          <p className="text-muted">
             We highly recommend to send yourself a sample email for you to verify if everything is correct before inviting your list of contacts.
           </p>
           {Fider.session.user.email ? (
@@ -125,7 +125,7 @@ ${Fider.session.user.name} (${Fider.session.tenant.name})`,
         </Field>
 
         <Field label="Confirmation">
-          <p className="info">Whenever you&apos;re ready, click the following button to send out these invites.</p>
+          <p className="text-muted">Whenever you&apos;re ready, click the following button to send out these invites.</p>
           <Button onClick={this.sendInvites} color="positive" disabled={this.state.numOfRecipients === 0}>
             Send {this.state.numOfRecipients} {this.state.numOfRecipients === 1 ? "invite" : "invites"}
           </Button>

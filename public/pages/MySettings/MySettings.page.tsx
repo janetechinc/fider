@@ -105,7 +105,7 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
 
   public render() {
     const changeEmail = (
-      <span className="info clickable" onClick={this.startChangeEmail}>
+      <span className="text-muted clickable" onClick={this.startChangeEmail}>
         change
       </span>
     )
@@ -142,7 +142,7 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
                 afterLabel={this.state.changingEmail ? undefined : changeEmail}
                 onChange={this.setNewEmail}
               >
-                <p className="info">
+                <p className="text-muted">
                   {Fider.session.user.email || this.state.changingEmail
                     ? "Your email is private and will never be publicly displayed."
                     : "Your account doesn't have an email."}
@@ -173,18 +173,18 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
                 onChange={this.avatarTypeChanged}
               >
                 {this.state.avatarType === UserAvatarType.Gravatar && (
-                  <p className="info">
+                  <p className="text-muted">
                     A{" "}
-                    <a rel="noopener" href="https://en.gravatar.com" target="_blank">
+                    <a className="text-link" rel="noopener" href="https://en.gravatar.com" target="_blank">
                       Gravatar
                     </a>{" "}
                     will be used based on your email. If you don&apos;t have a Gravatar, a letter avatar based on your initials is generated for you.
                   </p>
                 )}
-                {this.state.avatarType === UserAvatarType.Letter && <p className="info">A letter avatar based on your initials is generated for you.</p>}
+                {this.state.avatarType === UserAvatarType.Letter && <p className="text-muted">A letter avatar based on your initials is generated for you.</p>}
                 {this.state.avatarType === UserAvatarType.Custom && (
                   <ImageUploader field="avatar" previewMaxWidth={80} onChange={this.setAvatar} bkey={Fider.session.user.avatarBlobKey}>
-                    <p className="info">
+                    <p className="text-muted">
                       We accept JPG, GIF and PNG images, smaller than 100KB and with an aspect ratio of 1:1 with minimum dimensions of 50x50 pixels.
                     </p>
                   </ImageUploader>

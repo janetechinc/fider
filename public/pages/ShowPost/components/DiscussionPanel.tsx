@@ -16,13 +16,13 @@ export const DiscussionPanel = (props: DiscussionPanelProps) => {
   return (
     <div className="comments-col">
       <div className="c-comment-list">
-        <span className="subtitle">Discussion</span>
+        <span className="text-category">Discussion</span>
         <CommentInput post={props.post} />
         {props.comments.map((c) => (
           <ShowComment key={c.id} post={props.post} comment={c} />
         ))}
         {props.comments.length === 0 && (
-          <div className="center">
+          <div className="text-center">
             <PostIllustration height="150" />
             <p>No one has commented yet.</p>
           </div>

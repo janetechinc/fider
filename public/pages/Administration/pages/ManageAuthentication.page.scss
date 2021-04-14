@@ -14,12 +14,12 @@
     .m-enabled {
       color: get("colors.green.700");
       font-weight: 500;
-      font-size: $font-size-mini;
+      font-size: $font-size-tiny;
     }
     .m-disabled {
       color: get("colors.red.400");
       font-weight: 500;
-      font-size: $font-size-mini;
+      font-size: $font-size-tiny;
     }
   }
 }

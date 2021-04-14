@@ -58,7 +58,7 @@ export const TagsPanel = (props: TagsPanelProps) => {
         ))}
       </List>
     ) : (
-      <span className="info">None</span>
+      <span className="text-muted">None</span>
     )
 
   const editTagsList = props.tags.length > 0 && (
@@ -69,7 +69,7 @@ export const TagsPanel = (props: TagsPanelProps) => {
     </List>
   )
 
-  const subtitleClasses = `subtitle ${canEdit && "active"}`
+  const subtitleClasses = `text-category ${canEdit && "active"}`
   const icon = canEdit && (isEditing ? <FaCheckCircle /> : <FaCog />)
 
   return (

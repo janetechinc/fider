@@ -1,6 +1,5 @@
 .flex {
   display: flex;
-  align-items: center;
 }
 
 .flex-y {
@@ -12,6 +11,7 @@
 
 .flex-x {
   flex-direction: row;
+  align-items: center;
   > * + * {
     margin-left: spacing(1);
   }

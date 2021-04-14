@@ -6,10 +6,6 @@
     border-top-width: 0.1px !important;
 
     .c-list-item-title {
-      color: get("colors.gray.900");
-      font-weight: 500;
-      margin-bottom: 10px;
-      font-size: $font-size-large;
       &:hover {
         color: get("colors.primary");
       }

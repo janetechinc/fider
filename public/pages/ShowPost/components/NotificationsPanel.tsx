@@ -38,14 +38,14 @@ export const NotificationsPanel = (props: NotificationsPanelProps) => {
   )
 
   const text = subscribed ? (
-    <span className="info">You’re receiving notifications about activity on this post.</span>
+    <span className="text-muted">You’re receiving notifications about activity on this post.</span>
   ) : (
-    <span className="info">You&apos;ll not receive any notification about this post.</span>
+    <span className="text-muted">You&apos;ll not receive any notification about this post.</span>
   )
 
   return (
     <>
-      <span className="subtitle">Notifications</span>
+      <span className="text-category">Notifications</span>
       <List>
         <ListItem>
           {button}

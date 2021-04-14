@@ -37,7 +37,7 @@ export const ModerationPanel = (props: ModerationPanelProps) => {
       <Modal.Content>
         <Form error={error}>
           <TextArea field="text" onChange={setText} value={text} placeholder="Why are you deleting this post? (optional)">
-            <span className="info">
+            <span className="text-muted">
               This operation <strong>cannot</strong> be undone.
             </span>
           </TextArea>
@@ -58,7 +58,7 @@ export const ModerationPanel = (props: ModerationPanelProps) => {
   return (
     <>
       {modal}
-      <span className="subtitle">Moderation</span>
+      <span className="text-category">Moderation</span>
       <List>
         <ListItem>
           <Button color="danger" size="tiny" fluid={true} onClick={showModal}>

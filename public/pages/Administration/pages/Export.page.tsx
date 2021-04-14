@@ -14,7 +14,7 @@ export default class ExportPage extends AdminBasePage<any, any> {
       <Form>
         <Segment>
           <Field label="Export Posts">
-            <p className="info">
+            <p className="text-muted">
               Use this button to download a CSV file with all posts in this site. This can be useful to analyse the data with an external tool or simply to back
               it up.
             </p>
@@ -27,7 +27,9 @@ export default class ExportPage extends AdminBasePage<any, any> {
         </Segment>
         <Segment>
           <Field label="Backup your data">
-            <p className="info">Use this button to download a ZIP file with your data in JSON format. This is a full backup and contains all of your data.</p>
+            <p className="text-muted">
+              Use this button to download a ZIP file with your data in JSON format. This is a full backup and contains all of your data.
+            </p>
           </Field>
           <Field>
             <Button color="positive" href="/admin/export/backup.zip">
