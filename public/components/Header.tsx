@@ -1,24 +1,13 @@
 import "./Header.scss"
 
-import React, { useState, useEffect } from "react"
-import { SignInModal, Avatar, TenantLogo, DevBanner } from "@fider/components"
-import { actions } from "@fider/services"
+import React, { useState } from "react"
+import { SignInModal, Avatar, TenantLogo, DevBanner, NotificationIndicator } from "@fider/components"
 import { useFider } from "@fider/hooks"
+import { HStack } from "./layout"
 
 export const Header = () => {
   const fider = useFider()
   const [isSignInModalOpen, setIsSignInModalOpen] = useState(false)
-  const [unreadNotifications, setUnreadNotifications] = useState(0)
-
-  useEffect(() => {
-    if (fider.session.isAuthenticated) {
-      actions.getTotalUnreadNotifications().then((result) => {
-        if (result.ok && result.data > 0) {
-          setUnreadNotifications(result.data)
-        }
-      })
-    }
-  }, [fider.session.isAuthenticated])
 
   const showModal = () => {
     if (!fider.session.isAuthenticated) {
@@ -34,11 +23,7 @@ export const Header = () => {
         <span>{fider.session.user.name}</span>
       </div>
       <a href="/settings" className="c-menu-user-item">
-        Settings
-      </a>
-      <a href="/notifications" className="c-menu-user-item">
-        Notifications
-        {unreadNotifications > 0 && <div className="c-unread-count">{unreadNotifications}</div>}
+        My Settings
       </a>
       <div className="c-menu-user-divider" />
       {fider.session.user.isCollaborator && [
@@ -56,7 +41,7 @@ export const Header = () => {
     </div>
   )
 
-  const showRightMenu = fider.session.isAuthenticated || !fider.session.tenant.isPrivate
+  // const showRightMenu = fider.session.isAuthenticated || !fider.session.tenant.isPrivate
   return (
     <>
       <DevBanner />
@@ -68,13 +53,17 @@ export const Header = () => {
               <TenantLogo size={100} />
               <h1 className="text-display">{fider.session.tenant.name}</h1>
             </a>
-            {showRightMenu && (
-              <div onClick={showModal} className="c-menu-item-signin">
-                {fider.session.isAuthenticated && <Avatar user={fider.session.user} />}
-                {unreadNotifications > 0 && <div className="c-unread-dot" />}
-                {!fider.session.isAuthenticated && <span>Sign in</span>}
+            {fider.session.isAuthenticated && (
+              <HStack onClick={showModal} className="c-menu-item-signin">
+                <NotificationIndicator />
+                <Avatar user={fider.session.user} />
                 {items}
-              </div>
+              </HStack>
+            )}
+            {!fider.session.isAuthenticated && (
+              <HStack onClick={showModal} className="c-menu-item-signin">
+                <span>Sign in</span>
+              </HStack>
             )}
           </div>
         </div>

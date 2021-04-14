@@ -39,24 +39,7 @@
     }
 
     .c-menu-item-signin {
-      display: flex;
-      align-items: center;
-      cursor: pointer;
-      font-size: 90%;
-      margin-left: auto !important;
-      margin-bottom: 0;
-
-      > span {
-        font-weight: 600;
-        text-transform: uppercase;
-        color: get("colors.gray.700");
-      }
-
-      &:hover {
-        > span {
-          color: get("colors.gray.900");
-        }
-      }
+      margin-left: auto;
 
       .c-menu-user {
         display: none;
@@ -110,28 +93,6 @@
           left: auto;
           right: 0;
         }
-      }
-
-      .c-unread-dot {
-        width: 10px;
-        height: 10px;
-        border-radius: 5px;
-        margin-left: -10px;
-        margin-top: -25px;
-        background-color: get("colors.red.500");
-        border: 1px solid get("colors.white") !important;
-      }
-
-      .c-unread-count {
-        display: inline-block;
-        background-color: get("colors.red.500");
-        position: absolute;
-        right: 5px;
-        padding: 2px 8px;
-        color: get("colors.white");
-        border-radius: 100px;
-        font-size: $font-size-tiny;
-        text-align: center;
       }
     }
   }
