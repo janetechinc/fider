@@ -1,7 +1,7 @@
 import "./PrivacySettings.page.scss"
 
 import React from "react"
-import { Toggle, Form } from "@fider/components/common"
+import { Toggle, Form } from "@fider/components"
 import { actions, notify, Fider } from "@fider/services"
 import { AdminBasePage } from "@fider/pages/Administration/components/AdminBasePage"
 

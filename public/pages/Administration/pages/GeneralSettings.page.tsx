@@ -2,7 +2,7 @@ import "./GeneralSettings.page.scss"
 
 import React from "react"
 
-import { Button, ButtonClickEvent, TextArea, Form, Input, ImageUploader } from "@fider/components/common"
+import { Button, ButtonClickEvent, TextArea, Form, Input, ImageUploader } from "@fider/components"
 import { actions, Failure, Fider } from "@fider/services"
 import { AdminBasePage } from "../components/AdminBasePage"
 import { ImageUpload } from "@fider/models"

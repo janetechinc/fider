@@ -3,9 +3,8 @@ import "./Hint.scss"
 import React, { useState } from "react"
 import IconX from "@fider/assets/images/heroicons-x.svg"
 import IconInformationCircle from "@fider/assets/images/heroicons-information-circle.svg"
-
+import { HStack } from "@fider/components/layout"
 import { cache } from "@fider/services"
-import { HStack } from "./layout"
 
 interface HintProps {
   permanentCloseKey?: string

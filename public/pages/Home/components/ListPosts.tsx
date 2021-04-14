@@ -4,7 +4,7 @@ import React from "react"
 import { Post, Tag, CurrentUser } from "@fider/models"
 import { ShowTag, ShowPostResponse, VoteCounter, MultiLineText, ListItem, List } from "@fider/components"
 import IconChatAlt2 from "@fider/assets/images/heroicons-chat-alt-2.svg"
-import { HStack } from "@fider/components/common/layout"
+import { HStack } from "@fider/components/layout"
 
 interface ListPostsProps {
   posts?: Post[]

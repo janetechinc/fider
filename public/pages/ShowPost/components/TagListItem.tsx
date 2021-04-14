@@ -2,7 +2,7 @@ import React from "react"
 import { Tag } from "@fider/models"
 import { ShowTag } from "@fider/components"
 import IconCheck from "@fider/assets/images/heroicons-check.svg"
-import { HStack } from "@fider/components/common/layout"
+import { HStack } from "@fider/components/layout"
 
 interface TagListItemProps {
   tag: Tag

@@ -1,5 +1,5 @@
 import React from "react"
-import { Modal, Checkbox } from "@fider/components/common"
+import { Modal, Checkbox } from "@fider/components"
 import { useFider } from "@fider/hooks"
 
 interface LegalAgreementProps {

@@ -30,7 +30,7 @@ import {
 import { User, UserRole, Tag } from "@fider/models"
 import { notify, Failure } from "@fider/services"
 import { DropDown, DropDownItem } from "@fider/components"
-import { HStack, VStack } from "@fider/components/common/layout"
+import { HStack, VStack } from "@fider/components/layout"
 import IconLightBulb from "@fider/assets/images/heroicons-light-bulb.svg"
 import IconSearch from "@fider/assets/images/heroicons-search.svg"
 

@@ -1,8 +1,7 @@
 import React, { Suspense } from "react"
 import ReactDOM from "react-dom"
 import { resolveRootComponent } from "@fider/router"
-import { Header, Loader } from "@fider/components/common"
-import { ErrorBoundary } from "@fider/components"
+import { Header, ErrorBoundary, Loader } from "@fider/components"
 import { classSet, Fider, FiderContext, actions } from "@fider/services"
 import "@fider/assets/styles/index.scss"
 

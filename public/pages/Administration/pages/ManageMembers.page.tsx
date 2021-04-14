@@ -1,7 +1,7 @@
 import "./ManageMembers.page.scss"
 
 import React from "react"
-import { Segment, List, Input, ListItem, Avatar, UserName, DropDown, DropDownItem } from "@fider/components/common"
+import { Segment, List, Input, ListItem, Avatar, UserName, DropDown, DropDownItem } from "@fider/components"
 import { User, UserRole, UserStatus } from "@fider/models"
 import { AdminBasePage } from "../components/AdminBasePage"
 import IconSearch from "@fider/assets/images/heroicons-search.svg"

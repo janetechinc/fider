@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react"
 
 import { Post, ImageUpload } from "@fider/models"
-import { Avatar, UserName, Button, TextArea, Form, MultiImageUploader } from "@fider/components/common"
+import { Avatar, UserName, Button, TextArea, Form, MultiImageUploader } from "@fider/components"
 import { SignInModal } from "@fider/components"
 
 import { cache, actions, Failure, Fider } from "@fider/services"

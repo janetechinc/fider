@@ -2,7 +2,7 @@ import "./ShowPostResponse.scss"
 
 import React from "react"
 import { PostResponse, PostStatus } from "@fider/models"
-import { Avatar, MultiLineText, UserName, Segment } from "@fider/components/common"
+import { Avatar, MultiLineText, UserName, Segment } from "@fider/components"
 
 interface ShowPostStatusProps {
   status: PostStatus

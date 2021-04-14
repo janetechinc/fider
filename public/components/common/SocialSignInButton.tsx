@@ -1,5 +1,5 @@
 import React from "react"
-import { Button, OAuthProviderLogo } from "@fider/components/common"
+import { Button, OAuthProviderLogo } from "@fider/components"
 import { classSet } from "@fider/services"
 
 interface SocialSignInButtonProps {

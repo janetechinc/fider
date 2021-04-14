@@ -3,7 +3,7 @@ import { Post, PostStatus } from "@fider/models"
 import { actions } from "@fider/services"
 import { DropDown, DropDownItem } from "@fider/components"
 import FaCaretUp from "@fider/assets/images/fa-caretup.svg"
-import { HStack } from "@fider/components/common/layout"
+import { HStack } from "@fider/components/layout"
 
 interface PostSearchProps {
   exclude?: number[]
