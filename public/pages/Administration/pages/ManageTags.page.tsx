@@ -1,7 +1,7 @@
 import "./ManageTags.page.scss"
 
 import React from "react"
-import { Button, Segment, List, ListItem, Heading } from "@fider/components"
+import { Button, Segment, List, ListItem, PageTitle } from "@fider/components"
 
 import { Tag } from "@fider/models"
 import { actions, Failure, Fider } from "@fider/services"
@@ -107,7 +107,7 @@ export default class ManageTagsPage extends AdminBasePage<ManageTagsPageProps, M
         <Segment>
           <List divided={true}>
             <ListItem>
-              <Heading title="Public Tags" subtitle="These tags are visible to all visitors." />
+              <PageTitle title="Public Tags" subtitle="These tags are visible to all visitors." />
             </ListItem>
             {publicTaglist.length === 0 ? <ListItem>There aren’t any public tags yet.</ListItem> : publicTaglist}
           </List>
@@ -116,7 +116,7 @@ export default class ManageTagsPage extends AdminBasePage<ManageTagsPageProps, M
         <Segment>
           <List divided={true}>
             <ListItem>
-              <Heading title="Private Tags" subtitle="These tags are only visible for members of this site." />
+              <PageTitle title="Private Tags" subtitle="These tags are only visible for members of this site." />
             </ListItem>
             {privateTagList.length === 0 ? <ListItem>There aren’t any private tags yet.</ListItem> : privateTagList}
           </List>

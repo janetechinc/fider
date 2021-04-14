@@ -3,7 +3,7 @@ import "./UIToolkit.page.scss"
 import React, { useState } from "react"
 import { PostStatus, UserStatus } from "@fider/models"
 import {
-  Heading,
+  PageTitle,
   Button,
   List,
   UserName,
@@ -211,7 +211,7 @@ const UIToolkitPage = () => {
 
       <h2 className="text-display2 mb-3 mt-6">5. Page Title</h2>
 
-      <Heading title="Page Title" subtitle="This is a page subtitle" />
+      <PageTitle title="Page Title" subtitle="This is a page subtitle" />
 
       <h2 className="text-display2 mb-3 mt-6">6. Buttons</h2>
 

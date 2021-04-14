@@ -1,6 +1,6 @@
 import React from "react"
 import { Post, Tag, CurrentUser } from "@fider/models"
-import { Heading, Loader } from "@fider/components"
+import { PageTitle, Loader } from "@fider/components"
 import { ListPosts } from "./ListPosts"
 import { actions } from "@fider/services"
 
@@ -58,7 +58,7 @@ export class SimilarPosts extends React.Component<SimilarPostsProps, SimilarPost
   public render() {
     return (
       <>
-        <Heading title="Similar posts" subtitle="Consider voting on existing posts instead." />
+        <PageTitle title="Similar posts" subtitle="Consider voting on existing posts instead." />
         {this.state.loading ? (
           <Loader />
         ) : (

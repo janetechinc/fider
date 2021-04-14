@@ -3,8 +3,10 @@ import { Tag, Post } from "@fider/models"
 import { actions } from "@fider/services"
 import { ShowTag, List, ListItem } from "@fider/components"
 import { TagListItem } from "./TagListItem"
-import { FaCheckCircle, FaCog } from "react-icons/fa"
 import { useFider } from "@fider/hooks"
+
+import IconCog from "@fider/assets/images/heroicons-cog.svg"
+import IconCheckCircle from "@fider/assets/images/heroicons-check-circle.svg"
 
 interface TagsPanelProps {
   post: Post
@@ -70,7 +72,7 @@ export const TagsPanel = (props: TagsPanelProps) => {
   )
 
   const subtitleClasses = `text-category ${canEdit && "active"}`
-  const icon = canEdit && (isEditing ? <FaCheckCircle /> : <FaCog />)
+  const icon = canEdit && (isEditing ? <IconCheckCircle className="h-4" /> : <IconCog className="h-4" />)
 
   return (
     <>

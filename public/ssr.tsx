@@ -1,7 +1,6 @@
 import React from "react"
 import { renderToStaticMarkup } from "react-dom/server"
 import { Fider, FiderContext } from "./services/fider"
-import { IconContext } from "react-icons"
 import { Header } from "./components"
 import { resolveRootComponent, route } from "./router"
 
@@ -28,10 +27,8 @@ function ssrRender(url: string, pathname: string, args: any) {
 
   return renderToStaticMarkup(
     <FiderContext.Provider value={fider}>
-      <IconContext.Provider value={{ className: "icon" }}>
-        {config.showHeader && <Header />}
-        {React.createElement(config.component, args.props)}
-      </IconContext.Provider>
+      {config.showHeader && <Header />}
+      {React.createElement(config.component, args.props)}
     </FiderContext.Provider>
   )
 }

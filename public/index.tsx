@@ -4,7 +4,6 @@ import { resolveRootComponent } from "@fider/router"
 import { Header, Loader } from "@fider/components/common"
 import { ErrorBoundary } from "@fider/components"
 import { classSet, Fider, FiderContext, actions } from "@fider/services"
-import { IconContext } from "react-icons"
 import "@fider/assets/styles/index.scss"
 
 const Loading = () => (
@@ -48,10 +47,8 @@ window.addEventListener("error", (evt: ErrorEvent) => {
     <React.StrictMode>
       <ErrorBoundary onError={logProductionError}>
         <FiderContext.Provider value={fider}>
-          <IconContext.Provider value={{ className: "icon" }}>
-            {config.showHeader && <Header />}
-            <Suspense fallback={<Loading />}>{React.createElement(config.component, fider.session.props)}</Suspense>
-          </IconContext.Provider>
+          {config.showHeader && <Header />}
+          <Suspense fallback={<Loading />}>{React.createElement(config.component, fider.session.props)}</Suspense>
         </FiderContext.Provider>
       </ErrorBoundary>
     </React.StrictMode>,

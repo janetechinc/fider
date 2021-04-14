@@ -2,7 +2,7 @@ import "./MySettings.page.scss"
 
 import React from "react"
 
-import { Modal, Form, Button, Heading, Input, Select, SelectOption, ImageUploader } from "@fider/components"
+import { Modal, Form, Button, PageTitle, Input, Select, SelectOption, ImageUploader } from "@fider/components"
 
 import { UserSettings, UserAvatarType, ImageUpload } from "@fider/models"
 import { Failure, actions, Fider } from "@fider/services"
@@ -128,7 +128,7 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
           </Modal.Content>
         </Modal.Window>
 
-        <Heading title="Settings" subtitle="Manage your profile settings" />
+        <PageTitle title="Settings" subtitle="Manage your profile settings" />
 
         <div className="row">
           <div className="col-lg-7">

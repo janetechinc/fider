@@ -1,17 +1,13 @@
 @import "~@fider/assets/styles/variables.scss";
 
 #p-oauth-echo {
-  .icon {
-    margin-right: 5px;
-    margin-bottom: 5px;
-  }
-  .icon.error {
+  svg.error {
     color: get("colors.red.500");
   }
-  .icon.check {
+  svg.check {
     color: get("colors.green.500");
   }
-  .icon.warn {
+  svg.warn {
     color: get("colors.yellow.500");
   }
 }

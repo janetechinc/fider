@@ -3,8 +3,10 @@ import { Tag } from "@fider/models"
 import { ListItem, ShowTag, Button } from "@fider/components"
 import { TagFormState, TagForm } from "./TagForm"
 import { actions, Failure } from "@fider/services"
-import { FaTimes, FaEdit } from "react-icons/fa"
 import { useFider } from "@fider/hooks"
+
+import IconX from "@fider/assets/images/heroicons-x.svg"
+import IconPencilAlt from "@fider/assets/images/heroicons-pencil-alt.svg"
 
 interface TagListItemProps {
   tag: Tag
@@ -65,13 +67,13 @@ export const TagListItem = (props: TagListItemProps) => {
 
   const renderViewMode = () => {
     const buttons = fider.session.user.isAdministrator && [
-      <Button size="mini" key={0} onClick={startDelete} className="right">
-        <FaTimes />
-        Delete
+      <Button size="tiny" key={0} onClick={startDelete} className="right">
+        <IconX />
+        <span>Delete</span>
       </Button>,
-      <Button size="mini" key={1} onClick={startEdit} className="right">
-        <FaEdit />
-        Edit
+      <Button size="tiny" key={1} onClick={startEdit} className="right">
+        <IconPencilAlt />
+        <span>Edit</span>
       </Button>,
     ]
 

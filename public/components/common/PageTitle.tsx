@@ -1,26 +1,22 @@
-import "./Heading.scss"
-
 import React from "react"
 import { classSet } from "@fider/services"
 
-interface HeadingLogo {
+interface PageTitleLogo {
   title: string
   subtitle?: string
   className?: string
 }
 
-export const Heading = (props: HeadingLogo) => {
+export const PageTitle = (props: PageTitleLogo) => {
   const className = classSet({
-    "c-heading": true,
+    "mb-2": true,
     [`${props.className}`]: props.className,
   })
 
   return (
     <div className={className}>
-      <div className="c-heading-content">
-        {props.title}
-        <div className="c-heading-subtitle">{props.subtitle}</div>
-      </div>
+      <div className="text-display2 mb-2">{props.title}</div>
+      <div className="text-gray-700">{props.subtitle}</div>
     </div>
   )
 }

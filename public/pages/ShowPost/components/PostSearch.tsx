@@ -2,7 +2,8 @@ import React from "react"
 import { Post, PostStatus } from "@fider/models"
 import { actions } from "@fider/services"
 import { DropDown, DropDownItem } from "@fider/components"
-import { FaCaretUp } from "react-icons/fa"
+import FaCaretUp from "@fider/assets/images/fa-caretup.svg"
+import { HStack } from "@fider/components/common/layout"
 
 interface PostSearchProps {
   exclude?: number[]
@@ -58,10 +59,10 @@ export class PostSearch extends React.Component<PostSearchProps, PostSearchState
         value: p.number,
         render: (
           <>
-            <span className="votes">
-              <FaCaretUp />
+            <HStack className="votes">
+              <FaCaretUp className="h-4 mr-1" />
               {p.votesCount}
-            </span>
+            </HStack>
             <span className={`status-label status-${status.value}`}>{status.title}</span>
             {p.title}
           </>

@@ -31,15 +31,8 @@
   }
 
   .c-tag-list {
-    .m-selectable {
-      .icon {
-        height: 12px;
-        margin-right: 2px;
-        color: get("colors.green.400");
-      }
-    }
-    span {
-      margin-left: 5px;
+    > svg {
+      color: get("colors.green.600");
     }
   }
 }
@@ -50,13 +43,10 @@
       text-align: center;
       width: 50px;
       display: inline-block;
-      .icon {
-        margin: 0;
-      }
     }
     .status-label {
-      width: 65px;
-      margin-right: 5px;
+      width: 75px;
+      margin-right: 4px;
       text-align: center;
     }
   }

@@ -1,11 +1,13 @@
 import React from "react"
 
-import { Segment, List, ListItem, Button, Heading, OAuthProviderLogo } from "@fider/components"
+import { Segment, List, ListItem, Button, PageTitle, OAuthProviderLogo } from "@fider/components"
 import { OAuthConfig, OAuthProviderOption } from "@fider/models"
 import { OAuthForm } from "../components/OAuthForm"
 import { actions, notify, Fider } from "@fider/services"
-import { FaEdit, FaPlay } from "react-icons/fa"
 import { AdminBasePage } from "../components/AdminBasePage"
+
+import IconPlay from "@fider/assets/images/heroicons-play.svg"
+import IconPencilAlt from "@fider/assets/images/heroicons-pencil-alt.svg"
 
 import "./ManageAuthentication.page.scss"
 
@@ -67,7 +69,7 @@ export default class ManageAuthenticationPage extends AdminBasePage<ManageAuthen
 
     return (
       <>
-        <Heading title="OAuth Providers" subtitle="You can use these section to add any authentication provider thats supports the OAuth2 protocol." />
+        <PageTitle title="OAuth Providers" subtitle="You can use these section to add any authentication provider thats supports the OAuth2 protocol." />
         <p className="text-muted">
           Additional information is available in our{" "}
           <a rel="noopener" target="_blank" href="https://getfider.com/docs/configuring-oauth/">
@@ -82,14 +84,14 @@ export default class ManageAuthenticationPage extends AdminBasePage<ManageAuthen
                 {o.isCustomProvider && (
                   <>
                     {Fider.session.user.isAdministrator && (
-                      <Button onClick={this.edit.bind(this, o.provider)} size="mini" className="right">
-                        <FaEdit />
-                        Edit
+                      <Button onClick={this.edit.bind(this, o.provider)} size="tiny" className="right">
+                        <IconPencilAlt />
+                        <span>Edit</span>
                       </Button>
                     )}
-                    <Button onClick={this.startTest.bind(this, o.provider)} size="mini" className="right">
-                      <FaPlay />
-                      Test
+                    <Button onClick={this.startTest.bind(this, o.provider)} size="tiny" className="right">
+                      <IconPlay />
+                      <span>Test</span>
                     </Button>
                   </>
                 )}

@@ -1,0 +1,19 @@
+@each $name, $shades in $colors {
+  @if type-of($shades) == color {
+    .text-#{$name} {
+      color: #{$shades};
+    }
+    .bg-#{$name} {
+      background-color: #{$shades};
+    }
+  } @else {
+    @each $shade, $color in $colors {
+      .text-#{$name}-#{$shade} {
+        color: #{$color};
+      }
+      .bg-#{$name}-#{$shade} {
+        background-color: #{$color};
+      }
+    }
+  }
+}

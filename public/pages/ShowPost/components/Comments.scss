@@ -45,24 +45,6 @@
           border-radius: 5px;
           width: 100px;
         }
-
-        .icon {
-          color: get("colors.gray.500");
-          font-size: 12px;
-        }
-
-        &:hover {
-          .icon {
-            color: get("colors.gray.900");
-          }
-        }
-
-        &.is-open {
-          display: inline-block !important;
-          .icon {
-            color: get("colors.gray.900");
-          }
-        }
       }
     }
   }

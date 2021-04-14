@@ -4,6 +4,7 @@ import { classSet } from "@fider/services"
 interface StackProps {
   className?: string
   children: React.ReactNode
+  onClick?: () => void
 }
 
 export const HStack = (props: StackProps) => {
@@ -12,7 +13,11 @@ export const HStack = (props: StackProps) => {
     "flex flex-x": true,
   })
 
-  return <div className={className}>{props.children}</div>
+  return (
+    <div onClick={props.onClick} className={className}>
+      {props.children}
+    </div>
+  )
 }
 
 export const VStack = (props: StackProps) => {
@@ -21,5 +26,9 @@ export const VStack = (props: StackProps) => {
     "flex flex-y": true,
   })
 
-  return <div className={className}>{props.children}</div>
+  return (
+    <div onClick={props.onClick} className={className}>
+      {props.children}
+    </div>
+  )
 }

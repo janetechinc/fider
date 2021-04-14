@@ -56,15 +56,13 @@
     .c-tag {
       margin: 0 5px 0 0;
     }
-    .icon {
-      height: 12px;
-      margin-right: 2px;
+    svg {
       vertical-align: top;
       color: transparent;
     }
     .selected-tag {
-      .icon {
-        color: get("colors.green.400");
+      svg {
+        color: get("colors.green.600");
       }
     }
   }
