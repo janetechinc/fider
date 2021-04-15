@@ -59,7 +59,7 @@ export const ShowPostResponse = (props: PostResponseProps): JSX.Element | null =
         {status.show && <ShowPostStatus status={status} />}
         {props.showUser && (
           <>
-            <Avatar user={props.response.user} size="small" /> <UserName user={props.response.user} />
+            <Avatar user={props.response.user} /> <UserName user={props.response.user} />
           </>
         )}
         {status === PostStatus.Duplicate ? DuplicateDetails(props) : StatusDetails(props)}

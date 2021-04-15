@@ -10,7 +10,7 @@ interface ButtonProps {
   color?: "positive" | "danger" | "default" | "cancel"
   fluid?: boolean
   size?: "mini" | "tiny" | "small" | "normal" | "large"
-  onClick?: (event: ButtonClickEvent) => Promise<any>
+  onClick?: (event?: ButtonClickEvent) => Promise<any> | void
 }
 
 interface ButtonState {

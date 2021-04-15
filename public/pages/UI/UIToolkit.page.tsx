@@ -26,6 +26,7 @@ import {
   ButtonClickEvent,
   Message,
   Hint,
+  AvatarStack,
 } from "@fider/components"
 import { User, UserRole, Tag } from "@fider/models"
 import { notify, Failure } from "@fider/services"
@@ -39,7 +40,8 @@ const jonSnow: User = {
   name: "Jon Snow",
   role: UserRole.Administrator,
   status: UserStatus.Active,
-  avatarURL: "/avatars/letter/0/Jon%20Snow",
+  avatarURL:
+    "https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixqx=1JzWlMeJDF&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
 }
 
 const aryaStark: User = {
@@ -47,7 +49,16 @@ const aryaStark: User = {
   name: "Arya Snow",
   role: UserRole.Visitor,
   status: UserStatus.Active,
-  avatarURL: "/avatars/letter/0/Arya%20Snow",
+  avatarURL: "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+}
+
+const robStark: User = {
+  id: 0,
+  name: "Robert Stark",
+  role: UserRole.Visitor,
+  status: UserStatus.Active,
+  avatarURL:
+    "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixqx=1JzWlMeJDF&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80",
 }
 
 const easyTag: Tag = { id: 2, slug: "easy", name: "easy", color: "FB3A62", isPublic: true }
@@ -206,6 +217,9 @@ const UIToolkitPage = () => {
         </HStack>
         <HStack>
           <Avatar user={aryaStark} /> <UserName user={aryaStark} />
+        </HStack>
+        <HStack>
+          <AvatarStack users={[jonSnow, aryaStark, robStark]} />
         </HStack>
       </VStack>
 

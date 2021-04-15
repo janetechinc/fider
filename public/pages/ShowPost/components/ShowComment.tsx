@@ -114,7 +114,7 @@ export const ShowComment = (props: ShowCommentProps) => {
   return (
     <div className="c-comment">
       {modal()}
-      <Avatar size="large" user={comment.user} />
+      <Avatar user={comment.user} />
       <div className="c-comment-content">
         <div className="c-comment-header">
           <div className="c-comment-author">
