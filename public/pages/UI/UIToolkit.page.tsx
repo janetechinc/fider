@@ -84,7 +84,7 @@ const UIToolkitPage = () => {
     }
   }
 
-  const showLoading = async (e: ButtonClickEvent) => {
+  const showLoading = (e: ButtonClickEvent): void => {
     return e.preventEnable()
   }
 

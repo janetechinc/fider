@@ -4,16 +4,19 @@
 
 .flex-y {
   flex-direction: column;
-  > * + * {
-    margin-top: spacing(1);
-  }
 }
 
 .flex-x {
   flex-direction: row;
   align-items: center;
-  > * + * {
-    margin-left: spacing(1);
+}
+
+@for $i from 0 through 6 {
+  .flex-x.flex--spacing-#{$i} > * + * {
+    margin-left: spacing($i);
+  }
+  .flex-y.flex--spacing-#{$i} > * + * {
+    margin-top: spacing($i);
   }
 }
 

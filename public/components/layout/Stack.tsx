@@ -5,30 +5,29 @@ interface StackProps {
   className?: string
   children: React.ReactNode
   onClick?: () => void
+  spacing: 0 | 1 | 2 | 3 | 4 | 6
+}
+
+const Stack = (props: StackProps, dir: "x" | "y") => {
+  const spacing = props.spacing || 1
+  const className = classSet({
+    [`${props.className}`]: props.className,
+    [`flex flex--spacing-${spacing}`]: true,
+    "flex-x": dir === "x",
+    "flex-y": dir === "y",
+  })
+
+  return (
+    <div onClick={props.onClick} className={className}>
+      {props.children}
+    </div>
+  )
 }
 
 export const HStack = (props: StackProps) => {
-  const className = classSet({
-    [`${props.className}`]: props.className,
-    "flex flex-x": true,
-  })
-
-  return (
-    <div onClick={props.onClick} className={className}>
-      {props.children}
-    </div>
-  )
+  return Stack(props, "x")
 }
 
 export const VStack = (props: StackProps) => {
-  const className = classSet({
-    [`${props.className}`]: props.className,
-    "flex flex-y": true,
-  })
-
-  return (
-    <div onClick={props.onClick} className={className}>
-      {props.children}
-    </div>
-  )
+  return Stack(props, "y")
 }
