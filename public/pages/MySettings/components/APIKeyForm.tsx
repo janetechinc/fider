@@ -45,7 +45,7 @@ export class APIKeyForm extends React.Component<any, APIKeyFormState> {
           .
         </p>
         <p>
-          <Button size="tiny" onClick={this.regenerate}>
+          <Button size="small" onClick={this.regenerate}>
             Regenerate API Key
           </Button>
         </p>

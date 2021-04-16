@@ -237,91 +237,56 @@ const UIToolkitPage = () => {
 
       <VStack>
         <HStack>
-          <Button size="large">
-            <IconLightBulb /> <span>Large Icon</span>
-          </Button>
-          <Button size="large">Large Default</Button>
           <Button variant="primary" size="large">
-            Large Positive
+            Primary
+          </Button>
+          <Button size="large">
+            <IconLightBulb /> <span>Secondary</span>
+          </Button>
+          <Button size="large">Secondary</Button>
+          <Button variant="tertiary" size="large">
+            Tertiary
           </Button>
           <Button variant="danger" size="large">
-            Large Danger
-          </Button>
-          <Button variant="tertiary" size="large">
-            Large Cancel
+            Danger
           </Button>
         </HStack>
 
         <HStack>
-          <Button size="normal">
-            <IconLightBulb /> <span>Normal Icon</span>
+          <Button variant="primary">Primary</Button>
+          <Button>
+            <IconLightBulb /> <span>Secondary</span>
           </Button>
-          <Button size="normal">Normal Default</Button>
-          <Button variant="primary" size="normal">
-            Normal Positive
-          </Button>
-          <Button variant="danger" size="normal">
-            Normal Danger
-          </Button>
-          <Button variant="tertiary" size="normal">
-            Normal Cancel
-          </Button>
+          <Button>Secondary</Button>
+          <Button variant="tertiary">Tertiary</Button>
+          <Button variant="danger">Danger</Button>
         </HStack>
 
         <HStack>
-          <Button size="small">
-            <IconLightBulb /> <span>Small Icon</span>
-          </Button>
-          <Button size="small">Small Default</Button>
           <Button variant="primary" size="small">
-            Small Positive
+            Primary
+          </Button>
+          <Button size="small">
+            <IconLightBulb /> <span>Secondary</span>
+          </Button>
+          <Button size="small">Secondary</Button>
+          <Button variant="tertiary" size="small">
+            Tertiary
           </Button>
           <Button variant="danger" size="small">
-            Small Danger
-          </Button>
-          <Button variant="tertiary" size="small">
-            Small Cancel
+            Danger
           </Button>
         </HStack>
 
         <HStack>
-          <Button size="tiny">
-            <IconLightBulb /> <span>Tiny Icon</span>
+          <Button href="#" variant="primary">
+            Link
           </Button>
-          <Button size="tiny">Tiny Default</Button>
-          <Button variant="primary" size="tiny">
-            Tiny Positive
-          </Button>
-          <Button variant="danger" size="tiny">
-            Tiny Danger
-          </Button>
-          <Button variant="tertiary" size="tiny">
-            Tiny Cancel
-          </Button>
-        </HStack>
-
-        <HStack>
-          <Button size="mini">
-            <IconLightBulb /> <span>Mini Icon</span>
-          </Button>
-          <Button size="mini">Mini Default</Button>
-          <Button variant="primary" size="mini">
-            Mini Positive
-          </Button>
-          <Button variant="danger" size="mini">
-            Mini Danger
-          </Button>
-          <Button variant="tertiary" size="mini">
-            Mini Cancel
-          </Button>
-        </HStack>
-
-        <HStack>
           <Button href="#">
             <IconLightBulb /> <span>Link</span>
           </Button>
-          <Button href="#">Link</Button>
-          <Button href="#" variant="primary">
+          <Button>Link</Button>
+          <Button variant="tertiary" href="#">
             Link
           </Button>
           <Button href="#" variant="danger">
@@ -330,12 +295,15 @@ const UIToolkitPage = () => {
         </HStack>
 
         <HStack>
-          <Button disabled={true}>
-            <IconLightBulb /> <span>Default</span>
-          </Button>
-          <Button disabled={true}>Default</Button>
           <Button disabled={true} variant="primary">
-            Positive
+            Primary
+          </Button>
+          <Button disabled={true}>
+            <IconLightBulb /> <span>Secondary</span>
+          </Button>
+          <Button disabled={true}>Secondary</Button>
+          <Button disabled={true} variant="tertiary">
+            Tertiary
           </Button>
           <Button disabled={true} variant="danger">
             Danger
@@ -343,11 +311,14 @@ const UIToolkitPage = () => {
         </HStack>
 
         <HStack>
+          <Button variant="primary" onClick={showLoading}>
+            Loading
+          </Button>
           <Button onClick={showLoading}>
             <IconLightBulb /> <span>Loading</span>
           </Button>
           <Button onClick={showLoading}>Loading</Button>
-          <Button variant="primary" onClick={showLoading}>
+          <Button variant="tertiary" onClick={showLoading}>
             Loading
           </Button>
           <Button variant="danger" onClick={showLoading}>

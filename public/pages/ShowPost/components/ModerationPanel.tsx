@@ -61,7 +61,7 @@ export const ModerationPanel = (props: ModerationPanelProps) => {
       <span className="text-category">Moderation</span>
       <List>
         <ListItem>
-          <Button variant="danger" size="tiny" className="w-100" onClick={showModal}>
+          <Button variant="danger" size="small" className="w-100" onClick={showModal}>
             Delete
           </Button>
         </ListItem>

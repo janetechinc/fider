@@ -10,7 +10,7 @@
   border: none;
   margin: 0 4px 0 0;
   padding: 8px 16px;
-  font-weight: 600;
+  font-weight: 500;
 
   svg + *,
   img + * {
@@ -57,7 +57,7 @@
     }
   }
 
-  &--mini {
+  &--small {
     padding: 6px 12px;
     font-size: $font-size-tiny;
 
@@ -67,17 +67,7 @@
     }
   }
 
-  &--tiny {
-    padding: 7px 14px;
-    font-size: $font-size-tiny;
-
-    svg,
-    img {
-      height: sizing(3);
-    }
-  }
-
-  &--small {
+  &--default {
     padding: 8px 16px;
     font-size: $font-size-small;
 
@@ -87,23 +77,13 @@
     }
   }
 
-  &--normal {
+  &--large {
     padding: 9px 18px;
     font-size: $font-size-base;
 
     svg,
     img {
       height: sizing(4);
-    }
-  }
-
-  &--large {
-    padding: 10px 20px;
-    font-size: $font-size-large;
-
-    svg,
-    img {
-      height: sizing(5);
     }
   }
 

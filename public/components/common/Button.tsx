@@ -10,7 +10,7 @@ interface ButtonProps {
   rel?: "nofollow"
   type?: "button" | "submit"
   variant?: "primary" | "danger" | "secondary" | "tertiary"
-  size?: "mini" | "tiny" | "small" | "normal" | "large"
+  size?: "small" | "default" | "large"
   onClick?: (event: ButtonClickEvent) => Promise<any> | void
 }
 
@@ -32,7 +32,7 @@ export class Button extends React.Component<ButtonProps, ButtonState> {
   private unmounted = false
 
   public static defaultProps: Partial<ButtonProps> = {
-    size: "small",
+    size: "default",
     variant: "secondary",
     type: "button",
   }
