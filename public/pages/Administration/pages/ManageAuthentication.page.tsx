@@ -111,7 +111,7 @@ export default class ManageAuthenticationPage extends AdminBasePage<ManageAuthen
           </List>
         </Segment>
         {Fider.session.user.isAdministrator && (
-          <Button color="positive" onClick={this.addNew}>
+          <Button color="primary" onClick={this.addNew}>
             Add new
           </Button>
         )}

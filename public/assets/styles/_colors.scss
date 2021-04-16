@@ -59,6 +59,10 @@ $colors: (
     "100": #fee2e2,
     "50": #fef2f2,
   ),
-  "primary": #4338ca,
+  "primary": (
+    "light": var(--primary-color-light, #818cf8),
+    "base": var(--primary-color, #4f46e5),
+    "dark": var(--primary-color-dark, #3730a3),
+  ),
   "white": #fff,
 );

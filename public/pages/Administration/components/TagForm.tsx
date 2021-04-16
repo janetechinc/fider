@@ -107,7 +107,7 @@ export class TagForm extends React.Component<TagFormProps, TagFormState> {
             </Field>
           </div>
         </div>
-        <Button color="positive" onClick={this.handleSave}>
+        <Button color="primary" onClick={this.handleSave}>
           Save
         </Button>
         <Button onClick={this.handleCancel} color="cancel">

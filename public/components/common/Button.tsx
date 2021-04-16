@@ -1,3 +1,5 @@
+import "./Button.scss"
+
 import React from "react"
 import { classSet } from "@fider/services"
 
@@ -7,7 +9,7 @@ interface ButtonProps {
   href?: string
   rel?: "nofollow"
   type?: "button" | "submit"
-  color?: "positive" | "danger" | "default" | "cancel"
+  color?: "primary" | "danger" | "default" | "cancel"
   fluid?: boolean
   size?: "mini" | "tiny" | "small" | "normal" | "large"
   onClick?: (event: ButtonClickEvent) => Promise<any> | void
@@ -16,8 +18,6 @@ interface ButtonProps {
 interface ButtonState {
   clicked: boolean
 }
-
-import "./Button.scss"
 
 export class ButtonClickEvent {
   private shouldEnable = true
@@ -73,6 +73,7 @@ export class Button extends React.Component<ButtonProps, ButtonState> {
   public render() {
     const className = classSet({
       "c-button": true,
+      "shadow-sm": this.props.color !== "cancel",
       "m-fluid": this.props.fluid,
       [`m-${this.props.size}`]: this.props.size,
       [`m-${this.props.color}`]: this.props.color,

@@ -5,7 +5,7 @@ interface StackProps {
   className?: string
   children: React.ReactNode
   onClick?: () => void
-  spacing: 0 | 1 | 2 | 3 | 4 | 6
+  spacing?: 0 | 1 | 2 | 3 | 4 | 6
 }
 
 const Stack = (props: StackProps, dir: "x" | "y") => {

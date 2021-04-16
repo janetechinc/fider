@@ -6,7 +6,7 @@
   align-items: center;
   cursor: pointer;
   font-size: $font-size-base;
-  border-radius: 3px;
+  border-radius: 4px;
   border: none;
   margin: 0 4px 0 0;
   padding: 8px 16px;
@@ -26,34 +26,33 @@
 
   &.m-default {
     color: get("colors.gray.900");
-    background-color: get("colors.gray.100");
+    background-color: get("colors.gray.50");
     border: 1px solid get("colors.gray.300");
 
     &:hover {
-      border: 1px solid get("colors.gray.500");
+      background-color: get("colors.gray.100");
     }
   }
 
-  &.m-positive {
+  &.m-primary {
     color: get("colors.white");
-    background-color: get("colors.green.500");
-    border: 1px solid get("colors.green.500");
+    background-color: get("colors.primary.base");
+    border: 1px solid get("colors.primary.base");
 
     &:hover {
-      background-color: get("colors.green.700");
-      border-color: get("colors.green.700");
+      background-color: get("colors.primary.dark");
     }
   }
 
   &.m-danger {
-    color: get("colors.red.500");
+    color: get("colors.red.600");
     border: 1px solid get("colors.gray.300");
     background-color: get("colors.white");
 
     &:hover {
       color: get("colors.white");
-      border: 1px solid get("colors.red.500");
-      background-color: get("colors.red.500");
+      border: 1px solid get("colors.red.600");
+      background-color: get("colors.red.600");
     }
   }
 

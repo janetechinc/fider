@@ -1,12 +1,5 @@
 @each $name, $shades in $colors {
-  @if type-of($shades) == color {
-    .text-#{$name} {
-      color: #{$shades};
-    }
-    .bg-#{$name} {
-      background-color: #{$shades};
-    }
-  } @else {
+  @if type-of($shades) == "map" {
     @each $shade, $color in $shades {
       .text-#{$name}-#{$shade} {
         color: #{$color};
@@ -14,6 +7,13 @@
       .bg-#{$name}-#{$shade} {
         background-color: #{$color};
       }
+    }
+  } @else {
+    .text-#{$name} {
+      color: #{$shades};
+    }
+    .bg-#{$name} {
+      background-color: #{$shades};
     }
   }
 }

@@ -97,7 +97,7 @@ export default class ManageTagsPage extends AdminBasePage<ManageTagsPageProps, M
           <TagForm onSave={this.saveNewTag} onCancel={this.cancelAdd} />
         </Segment>
       ) : (
-        <Button color="positive" onClick={this.addNew}>
+        <Button color="primary" onClick={this.addNew}>
           Add new
         </Button>
       ))

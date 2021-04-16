@@ -144,7 +144,7 @@ export default class ShowPostPage extends React.Component<ShowPostPageProps, Sho
               this.state.editMode ? (
                 <List key={1}>
                   <ListItem>
-                    <Button className="save" color="positive" fluid={true} onClick={this.saveChanges}>
+                    <Button className="save" color="primary" fluid={true} onClick={this.saveChanges}>
                       <IconCheck /> <span>Save</span>
                     </Button>
                   </ListItem>

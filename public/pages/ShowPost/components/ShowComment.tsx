@@ -146,7 +146,7 @@ export const ShowComment = (props: ShowCommentProps) => {
             <Form error={error}>
               <TextArea field="content" minRows={1} value={newContent} placeholder={comment.content} onChange={setNewContent} />
               <MultiImageUploader field="attachments" bkeys={comment.attachments} maxUploads={2} previewMaxWidth={100} onChange={setAttachments} />
-              <Button size="tiny" onClick={saveEdit} color="positive">
+              <Button size="tiny" onClick={saveEdit} color="primary">
                 Save
               </Button>
               <Button color="cancel" size="tiny" onClick={cancelEdit}>

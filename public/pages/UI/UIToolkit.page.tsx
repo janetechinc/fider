@@ -177,6 +177,11 @@ const UIToolkitPage = () => {
         <div className="color yellow-100" />
         <div className="color yellow-50" />
       </div>
+      <div className="color-scale">
+        <div className="color bg-primary-dark" />
+        <div className="color bg-primary-base" />
+        <div className="color bg-primary-light" />
+      </div>
 
       <h2 className="text-display2 mb-3 mt-6">2. Text</h2>
 
@@ -235,7 +240,7 @@ const UIToolkitPage = () => {
             <IconLightBulb /> <span>Large Icon</span>
           </Button>
           <Button size="large">Large Default</Button>
-          <Button color="positive" size="large">
+          <Button color="primary" size="large">
             Large Positive
           </Button>
           <Button color="danger" size="large">
@@ -251,7 +256,7 @@ const UIToolkitPage = () => {
             <IconLightBulb /> <span>Normal Icon</span>
           </Button>
           <Button size="normal">Normal Default</Button>
-          <Button color="positive" size="normal">
+          <Button color="primary" size="normal">
             Normal Positive
           </Button>
           <Button color="danger" size="normal">
@@ -267,7 +272,7 @@ const UIToolkitPage = () => {
             <IconLightBulb /> <span>Small Icon</span>
           </Button>
           <Button size="small">Small Default</Button>
-          <Button color="positive" size="small">
+          <Button color="primary" size="small">
             Small Positive
           </Button>
           <Button color="danger" size="small">
@@ -283,7 +288,7 @@ const UIToolkitPage = () => {
             <IconLightBulb /> <span>Tiny Icon</span>
           </Button>
           <Button size="tiny">Tiny Default</Button>
-          <Button color="positive" size="tiny">
+          <Button color="primary" size="tiny">
             Tiny Positive
           </Button>
           <Button color="danger" size="tiny">
@@ -299,7 +304,7 @@ const UIToolkitPage = () => {
             <IconLightBulb /> <span>Mini Icon</span>
           </Button>
           <Button size="mini">Mini Default</Button>
-          <Button color="positive" size="mini">
+          <Button color="primary" size="mini">
             Mini Positive
           </Button>
           <Button color="danger" size="mini">
@@ -315,7 +320,7 @@ const UIToolkitPage = () => {
             <IconLightBulb /> <span>Link</span>
           </Button>
           <Button href="#">Link</Button>
-          <Button href="#" color="positive">
+          <Button href="#" color="primary">
             Link
           </Button>
           <Button href="#" color="danger">
@@ -328,7 +333,7 @@ const UIToolkitPage = () => {
             <IconLightBulb /> <span>Default</span>
           </Button>
           <Button disabled={true}>Default</Button>
-          <Button disabled={true} color="positive">
+          <Button disabled={true} color="primary">
             Positive
           </Button>
           <Button disabled={true} color="danger">
@@ -341,7 +346,7 @@ const UIToolkitPage = () => {
             <IconLightBulb /> <span>Loading</span>
           </Button>
           <Button onClick={showLoading}>Loading</Button>
-          <Button color="positive" onClick={showLoading}>
+          <Button color="primary" onClick={showLoading}>
             Loading
           </Button>
           <Button color="danger" onClick={showLoading}>
@@ -451,7 +456,7 @@ const UIToolkitPage = () => {
         <Input label="Disabled!" field="unamed" disabled={true} value={"you can't change this!"} />
         <Input label="Name" field="name" placeholder={"Your name goes here..."} />
         <Input label="Subdomain" field="subdomain" suffix="fider.io" />
-        <Input label="Email" field="email" suffix={<Button color="positive">Sign in</Button>} />
+        <Input label="Email" field="email" suffix={<Button color="primary">Sign in</Button>} />
         <TextArea label="Description" field="description" minRows={5}>
           <p className="text-muted">This textarea resizes as you type.</p>
         </TextArea>

@@ -27,9 +27,9 @@
   }
 
   button.m-voted {
-    color: get("colors.primary");
+    color: get("colors.primary.base");
     svg {
-      color: get("colors.primary");
+      color: get("colors.primary.base");
     }
   }
 

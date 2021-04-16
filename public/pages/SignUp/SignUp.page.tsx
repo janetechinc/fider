@@ -190,7 +190,7 @@ export default class SignUpPage extends React.Component<any, SignUpPageState> {
           <LegalAgreement onChange={this.onAgree} />
         </Form>
 
-        <Button color="positive" size="large" onClick={this.confirm}>
+        <Button color="primary" size="large" onClick={this.confirm}>
           Confirm
         </Button>
       </div>

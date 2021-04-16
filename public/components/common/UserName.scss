@@ -7,8 +7,8 @@
   align-items: center;
 
   &.m-staff {
-    color: get("colors.primary");
-    border-color: get("colors.primary");
+    color: get("colors.primary.base");
+    border-color: get("colors.primary.base");
 
     div {
       svg {

@@ -71,7 +71,7 @@ export const SignInControl: React.FunctionComponent<SignInControlProps> = (props
               onChange={setEmail}
               placeholder="yourname@example.com"
               suffix={
-                <Button type="submit" color="positive" disabled={email === ""} onClick={signIn}>
+                <Button type="submit" color="primary" disabled={email === ""} onClick={signIn}>
                   Sign in
                 </Button>
               }

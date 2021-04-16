@@ -7,7 +7,7 @@
 
     .c-list-item-title {
       &:hover {
-        color: get("colors.primary");
+        color: get("colors.primary.base");
       }
     }
 
@@ -30,6 +30,6 @@
 .c-post-list-show-more {
   cursor: pointer;
   font-weight: 500;
-  color: get("colors.primary");
+  color: get("colors.primary.base");
   margin-left: 55px;
 }
