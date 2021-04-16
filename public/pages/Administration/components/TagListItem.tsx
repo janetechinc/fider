@@ -55,10 +55,10 @@ export const TagListItem = (props: TagListItemProps) => {
             The tag <ShowTag tag={tag} /> will be removed from all posts.
           </span>
         </div>
-        <Button className="right" onClick={resetState} color="cancel">
+        <Button className="right" onClick={resetState} variant="tertiary">
           Cancel
         </Button>
-        <Button color="danger" className="right" onClick={deleteTag}>
+        <Button variant="danger" className="right" onClick={deleteTag}>
           Delete tag
         </Button>
       </>

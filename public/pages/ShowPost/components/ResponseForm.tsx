@@ -66,7 +66,7 @@ export class ResponseForm extends React.Component<ResponseFormProps, ResponseFor
 
   public render() {
     const button = (
-      <Button className="respond" fluid={true} onClick={this.showModal}>
+      <Button className="w-100" onClick={this.showModal}>
         <IconSpeakerPhone /> <span>Respond</span>
       </Button>
     )
@@ -102,10 +102,10 @@ export class ResponseForm extends React.Component<ResponseFormProps, ResponseFor
         </Modal.Content>
 
         <Modal.Footer>
-          <Button color="primary" onClick={this.submit}>
+          <Button variant="primary" onClick={this.submit}>
             Submit
           </Button>
-          <Button color="cancel" onClick={this.closeModal}>
+          <Button variant="tertiary" onClick={this.closeModal}>
             Cancel
           </Button>
         </Modal.Footer>

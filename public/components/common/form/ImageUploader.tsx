@@ -111,7 +111,7 @@ export class ImageUploader extends React.Component<ImageUploaderProps, ImageUplo
         <Modal.Content>{this.props.bkey ? <img alt="" src={uploadedImageURL(this.props.bkey)} /> : <img alt="" src={this.state.previewURL} />}</Modal.Content>
 
         <Modal.Footer>
-          <Button color="cancel" onClick={this.closeModal}>
+          <Button variant="tertiary" onClick={this.closeModal}>
             Close
           </Button>
         </Modal.Footer>
@@ -144,7 +144,7 @@ export class ImageUploader extends React.Component<ImageUploaderProps, ImageUplo
               <div className="preview">
                 <img alt="" onClick={this.openModal} src={this.state.previewURL} style={imgStyles} />
                 {!this.props.disabled && (
-                  <Button onClick={this.removeFile} color="danger">
+                  <Button onClick={this.removeFile} variant="danger">
                     X
                   </Button>
                 )}

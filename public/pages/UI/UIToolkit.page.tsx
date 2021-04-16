@@ -27,6 +27,7 @@ import {
   Message,
   Hint,
   AvatarStack,
+  SocialSignInButton,
 } from "@fider/components"
 import { User, UserRole, Tag } from "@fider/models"
 import { notify, Failure } from "@fider/services"
@@ -240,13 +241,13 @@ const UIToolkitPage = () => {
             <IconLightBulb /> <span>Large Icon</span>
           </Button>
           <Button size="large">Large Default</Button>
-          <Button color="primary" size="large">
+          <Button variant="primary" size="large">
             Large Positive
           </Button>
-          <Button color="danger" size="large">
+          <Button variant="danger" size="large">
             Large Danger
           </Button>
-          <Button color="cancel" size="large">
+          <Button variant="tertiary" size="large">
             Large Cancel
           </Button>
         </HStack>
@@ -256,13 +257,13 @@ const UIToolkitPage = () => {
             <IconLightBulb /> <span>Normal Icon</span>
           </Button>
           <Button size="normal">Normal Default</Button>
-          <Button color="primary" size="normal">
+          <Button variant="primary" size="normal">
             Normal Positive
           </Button>
-          <Button color="danger" size="normal">
+          <Button variant="danger" size="normal">
             Normal Danger
           </Button>
-          <Button color="cancel" size="normal">
+          <Button variant="tertiary" size="normal">
             Normal Cancel
           </Button>
         </HStack>
@@ -272,13 +273,13 @@ const UIToolkitPage = () => {
             <IconLightBulb /> <span>Small Icon</span>
           </Button>
           <Button size="small">Small Default</Button>
-          <Button color="primary" size="small">
+          <Button variant="primary" size="small">
             Small Positive
           </Button>
-          <Button color="danger" size="small">
+          <Button variant="danger" size="small">
             Small Danger
           </Button>
-          <Button color="cancel" size="small">
+          <Button variant="tertiary" size="small">
             Small Cancel
           </Button>
         </HStack>
@@ -288,13 +289,13 @@ const UIToolkitPage = () => {
             <IconLightBulb /> <span>Tiny Icon</span>
           </Button>
           <Button size="tiny">Tiny Default</Button>
-          <Button color="primary" size="tiny">
+          <Button variant="primary" size="tiny">
             Tiny Positive
           </Button>
-          <Button color="danger" size="tiny">
+          <Button variant="danger" size="tiny">
             Tiny Danger
           </Button>
-          <Button color="cancel" size="tiny">
+          <Button variant="tertiary" size="tiny">
             Tiny Cancel
           </Button>
         </HStack>
@@ -304,13 +305,13 @@ const UIToolkitPage = () => {
             <IconLightBulb /> <span>Mini Icon</span>
           </Button>
           <Button size="mini">Mini Default</Button>
-          <Button color="primary" size="mini">
+          <Button variant="primary" size="mini">
             Mini Positive
           </Button>
-          <Button color="danger" size="mini">
+          <Button variant="danger" size="mini">
             Mini Danger
           </Button>
-          <Button color="cancel" size="mini">
+          <Button variant="tertiary" size="mini">
             Mini Cancel
           </Button>
         </HStack>
@@ -320,10 +321,10 @@ const UIToolkitPage = () => {
             <IconLightBulb /> <span>Link</span>
           </Button>
           <Button href="#">Link</Button>
-          <Button href="#" color="primary">
+          <Button href="#" variant="primary">
             Link
           </Button>
-          <Button href="#" color="danger">
+          <Button href="#" variant="danger">
             Link
           </Button>
         </HStack>
@@ -333,10 +334,10 @@ const UIToolkitPage = () => {
             <IconLightBulb /> <span>Default</span>
           </Button>
           <Button disabled={true}>Default</Button>
-          <Button disabled={true} color="primary">
+          <Button disabled={true} variant="primary">
             Positive
           </Button>
-          <Button disabled={true} color="danger">
+          <Button disabled={true} variant="danger">
             Danger
           </Button>
         </HStack>
@@ -346,12 +347,18 @@ const UIToolkitPage = () => {
             <IconLightBulb /> <span>Loading</span>
           </Button>
           <Button onClick={showLoading}>Loading</Button>
-          <Button color="primary" onClick={showLoading}>
+          <Button variant="primary" onClick={showLoading}>
             Loading
           </Button>
-          <Button color="danger" onClick={showLoading}>
+          <Button variant="danger" onClick={showLoading}>
             Loading
           </Button>
+        </HStack>
+
+        <HStack>
+          <SocialSignInButton option={{ displayName: "GitHub", provider: "github" }} />
+          <SocialSignInButton option={{ displayName: "Facebook", provider: "facebook" }} />
+          <SocialSignInButton option={{ displayName: "Google", provider: "google" }} />
         </HStack>
       </VStack>
 
@@ -456,7 +463,7 @@ const UIToolkitPage = () => {
         <Input label="Disabled!" field="unamed" disabled={true} value={"you can't change this!"} />
         <Input label="Name" field="name" placeholder={"Your name goes here..."} />
         <Input label="Subdomain" field="subdomain" suffix="fider.io" />
-        <Input label="Email" field="email" suffix={<Button color="primary">Sign in</Button>} />
+        <Input label="Email" field="email" suffix={<Button variant="primary">Sign in</Button>} />
         <TextArea label="Description" field="description" minRows={5}>
           <p className="text-muted">This textarea resizes as you type.</p>
         </TextArea>

@@ -48,10 +48,10 @@ export class DangerZone extends React.Component<any, DangerZoneState> {
             </p>
           </Modal.Content>
           <Modal.Footer>
-            <Button color="danger" size="tiny" onClick={this.onConfirm}>
+            <Button variant="danger" size="tiny" onClick={this.onConfirm}>
               Confirm
             </Button>
-            <Button color="cancel" size="tiny" onClick={this.onCancel}>
+            <Button variant="tertiary" size="tiny" onClick={this.onCancel}>
               Cancel
             </Button>
           </Modal.Footer>
@@ -63,7 +63,7 @@ export class DangerZone extends React.Component<any, DangerZoneState> {
           be anonymised.
         </p>
         <p className="text-muted">This process is irreversible. Please be certain.</p>
-        <Button color="danger" size="tiny" onClick={this.onClickDelete}>
+        <Button variant="danger" size="tiny" onClick={this.onClickDelete}>
           Delete My Account
         </Button>
       </div>

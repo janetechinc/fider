@@ -20,7 +20,7 @@ export default class ExportPage extends AdminBasePage<any, any> {
             </p>
           </Field>
           <Field>
-            <Button color="primary" href="/admin/export/posts.csv">
+            <Button variant="primary" href="/admin/export/posts.csv">
               posts.csv
             </Button>
           </Field>
@@ -32,7 +32,7 @@ export default class ExportPage extends AdminBasePage<any, any> {
             </p>
           </Field>
           <Field>
-            <Button color="primary" href="/admin/export/backup.zip">
+            <Button variant="primary" href="/admin/export/backup.zip">
               backup.zip
             </Button>
           </Field>

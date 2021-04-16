@@ -12,11 +12,12 @@
   padding: 8px 16px;
   font-weight: 600;
 
-  svg + * {
+  svg + *,
+  img + * {
     margin-left: spacing(1);
   }
 
-  &.m-cancel {
+  &--tertiary {
     background-color: transparent;
 
     &:hover {
@@ -24,7 +25,7 @@
     }
   }
 
-  &.m-default {
+  &--secondary {
     color: get("colors.gray.900");
     background-color: get("colors.gray.50");
     border: 1px solid get("colors.gray.300");
@@ -34,7 +35,7 @@
     }
   }
 
-  &.m-primary {
+  &--primary {
     color: get("colors.white");
     background-color: get("colors.primary.base");
     border: 1px solid get("colors.primary.base");
@@ -44,7 +45,7 @@
     }
   }
 
-  &.m-danger {
+  &--danger {
     color: get("colors.red.600");
     border: 1px solid get("colors.gray.300");
     background-color: get("colors.white");
@@ -56,56 +57,57 @@
     }
   }
 
-  &.m-mini {
+  &--mini {
     padding: 6px 12px;
     font-size: $font-size-tiny;
 
-    svg {
+    svg,
+    img {
       height: sizing(2);
     }
   }
 
-  &.m-tiny {
+  &--tiny {
     padding: 7px 14px;
     font-size: $font-size-tiny;
 
-    svg {
+    svg,
+    img {
       height: sizing(3);
     }
   }
 
-  &.m-small {
+  &--small {
     padding: 8px 16px;
     font-size: $font-size-small;
 
-    svg {
+    svg,
+    img {
       height: sizing(4);
     }
   }
 
-  &.m-normal {
+  &--normal {
     padding: 9px 18px;
     font-size: $font-size-base;
 
-    svg {
+    svg,
+    img {
       height: sizing(4);
     }
   }
 
-  &.m-large {
+  &--large {
     padding: 10px 20px;
     font-size: $font-size-large;
 
-    svg {
+    svg,
+    img {
       height: sizing(5);
     }
   }
 
-  &.m-fluid {
-    width: 100%;
-  }
-
-  &.m-loading {
+  &--loading {
     position: relative;
     cursor: default;
     text-shadow: none !important;
@@ -144,37 +146,8 @@
     }
   }
 
-  &.m-disabled {
+  &--disabled {
     @include disabled();
-  }
-
-  &.m-social {
-    background-color: get("colors.white");
-    color: get("colors.gray.900");
-    text-align: center;
-    height: 40px;
-    line-height: 22px;
-    padding: 8px 0px;
-    border: none;
-    box-shadow: 0 0 0 1px get("colors.gray.300");
-
-    &.m-loading img {
-      display: none;
-    }
-
-    img {
-      display: inline-block;
-      vertical-align: middle;
-      width: 24px;
-      height: 24px;
-      margin-right: 5px;
-    }
-
-    &:hover {
-      color: get("colors.gray.900");
-      border: none;
-      box-shadow: 0 0 0 1px get("colors.gray.400");
-    }
   }
 }
 

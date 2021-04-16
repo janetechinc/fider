@@ -1,9 +1,10 @@
+import "@fider/assets/styles/index.scss"
+
 import React, { Suspense } from "react"
 import ReactDOM from "react-dom"
 import { resolveRootComponent } from "@fider/router"
 import { Header, ErrorBoundary, Loader } from "@fider/components"
 import { classSet, Fider, FiderContext, actions } from "@fider/services"
-import "@fider/assets/styles/index.scss"
 
 const Loading = () => (
   <div className="page">

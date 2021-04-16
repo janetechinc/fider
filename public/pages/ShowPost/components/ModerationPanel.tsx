@@ -45,10 +45,10 @@ export const ModerationPanel = (props: ModerationPanelProps) => {
       </Modal.Content>
 
       <Modal.Footer>
-        <Button color="danger" onClick={handleDelete}>
+        <Button variant="danger" onClick={handleDelete}>
           Delete
         </Button>
-        <Button color="cancel" onClick={hideModal}>
+        <Button variant="tertiary" onClick={hideModal}>
           Cancel
         </Button>
       </Modal.Footer>
@@ -61,7 +61,7 @@ export const ModerationPanel = (props: ModerationPanelProps) => {
       <span className="text-category">Moderation</span>
       <List>
         <ListItem>
-          <Button color="danger" size="tiny" fluid={true} onClick={showModal}>
+          <Button variant="danger" size="tiny" className="w-100" onClick={showModal}>
             Delete
           </Button>
         </ListItem>

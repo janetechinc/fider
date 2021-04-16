@@ -33,12 +33,12 @@ export const VotesPanel = (props: VotesPanelProps) => {
       <HStack>
         {props.votes.length > 0 && <AvatarStack users={props.votes.map((x) => x.user)} />}
         {extraVotesCount > 0 && (
-          <Button color="cancel" disabled={!canShowAll} size="tiny" onClick={openModal}>
+          <Button variant="tertiary" disabled={!canShowAll} size="tiny" onClick={openModal}>
             +{extraVotesCount} more
           </Button>
         )}
         {props.votes.length > 0 && extraVotesCount === 0 && canShowAll && (
-          <Button color="cancel" size="tiny" disabled={!canShowAll} onClick={openModal}>
+          <Button variant="tertiary" size="tiny" disabled={!canShowAll} onClick={openModal}>
             see details
           </Button>
         )}

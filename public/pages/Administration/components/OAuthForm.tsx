@@ -234,10 +234,10 @@ export const OAuthForm: React.FC<OAuthFormProps> = (props) => {
         </div>
 
         <div className="c-form-field">
-          <Button color="primary" onClick={handleSave}>
+          <Button variant="primary" onClick={handleSave}>
             Save
           </Button>
-          <Button color="cancel" onClick={handleCancel}>
+          <Button variant="tertiary" onClick={handleCancel}>
             Cancel
           </Button>
         </div>

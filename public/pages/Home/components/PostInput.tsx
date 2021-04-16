@@ -72,7 +72,7 @@ export const PostInput = (props: PostInputProps) => {
     <>
       <TextArea field="description" onChange={handleDescriptionChange} value={description} minRows={5} placeholder="Describe your suggestion (optional)" />
       <MultiImageUploader field="attachments" maxUploads={3} previewMaxWidth={100} onChange={setAttachments} />
-      <Button type="submit" color="primary" onClick={submit}>
+      <Button type="submit" variant="primary" onClick={submit}>
         Submit
       </Button>
     </>

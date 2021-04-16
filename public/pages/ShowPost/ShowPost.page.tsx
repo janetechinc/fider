@@ -144,12 +144,12 @@ export default class ShowPostPage extends React.Component<ShowPostPageProps, Sho
               this.state.editMode ? (
                 <List key={1}>
                   <ListItem>
-                    <Button className="save" color="primary" fluid={true} onClick={this.saveChanges}>
+                    <Button className="w-100" variant="primary" onClick={this.saveChanges}>
                       <IconCheck /> <span>Save</span>
                     </Button>
                   </ListItem>
                   <ListItem>
-                    <Button className="cancel" fluid={true} onClick={this.cancelEdit}>
+                    <Button className="w-100" onClick={this.cancelEdit}>
                       <IconX /> <span>Cancel</span>
                     </Button>
                   </ListItem>
@@ -157,7 +157,7 @@ export default class ShowPostPage extends React.Component<ShowPostPageProps, Sho
               ) : (
                 <List key={1}>
                   <ListItem>
-                    <Button className="edit" fluid={true} onClick={this.startEdit}>
+                    <Button className="w-100" onClick={this.startEdit}>
                       <IconPencilAlt /> <span>Edit</span>
                     </Button>
                   </ListItem>

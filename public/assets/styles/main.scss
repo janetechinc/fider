@@ -128,15 +128,6 @@ ul {
   transition: all 0.3s ease;
 }
 
-[type="reset"],
-[type="submit"],
-button,
-html [type="button"] {
-  -webkit-appearance: button;
-  appearance: button;
-  padding: 0;
-}
-
 .page {
   flex: 1 0 auto;
   padding-top: spacing(4);

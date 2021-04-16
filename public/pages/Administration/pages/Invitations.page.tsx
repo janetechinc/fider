@@ -126,7 +126,7 @@ ${Fider.session.user.name} (${Fider.session.tenant.name})`,
 
         <Field label="Confirmation">
           <p className="text-muted">Whenever you&apos;re ready, click the following button to send out these invites.</p>
-          <Button onClick={this.sendInvites} color="primary" disabled={this.state.numOfRecipients === 0}>
+          <Button onClick={this.sendInvites} variant="primary" disabled={this.state.numOfRecipients === 0}>
             Send {this.state.numOfRecipients} {this.state.numOfRecipients === 1 ? "invite" : "invites"}
           </Button>
         </Field>

@@ -96,7 +96,7 @@ export class VotesModal extends React.Component<VotesModalProps, VotesModalState
         </Modal.Content>
 
         <Modal.Footer>
-          <Button color="cancel" onClick={this.closeModal}>
+          <Button variant="tertiary" onClick={this.closeModal}>
             Close
           </Button>
         </Modal.Footer>

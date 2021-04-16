@@ -94,10 +94,10 @@ export const ShowComment = (props: ShowCommentProps) => {
         </Modal.Content>
 
         <Modal.Footer>
-          <Button color="danger" onClick={deleteComment}>
+          <Button variant="danger" onClick={deleteComment}>
             Delete
           </Button>
-          <Button color="cancel" onClick={closeModal}>
+          <Button variant="tertiary" onClick={closeModal}>
             Cancel
           </Button>
         </Modal.Footer>
@@ -146,10 +146,10 @@ export const ShowComment = (props: ShowCommentProps) => {
             <Form error={error}>
               <TextArea field="content" minRows={1} value={newContent} placeholder={comment.content} onChange={setNewContent} />
               <MultiImageUploader field="attachments" bkeys={comment.attachments} maxUploads={2} previewMaxWidth={100} onChange={setAttachments} />
-              <Button size="tiny" onClick={saveEdit} color="primary">
+              <Button size="tiny" onClick={saveEdit} variant="primary">
                 Save
               </Button>
-              <Button color="cancel" size="tiny" onClick={cancelEdit}>
+              <Button variant="tertiary" size="tiny" onClick={cancelEdit}>
                 Cancel
               </Button>
             </Form>
