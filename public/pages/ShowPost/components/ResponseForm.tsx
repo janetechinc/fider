@@ -66,7 +66,7 @@ export class ResponseForm extends React.Component<ResponseFormProps, ResponseFor
 
   public render() {
     const button = (
-      <Button className="w-100" onClick={this.showModal}>
+      <Button className="w-full" onClick={this.showModal}>
         <IconSpeakerPhone /> <span>Respond</span>
       </Button>
     )

@@ -29,11 +29,11 @@ export const NotificationsPanel = (props: NotificationsPanelProps) => {
   }
 
   const button = subscribed ? (
-    <Button className="w-100" onClick={subscribeOrUnsubscribe}>
+    <Button className="w-full" onClick={subscribeOrUnsubscribe}>
       <IconVolumeOff /> <span>Unsubscribe</span>
     </Button>
   ) : (
-    <Button className="w-100" onClick={subscribeOrUnsubscribe}>
+    <Button className="w-full" onClick={subscribeOrUnsubscribe}>
       <IconVolumeOn /> <span>Subscribe</span>
     </Button>
   )

@@ -11,6 +11,14 @@
   align-items: center;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
 @for $i from 0 through 6 {
   .flex-x.flex--spacing-#{$i} > * + * {
     margin-left: spacing($i);

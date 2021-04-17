@@ -47,3 +47,15 @@
 .text-center {
   text-align: center;
 }
+
+.text-medium {
+  font-weight: get("font.weight.medium");
+}
+
+.text-semibold {
+  font-weight: get("font.weight.semibold");
+}
+
+.text-bold {
+  font-weight: get("font.weight.bold");
+}

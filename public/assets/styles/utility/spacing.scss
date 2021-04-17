@@ -26,26 +26,26 @@
 
   // Padding
   .p-#{$i} {
-    margin: spacing($i);
+    padding: spacing($i);
   }
   .pb-#{$i} {
-    margin-bottom: spacing($i);
+    padding-bottom: spacing($i);
   }
   .pt-#{$i} {
-    margin-top: spacing($i);
+    padding-top: spacing($i);
   }
   .pl-#{$i} {
-    margin-left: spacing($i);
+    padding-left: spacing($i);
   }
-  .pt-#{$i} {
-    margin-right: spacing($i);
+  .pr-#{$i} {
+    padding-right: spacing($i);
   }
   .px-#{$i} {
-    margin-left: spacing($i);
-    margin-right: spacing($i);
+    padding-left: spacing($i);
+    padding-right: spacing($i);
   }
   .py-#{$i} {
-    margin-bottom: spacing($i);
-    margin-top: spacing($i);
+    padding-bottom: spacing($i);
+    padding-top: spacing($i);
   }
 }

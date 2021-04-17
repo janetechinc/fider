@@ -28,10 +28,10 @@ import {
   Hint,
   AvatarStack,
   SocialSignInButton,
+  Select2,
 } from "@fider/components"
 import { User, UserRole, Tag } from "@fider/models"
 import { notify, Failure } from "@fider/services"
-import { DropDown, DropDownItem } from "@fider/components"
 import { HStack, VStack } from "@fider/components/layout"
 import IconLightBulb from "@fider/assets/images/heroicons-light-bulb.svg"
 import IconSearch from "@fider/assets/images/heroicons-search.svg"
@@ -62,14 +62,16 @@ const robStark: User = {
     "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixqx=1JzWlMeJDF&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80",
 }
 
-const easyTag: Tag = { id: 2, slug: "easy", name: "easy", color: "FB3A62", isPublic: true }
-const hardTag: Tag = { id: 3, slug: "hard", name: "hard", color: "fbca04", isPublic: false }
+const easyTag: Tag = { id: 1, slug: "easy", name: "Easy", color: "82c460", isPublic: true }
+const normalTag: Tag = { id: 2, slug: "normal", name: "Normal", color: "ebb134", isPublic: false }
+const hardTag: Tag = { id: 3, slug: "hard", name: "Hard", color: "9c3630", isPublic: false }
 
 const visibilityPublic = { label: "Public", value: "public" }
 const visibilityPrivate = { label: "Private", value: "private" }
 
 const UIToolkitPage = () => {
   const [error, setError] = useState<Failure | undefined>(undefined)
+  const [selectedTag, setSelectedTag] = useState<Tag | undefined>(undefined)
 
   const notifyError = async () => {
     notify.error("Something went wrong...")
@@ -98,20 +100,6 @@ const UIToolkitPage = () => {
         { field: "status", message: "Status is mandatory" },
       ],
     })
-  }
-
-  const renderText = (item?: DropDownItem) => {
-    if (item) {
-      return `${item.label} (value: ${item.value})`
-    }
-    return <span>No country is selected</span>
-  }
-
-  const renderControl = (item?: DropDownItem) => {
-    if (item) {
-      return item.render
-    }
-    return <span>...</span>
   }
 
   return (
@@ -175,7 +163,7 @@ const UIToolkitPage = () => {
         <div className="color yellow-400" />
         <div className="color yellow-300" />
         <div className="color yellow-200" />
-        <div className="color yellow-100" />
+        <div className="color yellow-full" />
         <div className="color yellow-50" />
       </div>
       <div className="color-scale">
@@ -372,14 +360,18 @@ const UIToolkitPage = () => {
 
       <h2 className="text-display2 mb-3 mt-6">9. Tags</h2>
 
-      <List>
-        <ListItem>
+      <VStack>
+        <HStack>
           <ShowTag tag={easyTag} />
+          <ShowTag tag={normalTag} />
           <ShowTag tag={hardTag} />
+        </HStack>
+        <HStack>
           <ShowTag tag={easyTag} circular={true} />
+          <ShowTag tag={normalTag} circular={true} />
           <ShowTag tag={hardTag} circular={true} />
-        </ListItem>
-      </List>
+        </HStack>
+      </VStack>
 
       <h2 className="text-display2 mb-3 mt-6">10. Notification</h2>
 
@@ -425,49 +417,7 @@ const UIToolkitPage = () => {
       <Hint permanentCloseKey="ui-toolkip-example">Did you know that you can close this permanently?</Hint>
       <Hint>You can&apos;t close this one :)</Hint>
 
-      <h2 className="text-display2 mb-3 mt-6">15. Dropdown</h2>
-
-      <Field label="Number">
-        <DropDown
-          items={[
-            { label: "One", value: "1" },
-            { label: "Two", value: "2" },
-            { label: "Three", value: "3" },
-          ]}
-          defaultValue={"1"}
-          placeholder="Select a number"
-        />
-      </Field>
-
-      <Field label="Country (custom render text)">
-        <DropDown
-          items={[
-            { label: "Brazil", value: "br" },
-            { label: "United States", value: "us" },
-            { label: "Ireland", value: "ie" },
-          ]}
-          defaultValue={"1"}
-          renderText={renderText}
-          placeholder="Select a number"
-        />
-      </Field>
-
-      <Field label="Color (custom render control)">
-        <DropDown
-          items={[
-            { label: "Green", value: "green", render: <span className="text-green-500">Green</span> },
-            { label: "Red", value: "red", render: <span className="text-red-500">Red</span> },
-            { label: "Yellow", value: "yellow", render: <span className="text-yellow-500">Yellow</span> },
-          ]}
-          placeholder="Select a color"
-          inline={true}
-          style="simple"
-          header="What color do you like the most?"
-          renderControl={renderControl}
-        />
-      </Field>
-
-      <h2 className="text-display2 mb-3 mt-6">16. Form</h2>
+      <h2 className="text-display2 mb-3 mt-6">15. Form</h2>
 
       <Form error={error}>
         <Input label="Title" field="title">
@@ -508,10 +458,24 @@ const UIToolkitPage = () => {
           onChange={notifyStatusChange}
         />
 
+        <Field label="Tags">
+          <Select2
+            itemKey="id"
+            items={[easyTag, normalTag, hardTag]}
+            onSelect={setSelectedTag}
+            renderItem={(item) => (
+              <span className={selectedTag === item ? "text-semibold" : ""}>
+                <ShowTag tag={item} />
+              </span>
+            )}
+            renderHandle={() => (selectedTag === undefined ? <span>Select a tag</span> : <ShowTag tag={selectedTag} />)}
+          />
+        </Field>
+
         <Button onClick={forceError}>Save</Button>
       </Form>
 
-      <h2 className="text-display2 mb-3 mt-6">17. Search</h2>
+      <h2 className="text-display2 mb-3 mt-6">16. Search</h2>
 
       <Input field="search" placeholder="Search..." icon={IconSearch} />
     </div>
