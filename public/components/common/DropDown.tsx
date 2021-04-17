@@ -172,14 +172,14 @@ export class DropDown extends React.Component<DropDownProps, DropDownState> {
 
     return (
       <div ref={this.rootElementRef} className={dropdownClass}>
-        <div onMouseDown={this.handleMouseDown} onTouchEnd={this.handleMouseDown}>
+        <div onClick={this.handleMouseDown}>
           {this.props.renderControl ? (
-            <div className="c-dropdown-control">{this.props.renderControl(this.state.selected)}</div>
+            <button className="c-dropdown-control">{this.props.renderControl(this.state.selected)}</button>
           ) : (
-            <div className="c-dropdown-control">
+            <button className="c-dropdown-control">
               {this.state.isOpen && this.props.searchable ? search : this.props.renderText ? this.props.renderText(this.state.selected) : <div>{text}</div>}
               <span className="c-dropdown-arrow" />
-            </div>
+            </button>
           )}
         </div>
         {this.state.isOpen && this.buildItemList()}

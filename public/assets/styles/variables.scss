@@ -7,6 +7,13 @@
 $all: (
   colors: $colors,
   font: $font,
+  border: (
+    radius: (
+      small: 4px,
+      medium: 6px,
+      large: 8px,
+    ),
+  ),
 );
 
 // Queries

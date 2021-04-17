@@ -5,7 +5,7 @@
     width: 40px;
     height: 40px;
     display: inline-block;
-    margin: 0px 4px;
+    margin: 2px;
     border-radius: 4px;
 
     @each $name, $shades in $colors {

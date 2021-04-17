@@ -71,15 +71,13 @@
     background-color: get("colors.white");
     border: 1px solid get("colors.gray.300");
     box-shadow: 0 1px 0 get("colors.gray.100");
-    box-sizing: border-box;
-    margin-top: -1px;
+    margin-top: sizing(1);
     overflow-y: auto;
     position: absolute;
     width: 100%;
     top: 100%;
     z-index: 1000;
-    min-width: -webkit-min-content;
-    min-width: -moz-min-content;
+    border-radius: get("border.radius.medium");
     min-width: min-content;
     max-height: 300px;
     -webkit-overflow-scrolling: touch;
@@ -112,7 +110,7 @@
       }
 
       &.is-selected {
-        font-weight: 700;
+        font-weight: get("font.weight.semibold");
       }
     }
 

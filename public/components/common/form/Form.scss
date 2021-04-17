@@ -9,7 +9,7 @@
     input[type="text"],
     textarea,
     select {
-      padding: 8px;
+      padding: sizing(2);
     }
   }
 }
@@ -30,8 +30,9 @@
 
   label {
     display: block;
+    font-size: get("font.size.sm");
     margin: 0 0 5px;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   .c-form-field-wrapper {
@@ -39,18 +40,28 @@
     margin: 0 0 5px;
   }
 
+  select {
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em;
+    padding-right: 2.5rem;
+  }
+
   input[type="text"],
   textarea,
   select {
+    font-size: get("font.size.sm");
+    line-height: 20px;
     background-color: get("colors.white");
-    -webkit-appearance: none;
-    appearance: none;
     width: 100%;
-    padding: 8px;
+    padding: sizing(2);
     margin: 0;
     resize: none !important;
     border: 1px solid get("colors.gray.300");
-    border-radius: 3px;
+    border-radius: get("border.radius.medium");
 
     &:disabled {
       opacity: 0.45;
@@ -72,11 +83,7 @@
     input[type="text"],
     textarea,
     select {
-      border-color: get("colors.red.500");
-    }
-
-    label {
-      color: get("colors.red.500");
+      border-color: get("colors.red.600");
     }
   }
 
@@ -103,13 +110,14 @@
       border-bottom-right-radius: 0px;
     }
     .c-form-input-suffix {
+      font-size: get("font.size.sm");
       line-height: 20px;
       flex: 0 0 auto;
       padding: 8px 10px 9px 10px;
       font-weight: 600;
       background-color: get("colors.gray.200");
-      border-top-right-radius: 3px;
-      border-bottom-right-radius: 3px;
+      border-top-right-radius: get("border.radius.medium");
+      border-bottom-right-radius: get("border.radius.medium");
     }
   }
 
@@ -125,13 +133,12 @@
 }
 
 .c-form-field-error {
-  color: get("colors.red.400");
-  font-weight: bold;
+  color: get("colors.red.600");
   font-size: $font-size-small;
   margin: 0 0 10px 0;
   ul {
     list-style: none;
-    padding-left: 5px;
+    padding-left: sizing(1);
     margin: 0;
   }
 }

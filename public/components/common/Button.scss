@@ -63,7 +63,7 @@
 
     svg,
     img {
-      height: sizing(2);
+      height: sizing(3);
     }
   }
 
@@ -79,11 +79,11 @@
 
   &--large {
     padding: 9px 18px;
-    font-size: $font-size-base;
+    font-size: $font-size-large;
 
     svg,
     img {
-      height: sizing(4);
+      height: sizing(5);
     }
   }
 

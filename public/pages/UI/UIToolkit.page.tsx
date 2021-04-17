@@ -425,7 +425,49 @@ const UIToolkitPage = () => {
       <Hint permanentCloseKey="ui-toolkip-example">Did you know that you can close this permanently?</Hint>
       <Hint>You can&apos;t close this one :)</Hint>
 
-      <h2 className="text-display2 mb-3 mt-6">15. Form</h2>
+      <h2 className="text-display2 mb-3 mt-6">15. Dropdown</h2>
+
+      <Field label="Number">
+        <DropDown
+          items={[
+            { label: "One", value: "1" },
+            { label: "Two", value: "2" },
+            { label: "Three", value: "3" },
+          ]}
+          defaultValue={"1"}
+          placeholder="Select a number"
+        />
+      </Field>
+
+      <Field label="Country (custom render text)">
+        <DropDown
+          items={[
+            { label: "Brazil", value: "br" },
+            { label: "United States", value: "us" },
+            { label: "Ireland", value: "ie" },
+          ]}
+          defaultValue={"1"}
+          renderText={renderText}
+          placeholder="Select a number"
+        />
+      </Field>
+
+      <Field label="Color (custom render control)">
+        <DropDown
+          items={[
+            { label: "Green", value: "green", render: <span className="text-green-500">Green</span> },
+            { label: "Red", value: "red", render: <span className="text-red-500">Red</span> },
+            { label: "Yellow", value: "yellow", render: <span className="text-yellow-500">Yellow</span> },
+          ]}
+          placeholder="Select a color"
+          inline={true}
+          style="simple"
+          header="What color do you like the most?"
+          renderControl={renderControl}
+        />
+      </Field>
+
+      <h2 className="text-display2 mb-3 mt-6">16. Form</h2>
 
       <Form error={error}>
         <Input label="Title" field="title">
@@ -433,7 +475,7 @@ const UIToolkitPage = () => {
         </Input>
         <Input label="Disabled!" field="unamed" disabled={true} value={"you can't change this!"} />
         <Input label="Name" field="name" placeholder={"Your name goes here..."} />
-        <Input label="Subdomain" field="subdomain" suffix="fider.io" />
+        <Input label="Subdomain" field="subdomain" suffix=".fider.io" />
         <Input label="Email" field="email" suffix={<Button variant="primary">Sign in</Button>} />
         <TextArea label="Description" field="description" minRows={5}>
           <p className="text-muted">This textarea resizes as you type.</p>
@@ -466,50 +508,10 @@ const UIToolkitPage = () => {
           onChange={notifyStatusChange}
         />
 
-        <Field label="Number">
-          <DropDown
-            items={[
-              { label: "One", value: "1" },
-              { label: "Two", value: "2" },
-              { label: "Three", value: "3" },
-            ]}
-            defaultValue={"1"}
-            placeholder="Select a number"
-          />
-        </Field>
-
-        <Field label="Country (custom render text)">
-          <DropDown
-            items={[
-              { label: "Brazil", value: "br" },
-              { label: "United States", value: "us" },
-              { label: "Ireland", value: "ie" },
-            ]}
-            defaultValue={"1"}
-            renderText={renderText}
-            placeholder="Select a number"
-          />
-        </Field>
-
-        <Field label="Color (custom render control)">
-          <DropDown
-            items={[
-              { label: "Green", value: "green", render: <span style={{ color: "green" }}>Green</span> },
-              { label: "Red", value: "red", render: <span style={{ color: "red" }}>Red</span> },
-              { label: "Blue", value: "blue", render: <span style={{ color: "blue" }}>Blue</span> },
-            ]}
-            placeholder="Select a color"
-            inline={true}
-            style="simple"
-            header="What color do you like the most?"
-            renderControl={renderControl}
-          />
-        </Field>
-
         <Button onClick={forceError}>Save</Button>
       </Form>
 
-      <h2 className="text-display2 mb-3 mt-6">15. Search</h2>
+      <h2 className="text-display2 mb-3 mt-6">17. Search</h2>
 
       <Input field="search" placeholder="Search..." icon={IconSearch} />
     </div>
