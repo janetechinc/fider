@@ -19,11 +19,11 @@ export const Header = () => {
       <DevBanner />
       <div id="c-header">
         <SignInModal isOpen={isSignInModalOpen} onClose={hideModal} />
-        <HStack className="c-menu shadow h-12">
+        <HStack className="c-menu shadow p-2">
           <HStack justify="between" className="container">
-            <a href="/" className="c-menu-item-title">
+            <a href="/" className="flex flex-x flex--spacing-2 h-8">
               <TenantLogo size={100} />
-              <h1 className="text-display">{fider.session.tenant.name}</h1>
+              <h1 className="text-title">{fider.session.tenant.name}</h1>
             </a>
             {fider.session.isAuthenticated && (
               <HStack spacing={2}>
