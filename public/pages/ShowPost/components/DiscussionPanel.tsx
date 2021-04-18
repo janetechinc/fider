@@ -5,6 +5,7 @@ import { CurrentUser, Comment, Post } from "@fider/models"
 import { ShowComment } from "./ShowComment"
 import { CommentInput } from "./CommentInput"
 import PostIllustration from "@fider/assets/images/undraw-post.svg"
+import { Icon } from "@fider/components"
 
 interface DiscussionPanelProps {
   user?: CurrentUser
@@ -23,7 +24,7 @@ export const DiscussionPanel = (props: DiscussionPanelProps) => {
         ))}
         {props.comments.length === 0 && (
           <div className="text-center">
-            <PostIllustration height="150" />
+            <Icon sprite={PostIllustration} height="150" />
             <p>No one has commented yet.</p>
           </div>
         )}

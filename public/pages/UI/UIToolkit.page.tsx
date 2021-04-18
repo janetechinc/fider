@@ -30,6 +30,7 @@ import {
   SocialSignInButton,
   Select2,
   Dropdown2,
+  Icon,
 } from "@fider/components"
 import { User, UserRole, Tag } from "@fider/models"
 import { notify, Failure } from "@fider/services"
@@ -230,7 +231,7 @@ const UIToolkitPage = () => {
             Primary
           </Button>
           <Button size="large">
-            <IconLightBulb /> <span>Secondary</span>
+            <Icon sprite={IconLightBulb} /> <span>Secondary</span>
           </Button>
           <Button size="large">Secondary</Button>
           <Button variant="tertiary" size="large">
@@ -244,7 +245,7 @@ const UIToolkitPage = () => {
         <HStack>
           <Button variant="primary">Primary</Button>
           <Button>
-            <IconLightBulb /> <span>Secondary</span>
+            <Icon sprite={IconLightBulb} /> <span>Secondary</span>
           </Button>
           <Button>Secondary</Button>
           <Button variant="tertiary">Tertiary</Button>
@@ -256,7 +257,7 @@ const UIToolkitPage = () => {
             Primary
           </Button>
           <Button size="small">
-            <IconLightBulb /> <span>Secondary</span>
+            <Icon sprite={IconLightBulb} /> <span>Secondary</span>
           </Button>
           <Button size="small">Secondary</Button>
           <Button variant="tertiary" size="small">
@@ -272,7 +273,7 @@ const UIToolkitPage = () => {
             Link
           </Button>
           <Button href="#">
-            <IconLightBulb /> <span>Link</span>
+            <Icon sprite={IconLightBulb} /> <span>Link</span>
           </Button>
           <Button>Link</Button>
           <Button variant="tertiary" href="#">
@@ -288,7 +289,7 @@ const UIToolkitPage = () => {
             Primary
           </Button>
           <Button disabled={true}>
-            <IconLightBulb /> <span>Secondary</span>
+            <Icon sprite={IconLightBulb} /> <span>Secondary</span>
           </Button>
           <Button disabled={true}>Secondary</Button>
           <Button disabled={true} variant="tertiary">
@@ -304,7 +305,7 @@ const UIToolkitPage = () => {
             Loading
           </Button>
           <Button onClick={showLoading}>
-            <IconLightBulb /> <span>Loading</span>
+            <Icon sprite={IconLightBulb} /> <span>Loading</span>
           </Button>
           <Button onClick={showLoading}>Loading</Button>
           <Button variant="tertiary" onClick={showLoading}>

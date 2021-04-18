@@ -3,7 +3,7 @@ import "./VoteCounter.scss"
 import React, { useState } from "react"
 import { Post, PostStatus } from "@fider/models"
 import { actions, device, classSet } from "@fider/services"
-import { SignInModal } from "@fider/components"
+import { Icon, SignInModal } from "@fider/components"
 import { useFider } from "@fider/hooks"
 import FaCaretUp from "@fider/assets/images/fa-caretup.svg"
 
@@ -44,14 +44,14 @@ export const VoteCounter = (props: VoteCounterProps) => {
 
   const vote = (
     <button className={className} onClick={voteOrUndo}>
-      <FaCaretUp height="16" width="16" />
+      <Icon sprite={FaCaretUp} height="16" width="16" />
       {votesCount}
     </button>
   )
 
   const disabled = (
     <button className={className}>
-      <FaCaretUp height="16" width="16" />
+      <Icon sprite={FaCaretUp} height="16" width="16" />
       {votesCount}
     </button>
   )

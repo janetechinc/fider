@@ -8,11 +8,13 @@
   border-left: 2px solid get("colors.blue.800");
   background-color: get("colors.blue.50");
 
-  svg {
+  svg,
+  img {
     width: sizing(5);
   }
 
-  svg.c-hint-close {
+  svg.c-hint-close,
+  img.c-hint-close {
     position: absolute;
     cursor: pointer;
     right: 12px;

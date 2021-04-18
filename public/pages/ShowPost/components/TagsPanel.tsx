@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { Tag, Post } from "@fider/models"
 import { actions } from "@fider/services"
-import { ShowTag, List, ListItem } from "@fider/components"
+import { ShowTag, List, ListItem, Icon } from "@fider/components"
 import { TagListItem } from "./TagListItem"
 import { useFider } from "@fider/hooks"
 
@@ -72,7 +72,7 @@ export const TagsPanel = (props: TagsPanelProps) => {
   )
 
   const subtitleClasses = `text-category ${canEdit && "active"}`
-  const icon = canEdit && (isEditing ? <IconCheckCircle className="h-4" /> : <IconCog className="h-4" />)
+  const icon = canEdit && (isEditing ? <Icon sprite={IconCheckCircle} className="h-4" /> : <Icon sprite={IconCog} className="h-4" />)
 
   return (
     <>

@@ -4,7 +4,7 @@ import React from "react"
 import { ValidationContext } from "./Form"
 import { DisplayError, hasError } from "./DisplayError"
 import { classSet, fileToBase64, uploadedImageURL } from "@fider/services"
-import { Button, Modal } from "@fider/components"
+import { Button, Icon, Modal } from "@fider/components"
 import { ImageUpload } from "@fider/models"
 import IconPhotograph from "@fider/assets/images/heroicons-photograph.svg"
 
@@ -156,7 +156,7 @@ export class ImageUploader extends React.Component<ImageUploaderProps, ImageUplo
             {!hasFile && (
               <div className="c-form-field-wrapper">
                 <Button onClick={this.selectFile} size="large" disabled={this.props.disabled}>
-                  <IconPhotograph />
+                  <Icon sprite={IconPhotograph} />
                 </Button>
               </div>
             )}

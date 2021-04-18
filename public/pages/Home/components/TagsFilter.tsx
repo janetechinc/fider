@@ -3,7 +3,7 @@ import "./TagsFilter.scss"
 import React from "react"
 import { Tag } from "@fider/models"
 import { ShowTag } from "@fider/components/ShowTag"
-import { DropDown, DropDownItem } from "@fider/components"
+import { DropDown, DropDownItem, Icon } from "@fider/components"
 import IconCheck from "@fider/assets/images/heroicons-check.svg"
 
 interface TagsFilterProps {
@@ -52,7 +52,7 @@ export class TagsFilter extends React.Component<TagsFilterProps, TagsFilterState
         label: t.name,
         render: (
           <div className={this.state.selected.indexOf(t.slug) >= 0 ? "selected-tag" : ""}>
-            <IconCheck className="h-4 mr-2" />
+            <Icon sprite={IconCheck} className="h-4 mr-2" />
             <ShowTag tag={t} circular={true} />
             {t.name}
           </div>

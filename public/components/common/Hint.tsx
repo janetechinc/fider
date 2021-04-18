@@ -5,6 +5,7 @@ import IconX from "@fider/assets/images/heroicons-x.svg"
 import IconInformationCircle from "@fider/assets/images/heroicons-information-circle.svg"
 import { HStack } from "@fider/components/layout"
 import { cache } from "@fider/services"
+import { Icon } from "./Icon"
 
 interface HintProps {
   permanentCloseKey?: string
@@ -27,8 +28,8 @@ export const Hint: React.FC<HintProps> = (props) => {
   }
   return (
     <HStack className="c-hint">
-      <IconInformationCircle height="16" /> <span>{props.children}</span>
-      {cacheKey && <IconX onClick={close} className="c-hint-close" />}
+      <Icon sprite={IconInformationCircle} height="16" /> <span>{props.children}</span>
+      {cacheKey && <Icon sprite={IconX} onClick={close} className="c-hint-close" />}
     </HStack>
   )
 }

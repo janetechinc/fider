@@ -1,7 +1,7 @@
 import React from "react"
 import { Post, PostStatus } from "@fider/models"
 import { actions } from "@fider/services"
-import { DropDown, DropDownItem } from "@fider/components"
+import { DropDown, DropDownItem, Icon } from "@fider/components"
 import FaCaretUp from "@fider/assets/images/fa-caretup.svg"
 import { HStack } from "@fider/components/layout"
 
@@ -60,7 +60,7 @@ export class PostSearch extends React.Component<PostSearchProps, PostSearchState
         render: (
           <>
             <HStack className="votes">
-              <FaCaretUp className="h-4 mr-1" />
+              <Icon sprite={FaCaretUp} className="h-4 mr-1" />
               {p.votesCount}
             </HStack>
             <span className={`status-label status-${status.value}`}>{status.title}</span>

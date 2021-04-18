@@ -1,6 +1,6 @@
 import React from "react"
 
-import { Segment, List, ListItem, Button, PageTitle, OAuthProviderLogo } from "@fider/components"
+import { Segment, List, ListItem, Button, PageTitle, OAuthProviderLogo, Icon } from "@fider/components"
 import { OAuthConfig, OAuthProviderOption } from "@fider/models"
 import { OAuthForm } from "../components/OAuthForm"
 import { actions, notify, Fider } from "@fider/services"
@@ -85,12 +85,12 @@ export default class ManageAuthenticationPage extends AdminBasePage<ManageAuthen
                   <>
                     {Fider.session.user.isAdministrator && (
                       <Button onClick={this.edit.bind(this, o.provider)} size="small" className="right">
-                        <IconPencilAlt />
+                        <Icon sprite={IconPencilAlt} />
                         <span>Edit</span>
                       </Button>
                     )}
                     <Button onClick={this.startTest.bind(this, o.provider)} size="small" className="right">
-                      <IconPlay />
+                      <Icon sprite={IconPlay} />
                       <span>Test</span>
                     </Button>
                   </>

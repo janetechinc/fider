@@ -1,6 +1,6 @@
 import React from "react"
 
-import { Modal, Button, DisplayError, Select, Form, TextArea, Field, SelectOption } from "@fider/components"
+import { Modal, Button, DisplayError, Select, Form, TextArea, Field, SelectOption, Icon } from "@fider/components"
 import { Post, PostStatus } from "@fider/models"
 
 import { actions, Failure } from "@fider/services"
@@ -67,7 +67,7 @@ export class ResponseForm extends React.Component<ResponseFormProps, ResponseFor
   public render() {
     const button = (
       <Button className="w-full" onClick={this.showModal}>
-        <IconSpeakerPhone /> <span>Respond</span>
+        <Icon sprite={IconSpeakerPhone} /> <span>Respond</span>
       </Button>
     )
 

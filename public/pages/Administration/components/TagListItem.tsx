@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Tag } from "@fider/models"
-import { ListItem, ShowTag, Button } from "@fider/components"
+import { ListItem, ShowTag, Button, Icon } from "@fider/components"
 import { TagFormState, TagForm } from "./TagForm"
 import { actions, Failure } from "@fider/services"
 import { useFider } from "@fider/hooks"
@@ -68,11 +68,11 @@ export const TagListItem = (props: TagListItemProps) => {
   const renderViewMode = () => {
     const buttons = fider.session.user.isAdministrator && [
       <Button size="small" key={0} onClick={startDelete} className="right">
-        <IconX />
+        <Icon sprite={IconX} />
         <span>Delete</span>
       </Button>,
       <Button size="small" key={1} onClick={startEdit} className="right">
-        <IconPencilAlt />
+        <Icon sprite={IconPencilAlt} />
         <span>Edit</span>
       </Button>,
     ]

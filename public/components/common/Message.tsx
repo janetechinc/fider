@@ -6,6 +6,7 @@ import IconCheckCircle from "@fider/assets/images/heroicons-check-circle.svg"
 import IconExclamationCircle from "@fider/assets/images/heroicons-exclamation-circle.svg"
 import IconExclamation from "@fider/assets/images/heroicons-exclamation.svg"
 import { HStack } from "@fider/components/layout"
+import { Icon } from "./Icon"
 
 interface MessageProps {
   type: "success" | "warning" | "error"
@@ -18,11 +19,11 @@ export const Message: React.FunctionComponent<MessageProps> = (props) => {
     [`m-${props.type}`]: true,
   })
 
-  const icon = props.type === "error" ? <IconExclamation /> : props.type === "warning" ? <IconExclamationCircle /> : <IconCheckCircle />
+  const icon = props.type === "error" ? IconExclamation : props.type === "warning" ? IconExclamationCircle : IconCheckCircle
 
   return (
     <HStack className={className}>
-      {props.showIcon === true && icon}
+      {props.showIcon === true && <Icon sprite={icon} />}
       <span>{props.children}</span>
     </HStack>
   )

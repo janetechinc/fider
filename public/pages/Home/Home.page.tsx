@@ -3,7 +3,7 @@ import NoDataIllustration from "@fider/assets/images/undraw-no-data.svg"
 
 import React, { useState } from "react"
 import { Post, Tag, PostStatus } from "@fider/models"
-import { MultiLineText, Hint, PoweredByFider } from "@fider/components"
+import { MultiLineText, Hint, PoweredByFider, Icon } from "@fider/components"
 import { SimilarPosts } from "./components/SimilarPosts"
 import { PostInput } from "./components/PostInput"
 import { PostsContainer } from "./components/PostsContainer"
@@ -28,7 +28,7 @@ const Lonely = () => {
         It&apos;s recommended that you post <strong>at least 3</strong> suggestions here before sharing this site. The initial content is key to start the
         interactions with your audience.
       </Hint>
-      <NoDataIllustration height="150" />
+      <Icon sprite={NoDataIllustration} height="150" />
       <p>No posts have been created yet.</p>
     </div>
   )

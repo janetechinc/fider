@@ -19,6 +19,7 @@ import {
   TextArea,
   MultiImageUploader,
   ImageViewer,
+  Icon,
 } from "@fider/components"
 import { ResponseForm } from "./components/ResponseForm"
 import { TagsPanel } from "./components/TagsPanel"
@@ -145,12 +146,12 @@ export default class ShowPostPage extends React.Component<ShowPostPageProps, Sho
                 <List key={1}>
                   <ListItem>
                     <Button className="w-full" variant="primary" onClick={this.saveChanges}>
-                      <IconCheck /> <span>Save</span>
+                      <Icon sprite={IconCheck} /> <span>Save</span>
                     </Button>
                   </ListItem>
                   <ListItem>
                     <Button className="w-full" onClick={this.cancelEdit}>
-                      <IconX /> <span>Cancel</span>
+                      <Icon sprite={IconX} /> <span>Cancel</span>
                     </Button>
                   </ListItem>
                 </List>
@@ -158,7 +159,7 @@ export default class ShowPostPage extends React.Component<ShowPostPageProps, Sho
                 <List key={1}>
                   <ListItem>
                     <Button className="w-full" onClick={this.startEdit}>
-                      <IconPencilAlt /> <span>Edit</span>
+                      <Icon sprite={IconPencilAlt} /> <span>Edit</span>
                     </Button>
                   </ListItem>
                   <ListItem>

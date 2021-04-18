@@ -3,6 +3,7 @@ import "./Select2.scss"
 import React, { useEffect, useRef, useState } from "react"
 import IconSelector from "@fider/assets/images/heroicons-selector.svg"
 import { HStack } from "@fider/components/layout"
+import { Icon } from "@fider/components"
 
 interface Select2Props<T> {
   items: T[]
@@ -45,7 +46,7 @@ export const Select2 = <T extends unknown>(props: Select2Props<T>) => {
       <button type="button" className="c-select2__handle w-full" onClick={toggleIsOpen}>
         <HStack justify="between">
           {props.renderHandle()}
-          <IconSelector className="h-5 w-5 text-gray-500" />
+          <Icon sprite={IconSelector} className="h-5 w-5 text-gray-500" />
         </HStack>
       </button>
       {isOpen && (

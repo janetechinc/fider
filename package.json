@@ -13,7 +13,6 @@
     "tslib": "2.2.0"
   },
   "devDependencies": {
-    "@svgr/webpack": "5.5.0",
     "@types/dompurify": "2.2.1",
     "@types/enzyme": "3.10.8",
     "@types/jest": "26.0.22",
@@ -45,6 +44,7 @@
     "puppeteer": "8.0.0",
     "reflect-metadata": "0.1.13",
     "sass-loader": "11.0.1",
+    "svg-sprite-loader": "6.0.5",
     "ts-jest": "26.5.4",
     "ts-loader": "8.1.0",
     "typescript": "4.2.4",

@@ -2,7 +2,7 @@ import "./ListPosts.scss"
 
 import React from "react"
 import { Post, Tag, CurrentUser } from "@fider/models"
-import { ShowTag, ShowPostResponse, VoteCounter, MultiLineText, ListItem, List } from "@fider/components"
+import { ShowTag, ShowPostResponse, VoteCounter, MultiLineText, ListItem, List, Icon } from "@fider/components"
 import IconChatAlt2 from "@fider/assets/images/heroicons-chat-alt-2.svg"
 import { HStack } from "@fider/components/layout"
 
@@ -19,7 +19,7 @@ const ListPostItem = (props: { post: Post; user?: CurrentUser; tags: Tag[] }) =>
       <div className="c-list-item-content">
         {props.post.commentsCount > 0 && (
           <HStack className="text-muted right">
-            {props.post.commentsCount} <IconChatAlt2 className="h-4 ml-1" />
+            {props.post.commentsCount} <Icon sprite={IconChatAlt2} className="h-4 ml-1" />
           </HStack>
         )}
         <a className="c-list-item-title text-title" href={`/posts/${props.post.number}/${props.post.slug}`}>

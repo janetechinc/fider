@@ -2,7 +2,7 @@ import "./OAuthEcho.page.scss"
 
 import React from "react"
 import { navigator } from "@fider/services"
-import { Segments, Segment } from "@fider/components"
+import { Segments, Segment, Icon } from "@fider/components"
 
 import IconXCircle from "@fider/assets/images/heroicons-x-circle.svg"
 import IconCheckCircle from "@fider/assets/images/heroicons-check-circle.svg"
@@ -18,9 +18,9 @@ interface OAuthEchoPageProps {
   }
 }
 
-const ok = <IconXCircle className="h-4 check" />
-const error = <IconCheckCircle className="h-4 error" />
-const warn = <IconExclamation className="h-4 warn" />
+const ok = <Icon sprite={IconXCircle} className="h-4 check" />
+const error = <Icon sprite={IconCheckCircle} className="h-4 error" />
+const warn = <Icon sprite={IconExclamation} className="h-4 warn" />
 
 export default class OAuthEchoPage extends React.Component<OAuthEchoPageProps, any> {
   public componentDidMount() {

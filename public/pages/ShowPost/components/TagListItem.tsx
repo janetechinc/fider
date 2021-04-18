@@ -1,6 +1,6 @@
 import React from "react"
 import { Tag } from "@fider/models"
-import { ShowTag } from "@fider/components"
+import { Icon, ShowTag } from "@fider/components"
 import IconCheck from "@fider/assets/images/heroicons-check.svg"
 import { HStack } from "@fider/components/layout"
 
@@ -17,7 +17,7 @@ export const TagListItem = (props: TagListItemProps) => {
 
   return (
     <HStack className="c-tag-list" onClick={onClick}>
-      {props.assigned && <IconCheck className="h-4 mr-1" />}
+      {props.assigned && <Icon sprite={IconCheck} className="h-4 mr-1" />}
       <ShowTag tag={props.tag} circular={true} />
       <span>{props.tag.name}</span>
     </HStack>

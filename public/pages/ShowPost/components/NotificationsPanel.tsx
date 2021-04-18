@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 import { Post } from "@fider/models"
-import { Button, List, ListItem } from "@fider/components"
+import { Button, Icon, List, ListItem } from "@fider/components"
 import { actions } from "@fider/services"
 import { useFider } from "@fider/hooks"
 import IconVolumeOn from "@fider/assets/images/heroicons-volume-on.svg"
@@ -30,11 +30,11 @@ export const NotificationsPanel = (props: NotificationsPanelProps) => {
 
   const button = subscribed ? (
     <Button className="w-full" onClick={subscribeOrUnsubscribe}>
-      <IconVolumeOff /> <span>Unsubscribe</span>
+      <Icon sprite={IconVolumeOff} /> <span>Unsubscribe</span>
     </Button>
   ) : (
     <Button className="w-full" onClick={subscribeOrUnsubscribe}>
-      <IconVolumeOn /> <span>Subscribe</span>
+      <Icon sprite={IconVolumeOn} /> <span>Subscribe</span>
     </Button>
   )
 
