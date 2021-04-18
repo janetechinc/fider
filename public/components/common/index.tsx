@@ -32,6 +32,7 @@ export * from "./FiderVersion"
 export * from "./DropDown"
 export * from "./PoweredByFider"
 export * from "./PageTitle"
+export * from "./Dropdown2"
 
 import Textarea from "react-textarea-autosize"
 export { Textarea }

@@ -29,6 +29,7 @@ import {
   AvatarStack,
   SocialSignInButton,
   Select2,
+  Dropdown2,
 } from "@fider/components"
 import { User, UserRole, Tag } from "@fider/models"
 import { notify, Failure } from "@fider/services"
@@ -475,7 +476,16 @@ const UIToolkitPage = () => {
         <Button onClick={forceError}>Save</Button>
       </Form>
 
-      <h2 className="text-display2 mb-3 mt-6">16. Search</h2>
+      <h2 className="text-display2 mb-3 mt-6">16. Dropdown</h2>
+
+      <Dropdown2 renderHandle={<Avatar user={aryaStark} />}>
+        <>
+          <div>Hey</div>
+          <div>Ho</div>
+        </>
+      </Dropdown2>
+
+      <h2 className="text-display2 mb-3 mt-6">17. Search</h2>
 
       <Input field="search" placeholder="Search..." icon={IconSearch} />
     </div>
