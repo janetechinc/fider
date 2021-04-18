@@ -479,10 +479,13 @@ const UIToolkitPage = () => {
       <h2 className="text-display2 mb-3 mt-6">16. Dropdown</h2>
 
       <Dropdown2 renderHandle={<Avatar user={aryaStark} />}>
-        <>
-          <div>Hey</div>
-          <div>Ho</div>
-        </>
+        <Dropdown2.List>
+          <div className="p-2 text-bold uppercase">Arya Stark</div>
+          <Dropdown2.ListItem>Account Settings</Dropdown2.ListItem>
+          <Dropdown2.ListItem>My Profile</Dropdown2.ListItem>
+          <Dropdown2.Divider />
+          <Dropdown2.ListItem>Sign Out</Dropdown2.ListItem>
+        </Dropdown2.List>
       </Dropdown2>
 
       <h2 className="text-display2 mb-3 mt-6">17. Search</h2>

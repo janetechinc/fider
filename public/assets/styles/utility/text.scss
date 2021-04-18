@@ -59,3 +59,7 @@
 .text-bold {
   font-weight: get("font.weight.bold");
 }
+
+.uppercase {
+  text-transform: uppercase;
+}
