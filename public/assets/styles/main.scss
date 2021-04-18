@@ -78,9 +78,16 @@ ul {
 }
 
 .page {
-  flex: 1 0 auto;
   padding-top: spacing(4);
   padding-bottom: spacing(4);
+}
+
+@include media("sm") {
+  .page {
+    width: calc(100vw - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+  }
 }
 
 noscript {
