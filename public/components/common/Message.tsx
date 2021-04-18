@@ -22,8 +22,8 @@ export const Message: React.FunctionComponent<MessageProps> = (props) => {
   const icon = props.type === "error" ? IconExclamation : props.type === "warning" ? IconExclamationCircle : IconCheckCircle
 
   return (
-    <HStack className={className}>
-      {props.showIcon === true && <Icon sprite={icon} />}
+    <HStack className={className} spacing={2}>
+      {props.showIcon === true && <Icon className="h-5" sprite={icon} />}
       <span>{props.children}</span>
     </HStack>
   )

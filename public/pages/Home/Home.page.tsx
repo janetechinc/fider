@@ -23,13 +23,15 @@ const Lonely = () => {
   const fider = useFider()
 
   return (
-    <div className="l-lonely center">
+    <div className="text-center">
       <Hint permanentCloseKey="at-least-3-posts" condition={fider.session.isAuthenticated && fider.session.user.isAdministrator}>
-        It&apos;s recommended that you post <strong>at least 3</strong> suggestions here before sharing this site. The initial content is key to start the
-        interactions with your audience.
+        <p>
+          It&apos;s recommended that you create <strong>at least 3</strong> suggestions here before sharing this site. The initial content is important to start
+          engaging your audience.
+        </p>
       </Hint>
-      <Icon sprite={NoDataIllustration} height="150" />
-      <p>No posts have been created yet.</p>
+      <Icon sprite={NoDataIllustration} height="120" className="mt-6 mb-2" />
+      <p className="text-muted">No posts have been created yet.</p>
     </div>
   )
 }
@@ -57,21 +59,19 @@ const HomePage = (props: HomePageProps) => {
 
   return (
     <div id="p-home" className="page container">
-      <div className="row">
-        <div className="l-welcome-col col-md-4">
-          <MultiLineText className="welcome-message" text={fider.session.tenant.welcomeMessage || defaultWelcomeMessage} style="full" />
-          <PostInput placeholder={fider.session.tenant.invitation || "Enter your suggestion here..."} onTitleChanged={setTitle} />
-          <PoweredByFider />
-        </div>
-        <div className="l-posts-col col-md-8">
-          {isLonely() ? (
-            <Lonely />
-          ) : title ? (
-            <SimilarPosts title={title} tags={props.tags} />
-          ) : (
-            <PostsContainer posts={props.posts} tags={props.tags} countPerStatus={props.countPerStatus} />
-          )}
-        </div>
+      <div className="p-home__welcome">
+        <MultiLineText text={fider.session.tenant.welcomeMessage || defaultWelcomeMessage} style="full" />
+        <PostInput placeholder={fider.session.tenant.invitation || "Enter your suggestion here..."} onTitleChanged={setTitle} />
+        <PoweredByFider />
+      </div>
+      <div className="p-home__posts">
+        {isLonely() ? (
+          <Lonely />
+        ) : title ? (
+          <SimilarPosts title={title} tags={props.tags} />
+        ) : (
+          <PostsContainer posts={props.posts} tags={props.tags} countPerStatus={props.countPerStatus} />
+        )}
       </div>
     </div>
   )

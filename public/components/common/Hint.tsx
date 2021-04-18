@@ -2,7 +2,6 @@ import "./Hint.scss"
 
 import React, { useState } from "react"
 import IconX from "@fider/assets/images/heroicons-x.svg"
-import IconInformationCircle from "@fider/assets/images/heroicons-information-circle.svg"
 import { HStack } from "@fider/components/layout"
 import { cache } from "@fider/services"
 import { Icon } from "./Icon"
@@ -26,10 +25,11 @@ export const Hint: React.FC<HintProps> = (props) => {
   if (props.condition === false || isClosed) {
     return null
   }
+
   return (
-    <HStack className="c-hint">
-      <Icon sprite={IconInformationCircle} height="16" /> <span>{props.children}</span>
-      {cacheKey && <Icon sprite={IconX} onClick={close} className="c-hint-close" />}
+    <HStack className="c-hint" justify="between" spacing={2}>
+      <span>{props.children}</span>
+      {cacheKey && <Icon sprite={IconX} onClick={close} className="c-hint__close h-5" />}
     </HStack>
   )
 }

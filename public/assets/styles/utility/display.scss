@@ -1,3 +1,41 @@
+.container {
+  position: relative;
+  display: block;
+  max-width: 100%;
+}
+
+@include media("sm") {
+  .container {
+    width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@include media("md") {
+  .container {
+    width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@include media("lg") {
+  .container {
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@include media("xl") {
+  .container {
+    width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .flex {
   display: flex;
 }

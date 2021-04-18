@@ -1,13 +1,8 @@
 @import "~@fider/assets/styles/variables.scss";
 
 .c-message {
-  padding: spacing(3);
+  padding: spacing(4);
   margin-bottom: spacing(2);
-
-  svg,
-  img {
-    width: sizing(5);
-  }
 
   &.m-success {
     color: get("colors.green.800");
