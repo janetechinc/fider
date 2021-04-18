@@ -3,17 +3,17 @@
 .c-dropdown2 {
   display: inline-block;
   position: relative;
+  font-size: get("font.size.sm");
 
   &__handle {
     text-align: left;
-    background-color: get("colors.white");
+    background-color: transparent;
     border: none;
     padding: 0;
     cursor: pointer;
   }
 
   &__list {
-    font-size: get("font.size.sm");
     margin-top: spacing(2);
     position: absolute;
     overflow: auto;
@@ -33,6 +33,7 @@
   }
 
   &__listitem {
+    display: block;
     padding: spacing(2);
     &:hover {
       cursor: pointer;

@@ -1,7 +1,7 @@
-import "./DevBanner.scss"
-
 import React from "react"
 import { useFider } from "@fider/hooks"
+
+import "./DevBanner.scss"
 
 export const DevBanner = () => {
   const fider = useFider()

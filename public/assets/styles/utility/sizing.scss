@@ -1,4 +1,4 @@
-@for $i from 0 through 6 {
+@for $i from 0 through 20 {
   .w-#{$i} {
     width: sizing($i);
   }
