@@ -5,6 +5,9 @@
   .h-#{$i} {
     height: sizing($i);
   }
+  .w-min-#{$i} {
+    min-width: sizing($i);
+  }
 }
 
 .w-full {

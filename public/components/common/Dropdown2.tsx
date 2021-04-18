@@ -5,6 +5,7 @@ import { classSet } from "@fider/services"
 
 interface Dropdown2ListItemProps {
   href?: string
+  onClick?: () => void
   children: React.ReactNode
 }
 
@@ -17,7 +18,11 @@ const ListItem = (props: Dropdown2ListItemProps) => {
     )
   }
 
-  return <div className="c-dropdown2__listitem">{props.children}</div>
+  return (
+    <div onClick={props.onClick} className="c-dropdown2__listitem">
+      {props.children}
+    </div>
+  )
 }
 
 const Divider = () => {

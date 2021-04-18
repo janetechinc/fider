@@ -39,6 +39,14 @@
   color: get("colors.blue.600");
 }
 
+.text-xs {
+  font-size: get("font.size.xs");
+}
+
+.text-2xs {
+  font-size: get("font.size.2xs");
+}
+
 .text-link:hover {
   color: get("colors.blue.800");
   text-decoration: underline;

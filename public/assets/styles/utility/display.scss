@@ -78,3 +78,19 @@
 .shadow-lg {
   box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
+
+.rounded {
+  border-radius: sizing(1);
+}
+
+.rounded-md {
+  border-radius: sizing(2);
+}
+
+.rounded-full {
+  border-radius: 999px;
+}
+
+.invisible {
+  visibility: hidden;
+}
