@@ -13,13 +13,18 @@
   }
 
   .p-home {
-    &__welcome {
+    &__welcome-col {
+      @include media("sm") {
+        background-color: get("colors.gray.100");
+        padding: spacing(2);
+        border-radius: get("border.radius.medium");
+      }
       .markdown-body {
         margin-bottom: spacing(2);
       }
     }
 
-    &__posts {
+    &__posts-col {
       grid-column: span 2 / span 2;
     }
   }

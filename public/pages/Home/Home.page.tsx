@@ -59,12 +59,12 @@ const HomePage = (props: HomePageProps) => {
 
   return (
     <div id="p-home" className="page container">
-      <div className="p-home__welcome">
+      <div className="p-home__welcome-col">
         <MultiLineText text={fider.session.tenant.welcomeMessage || defaultWelcomeMessage} style="full" />
         <PostInput placeholder={fider.session.tenant.invitation || "Enter your suggestion here..."} onTitleChanged={setTitle} />
-        <PoweredByFider />
+        <PoweredByFider className="sm:hidden" />
       </div>
-      <div className="p-home__posts">
+      <div className="p-home__posts-col">
         {isLonely() ? (
           <Lonely />
         ) : title ? (
@@ -72,6 +72,7 @@ const HomePage = (props: HomePageProps) => {
         ) : (
           <PostsContainer posts={props.posts} tags={props.tags} countPerStatus={props.countPerStatus} />
         )}
+        <PoweredByFider className="md:hidden lg:hidden xl:hidden" />
       </div>
     </div>
   )

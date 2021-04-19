@@ -5,7 +5,7 @@ export const FiderVersion = () => {
   const fider = useFider()
 
   return (
-    <p className="text-muted text-center hidden-sm hidden-md">
+    <p className="text-muted text-center sm:hidden md:hidden">
       Support our{" "}
       <a className="text-link" rel="noopener" target="_blank" href="http://opencollective.com/fider">
         OpenCollective

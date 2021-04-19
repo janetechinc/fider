@@ -272,27 +272,3 @@ input {
 .c-toast {
   border-radius: 5px !important;
 }
-
-@include media("sm") {
-  .hidden-sm {
-    display: none;
-  }
-}
-
-@include media("md") {
-  .hidden-md {
-    display: none;
-  }
-}
-
-@include media("lg") {
-  .hidden-lg {
-    display: none;
-  }
-}
-
-@include media("xl") {
-  .hidden-xl {
-    display: none;
-  }
-}

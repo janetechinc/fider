@@ -10,7 +10,7 @@ export abstract class AdminBasePage<P, S> extends React.Component<P, S> {
   public abstract content(): JSX.Element
 
   private toggleSideMenu = (active: boolean) => {
-    const el = document.querySelector(".hidden-lg .c-side-menu") as HTMLElement
+    const el = document.querySelector(".lg:hidden .c-side-menu") as HTMLElement
     if (el) {
       el.style.display = active ? "" : "none"
     }
@@ -23,11 +23,11 @@ export abstract class AdminBasePage<P, S> extends React.Component<P, S> {
         <SideMenuToggler onToggle={this.toggleSideMenu} />
 
         <div className="row">
-          <div className="col-lg-2 hidden-sm hidden-md">
+          <div className="col-lg-2 sm:hidden md:hidden">
             <SideMenu visible={true} activeItem={this.name} />
           </div>
           <div className="col-lg-10 col-md-12">
-            <SideMenu className="hidden-lg hidden-xl" visible={false} activeItem={this.name} />
+            <SideMenu className="lg:hidden xl:hidden" visible={false} activeItem={this.name} />
             {this.content()}
           </div>
         </div>

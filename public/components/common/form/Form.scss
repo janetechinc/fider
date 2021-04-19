@@ -18,6 +18,10 @@
   clear: both;
   margin: 0 0 10px;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   &.m-checkbox {
     label {
       font-weight: initial;
@@ -37,7 +41,6 @@
 
   .c-form-field-wrapper {
     position: relative;
-    margin: 0 0 5px;
   }
 
   select {

@@ -5,8 +5,9 @@ interface StackProps {
   className?: string
   children: React.ReactNode
   onClick?: () => void
+  center?: boolean
   justify?: "between" | "evenly"
-  spacing?: 0 | 1 | 2 | 3 | 4 | 6
+  spacing?: 0 | 1 | 2 | 3 | 4 | 6 | 8
 }
 
 const Stack = (props: StackProps, dir: "x" | "y") => {
@@ -16,6 +17,7 @@ const Stack = (props: StackProps, dir: "x" | "y") => {
     [`flex flex--spacing-${spacing}`]: true,
     "flex-x": dir === "x",
     "flex-y": dir === "y",
+    "flex-items-center": dir === "x" && props.center !== false,
     "justify-between": props.justify === "between",
     "justify-evenly": props.justify === "evenly",
   })
