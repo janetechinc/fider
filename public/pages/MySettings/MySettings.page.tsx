@@ -1,5 +1,3 @@
-import "./MySettings.page.scss"
-
 import React from "react"
 
 import { Modal, Form, Button, PageTitle, Input, Select, SelectOption, ImageUploader } from "@fider/components"
