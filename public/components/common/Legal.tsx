@@ -6,12 +6,12 @@ interface LegalAgreementProps {
   onChange: (agreed: boolean) => void
 }
 
-export const TermsOfService: React.FunctionComponent<any> = () => {
+export const TermsOfService = () => {
   const fider = useFider()
 
   if (fider.settings.hasLegal) {
     return (
-      <a href="/terms" target="_blank">
+      <a href="/terms" className="text-link" target="_blank">
         Terms of Service
       </a>
     )
@@ -19,12 +19,12 @@ export const TermsOfService: React.FunctionComponent<any> = () => {
   return null
 }
 
-export const PrivacyPolicy: React.FunctionComponent<any> = () => {
+export const PrivacyPolicy = () => {
   const fider = useFider()
 
   if (fider.settings.hasLegal) {
     return (
-      <a href="/privacy" target="_blank">
+      <a href="/privacy" className="text-link" target="_blank">
         Privacy Policy
       </a>
     )
@@ -32,7 +32,7 @@ export const PrivacyPolicy: React.FunctionComponent<any> = () => {
   return null
 }
 
-export const LegalNotice: React.FunctionComponent<any> = () => {
+export const LegalNotice = () => {
   const fider = useFider()
 
   if (fider.settings.hasLegal) {
@@ -45,7 +45,7 @@ export const LegalNotice: React.FunctionComponent<any> = () => {
   return null
 }
 
-export const LegalFooter: React.FunctionComponent<any> = () => {
+export const LegalFooter = () => {
   const fider = useFider()
 
   if (fider.settings.hasLegal) {

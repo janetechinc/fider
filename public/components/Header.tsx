@@ -22,7 +22,7 @@ export const Header = () => {
         <HStack className="c-menu shadow p-2 w-full">
           <div className="container">
             <HStack justify="between">
-              <a href="/" className="flex flex-x flex--spacing-2 h-8">
+              <a href="/" className="flex flex-x flex-items-center flex--spacing-2 h-8">
                 <TenantLogo size={100} />
                 <h1 className="text-title">{fider.session.tenant.name}</h1>
               </a>

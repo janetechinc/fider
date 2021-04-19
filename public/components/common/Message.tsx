@@ -10,6 +10,7 @@ import { Icon } from "./Icon"
 
 interface MessageProps {
   type: "success" | "warning" | "error"
+  className?: string
   showIcon?: boolean
 }
 
@@ -17,6 +18,7 @@ export const Message: React.FunctionComponent<MessageProps> = (props) => {
   const className = classSet({
     "c-message": true,
     [`m-${props.type}`]: true,
+    [`${props.className}`]: props.className,
   })
 
   const icon = props.type === "error" ? IconExclamation : props.type === "warning" ? IconExclamationCircle : IconCheckCircle

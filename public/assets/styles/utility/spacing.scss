@@ -1,4 +1,4 @@
-@for $i from 0 through 6 {
+@for $i from 0 through 8 {
   // Margin
   .m-#{$i} {
     margin: spacing($i);

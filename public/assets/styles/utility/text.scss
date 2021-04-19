@@ -25,9 +25,8 @@
 .text-category {
   font-size: get("font.size.xs");
   font-weight: get("font.weight.semibold");
-  color: get("colors.gray.700");
+  color: get("colors.gray.600");
   text-transform: uppercase;
-  letter-spacing: -0.5px;
 }
 
 .text-muted {
