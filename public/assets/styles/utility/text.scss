@@ -43,6 +43,10 @@
   text-decoration: underline;
 }
 
+.text-sm {
+  font-size: get("font.size.sm");
+}
+
 .text-xs {
   font-size: get("font.size.xs");
 }

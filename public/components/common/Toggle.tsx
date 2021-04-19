@@ -37,7 +37,7 @@ export const Toggle: React.FC<ToggleProps> = (props) => {
       <button onClick={toggle} type="button" className={className} role="switch">
         <span aria-hidden="true" className="shadow"></span>
       </button>
-      {props.label && <span>{props.label}</span>}
+      {props.label && <span className="text-sm">{props.label}</span>}
     </HStack>
   )
 }

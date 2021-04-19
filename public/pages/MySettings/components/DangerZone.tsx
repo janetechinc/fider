@@ -35,7 +35,7 @@ export class DangerZone extends React.Component<any, DangerZoneState> {
 
   public render() {
     return (
-      <div className="l-danger-zone">
+      <div>
         <Modal.Window isOpen={this.state.clicked} center={false} onClose={this.onCancel}>
           <Modal.Header>Delete account</Modal.Header>
           <Modal.Content>
@@ -57,7 +57,7 @@ export class DangerZone extends React.Component<any, DangerZoneState> {
           </Modal.Footer>
         </Modal.Window>
 
-        <h4>Delete account</h4>
+        <h4 className="text-title mb-1">Delete account</h4>
         <p className="text-muted">
           When you choose to delete your account, we will erase all your personal information forever. The content you have published will remain, but it will
           be anonymised.

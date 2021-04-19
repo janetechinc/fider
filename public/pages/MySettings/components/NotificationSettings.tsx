@@ -83,7 +83,7 @@ export const NotificationSettings = (props: NotificationSettingsProps) => {
       <div className="notifications-settings">
         <Segments>
           <Segment>
-            <span className="event-title">New Post</span>
+            <span>New Post</span>
             {info("event_notification_new_post", "new posts on this site", "new posts on this site")}
             <HStack spacing={6}>
               {icon("event_notification_new_post", WebChannel)}
@@ -91,7 +91,7 @@ export const NotificationSettings = (props: NotificationSettingsProps) => {
             </HStack>
           </Segment>
           <Segment>
-            <span className="event-title">Discussion</span>
+            <span>Discussion</span>
             {info("event_notification_new_comment", "comments on posts you've subscribed to", "comments on all posts unless individually unsubscribed")}
             <HStack spacing={6}>
               {icon("event_notification_new_comment", WebChannel)}
@@ -99,7 +99,7 @@ export const NotificationSettings = (props: NotificationSettingsProps) => {
             </HStack>
           </Segment>
           <Segment>
-            <span className="event-title">Status Changed</span>
+            <span>Status Changed</span>
             {info(
               "event_notification_change_status",
               "status change on posts you've subscribed to",

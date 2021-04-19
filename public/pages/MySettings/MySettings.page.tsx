@@ -105,9 +105,9 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
 
   public render() {
     const changeEmail = (
-      <span className="text-muted clickable" onClick={this.startChangeEmail}>
+      <Button variant="tertiary" size="small" onClick={this.startChangeEmail}>
         change
-      </span>
+      </Button>
     )
 
     return (
@@ -130,86 +130,75 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
 
         <PageTitle title="Settings" subtitle="Manage your profile settings" />
 
-        <div className="row">
-          <div className="col-lg-7">
-            <Form error={this.state.error}>
-              <Input
-                label="Email"
-                field="email"
-                value={this.state.changingEmail ? this.state.newEmail : Fider.session.user.email}
-                maxLength={200}
-                disabled={!this.state.changingEmail}
-                afterLabel={this.state.changingEmail ? undefined : changeEmail}
-                onChange={this.setNewEmail}
-              >
-                <p className="text-muted">
-                  {Fider.session.user.email || this.state.changingEmail
-                    ? "Your email is private and will never be publicly displayed."
-                    : "Your account doesn't have an email."}
+        <div className="w-max-7xl">
+          <Form error={this.state.error}>
+            <Input
+              label="Email"
+              field="email"
+              value={this.state.changingEmail ? this.state.newEmail : Fider.session.user.email}
+              maxLength={200}
+              disabled={!this.state.changingEmail}
+              afterLabel={this.state.changingEmail ? undefined : changeEmail}
+              onChange={this.setNewEmail}
+            >
+              <p className="text-muted">
+                {Fider.session.user.email || this.state.changingEmail
+                  ? "Your email is private and will never be publicly displayed."
+                  : "Your account doesn't have an email."}
+              </p>
+              {this.state.changingEmail && (
+                <>
+                  <Button variant="primary" size="small" onClick={this.submitNewEmail}>
+                    Confirm
+                  </Button>
+                  <Button variant="tertiary" size="small" onClick={this.cancelChangeEmail}>
+                    Cancel
+                  </Button>
+                </>
+              )}
+            </Input>
+
+            <Input label="Name" field="name" value={this.state.name} maxLength={100} onChange={this.setName} />
+
+            <Select
+              label="Avatar"
+              field="avatarType"
+              defaultValue={this.state.avatarType}
+              options={[
+                { label: "Letter", value: UserAvatarType.Letter },
+                { label: "Gravatar", value: UserAvatarType.Gravatar },
+                { label: "Custom", value: UserAvatarType.Custom },
+              ]}
+              onChange={this.avatarTypeChanged}
+            >
+              {this.state.avatarType === UserAvatarType.Gravatar && (
+                <p className="text-muted mt-1">
+                  A{" "}
+                  <a className="text-link" rel="noopener" href="https://en.gravatar.com" target="_blank">
+                    Gravatar
+                  </a>{" "}
+                  will be used based on your email. If you don&apos;t have a Gravatar, a letter avatar based on your initials is generated for you.
                 </p>
-                {this.state.changingEmail && (
-                  <>
-                    <Button variant="primary" size="small" onClick={this.submitNewEmail}>
-                      Confirm
-                    </Button>
-                    <Button variant="tertiary" size="small" onClick={this.cancelChangeEmail}>
-                      Cancel
-                    </Button>
-                  </>
-                )}
-              </Input>
-
-              <Input label="Name" field="name" value={this.state.name} maxLength={100} onChange={this.setName} />
-
-              <Select
-                label="Avatar"
-                field="avatarType"
-                defaultValue={this.state.avatarType}
-                options={[
-                  { label: "Letter", value: UserAvatarType.Letter },
-                  { label: "Gravatar", value: UserAvatarType.Gravatar },
-                  { label: "Custom", value: UserAvatarType.Custom },
-                ]}
-                onChange={this.avatarTypeChanged}
-              >
-                {this.state.avatarType === UserAvatarType.Gravatar && (
+              )}
+              {this.state.avatarType === UserAvatarType.Letter && <p className="text-muted">A letter avatar based on your initials is generated for you.</p>}
+              {this.state.avatarType === UserAvatarType.Custom && (
+                <ImageUploader field="avatar" previewMaxWidth={80} onChange={this.setAvatar} bkey={Fider.session.user.avatarBlobKey}>
                   <p className="text-muted">
-                    A{" "}
-                    <a className="text-link" rel="noopener" href="https://en.gravatar.com" target="_blank">
-                      Gravatar
-                    </a>{" "}
-                    will be used based on your email. If you don&apos;t have a Gravatar, a letter avatar based on your initials is generated for you.
+                    We accept JPG, GIF and PNG images, smaller than 100KB and with an aspect ratio of 1:1 with minimum dimensions of 50x50 pixels.
                   </p>
-                )}
-                {this.state.avatarType === UserAvatarType.Letter && <p className="text-muted">A letter avatar based on your initials is generated for you.</p>}
-                {this.state.avatarType === UserAvatarType.Custom && (
-                  <ImageUploader field="avatar" previewMaxWidth={80} onChange={this.setAvatar} bkey={Fider.session.user.avatarBlobKey}>
-                    <p className="text-muted">
-                      We accept JPG, GIF and PNG images, smaller than 100KB and with an aspect ratio of 1:1 with minimum dimensions of 50x50 pixels.
-                    </p>
-                  </ImageUploader>
-                )}
-              </Select>
+                </ImageUploader>
+              )}
+            </Select>
 
-              <NotificationSettings userSettings={this.props.userSettings} settingsChanged={this.setNotificationSettings} />
+            <NotificationSettings userSettings={this.props.userSettings} settingsChanged={this.setNotificationSettings} />
 
-              <Button variant="primary" onClick={this.confirm}>
-                Save
-              </Button>
-            </Form>
-          </div>
-        </div>
+            <Button variant="primary" onClick={this.confirm}>
+              Save
+            </Button>
+          </Form>
 
-        {Fider.session.user.isCollaborator && (
-          <div className="row">
-            <div className="col-lg-7">
-              <APIKeyForm />
-            </div>
-          </div>
-        )}
-
-        <div className="row">
-          <div className="col-lg-7">
+          <div className="mt-8">{Fider.session.user.isCollaborator && <APIKeyForm />}</div>
+          <div className="mt-8">
             <DangerZone />
           </div>
         </div>

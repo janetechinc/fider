@@ -32,8 +32,8 @@ export class APIKeyForm extends React.Component<any, APIKeyFormState> {
 
   public render() {
     return (
-      <div className="l-api-key">
-        <h4>API Key</h4>
+      <div>
+        <h4 className="text-title mb-1">API Key</h4>
         <p className="text-muted">
           The API Key is only shown whenever generated. If your Key is lost or has been compromised, generated a new one and take note of it.
         </p>
