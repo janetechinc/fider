@@ -180,7 +180,7 @@ export default class MySettingsPage extends React.Component<MySettingsPageProps,
               )}
               {this.state.avatarType === UserAvatarType.Letter && <p className="text-muted">A letter avatar based on your initials is generated for you.</p>}
               {this.state.avatarType === UserAvatarType.Custom && (
-                <ImageUploader field="avatar" previewMaxWidth={80} onChange={this.setAvatar} bkey={Fider.session.user.avatarBlobKey}>
+                <ImageUploader field="avatar" onChange={this.setAvatar} bkey={Fider.session.user.avatarBlobKey}>
                   <p className="text-muted">
                     We accept JPG, GIF and PNG images, smaller than 100KB and with an aspect ratio of 1:1 with minimum dimensions of 50x50 pixels.
                   </p>

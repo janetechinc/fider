@@ -113,14 +113,7 @@ export default class GeneralSettingsPage extends AdminBasePage<any, GeneralSetti
           </p>
         </Input>
 
-        <ImageUploader
-          label="Logo"
-          field="logo"
-          bkey={Fider.session.tenant.logoBlobKey}
-          previewMaxWidth={200}
-          disabled={!Fider.session.user.isAdministrator}
-          onChange={this.setLogo}
-        >
+        <ImageUploader label="Logo" field="logo" bkey={Fider.session.tenant.logoBlobKey} disabled={!Fider.session.user.isAdministrator} onChange={this.setLogo}>
           <p className="text-muted">
             We accept JPG, GIF and PNG images, smaller than 100KB and with an aspect ratio of 1:1 with minimum dimensions of 200x200 pixels.
           </p>

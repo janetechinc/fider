@@ -1,6 +1,6 @@
 import React from "react"
 
-import { Segment, Button, PageTitle, OAuthProviderLogo, Icon } from "@fider/components"
+import { Segment, Button, OAuthProviderLogo, Icon } from "@fider/components"
 import { OAuthConfig, OAuthProviderOption } from "@fider/models"
 import { OAuthForm } from "../components/OAuthForm"
 import { actions, notify, Fider } from "@fider/services"
@@ -69,9 +69,9 @@ export default class ManageAuthenticationPage extends AdminBasePage<ManageAuthen
 
     return (
       <>
-        <PageTitle title="OAuth Providers" subtitle="You can use these section to add any authentication provider thats supports the OAuth2 protocol." />
-        <p className="text-muted">
-          Additional information is available in our{" "}
+        <h2 className="text-display">OAuth Providers</h2>
+        <p>
+          You can use these section to add any authentication provider thats supports the OAuth2 protocol. Additional information is available in our{" "}
           <a rel="noopener" className="text-link" target="_blank" href="https://getfider.com/docs/configuring-oauth/">
             OAuth Documentation
           </a>
@@ -101,7 +101,7 @@ export default class ManageAuthenticationPage extends AdminBasePage<ManageAuthen
                     </HStack>
                   )}
                 </HStack>
-                <div className="text-xs block mb-1">{o.isEnabled ? enabled : disabled}</div>
+                <div className="text-xs block my-1">{o.isEnabled ? enabled : disabled}</div>
                 {o.isCustomProvider && (
                   <span className="text-muted">
                     <strong>Client ID:</strong> {o.clientID} <br />
@@ -113,7 +113,7 @@ export default class ManageAuthenticationPage extends AdminBasePage<ManageAuthen
           </VStack>
         </Segment>
         {Fider.session.user.isAdministrator && (
-          <Button variant="primary" onClick={this.addNew}>
+          <Button variant="secondary" onClick={this.addNew}>
             Add new
           </Button>
         )}

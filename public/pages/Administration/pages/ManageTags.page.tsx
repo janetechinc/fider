@@ -1,13 +1,14 @@
 import "./ManageTags.page.scss"
 
 import React from "react"
-import { Button, Segment, List, ListItem, PageTitle } from "@fider/components"
+import { Button, Segment } from "@fider/components"
 
 import { Tag } from "@fider/models"
 import { actions, Failure, Fider } from "@fider/services"
 import { AdminBasePage } from "../components/AdminBasePage"
 import { TagFormState, TagForm } from "../components/TagForm"
 import { TagListItem } from "../components/TagListItem"
+import { VStack } from "@fider/components/layout"
 
 interface ManageTagsPageProps {
   tags: Tag[]
@@ -97,7 +98,7 @@ export default class ManageTagsPage extends AdminBasePage<ManageTagsPageProps, M
           <TagForm onSave={this.saveNewTag} onCancel={this.cancelAdd} />
         </Segment>
       ) : (
-        <Button variant="primary" onClick={this.addNew}>
+        <Button variant="secondary" onClick={this.addNew}>
           Add new
         </Button>
       ))
@@ -105,21 +106,23 @@ export default class ManageTagsPage extends AdminBasePage<ManageTagsPageProps, M
     return (
       <>
         <Segment>
-          <List divided={true}>
-            <ListItem>
-              <PageTitle title="Public Tags" subtitle="These tags are visible to all visitors." />
-            </ListItem>
-            {publicTaglist.length === 0 ? <ListItem>There aren’t any public tags yet.</ListItem> : publicTaglist}
-          </List>
+          <VStack spacing={4} divide={true}>
+            <div>
+              <h2 className="text-display">Public Tags</h2>
+              <p>These tags are visible to all visitors.</p>
+            </div>
+            {publicTaglist.length === 0 ? <p className="text-muted">There aren’t any public tags yet.</p> : publicTaglist}
+          </VStack>
         </Segment>
 
         <Segment>
-          <List divided={true}>
-            <ListItem>
-              <PageTitle title="Private Tags" subtitle="These tags are only visible for members of this site." />
-            </ListItem>
-            {privateTagList.length === 0 ? <ListItem>There aren’t any private tags yet.</ListItem> : privateTagList}
-          </List>
+          <VStack spacing={4} divide={true}>
+            <div>
+              <h2 className="text-display">Private Tags</h2>
+              <p>These tags are only visible for members of this site.</p>
+            </div>
+            {privateTagList.length === 0 ? <p className="text-muted">There aren’t any private tags yet.</p> : privateTagList}
+          </VStack>
         </Segment>
         {form}
       </>

@@ -16,7 +16,6 @@ interface ImageUploaderProps {
   label?: string
   bkey?: string
   disabled?: boolean
-  previewMaxWidth: number
   onChange(state: ImageUpload, instanceID?: string, previewURL?: string): void
 }
 
@@ -34,7 +33,7 @@ export class ImageUploader extends React.Component<ImageUploaderProps, ImageUplo
       upload: undefined,
       remove: false,
       showModal: false,
-      previewURL: uploadedImageURL(this.props.bkey, this.props.previewMaxWidth),
+      previewURL: uploadedImageURL(this.props.bkey),
     }
   }
 
@@ -123,10 +122,6 @@ export class ImageUploader extends React.Component<ImageUploaderProps, ImageUplo
     const isUploading = !!this.state.upload
     const hasFile = (!this.state.remove && this.props.bkey) || isUploading
 
-    const imgStyles: React.CSSProperties = {
-      maxWidth: `${this.props.previewMaxWidth}px`,
-    }
-
     return (
       <ValidationContext.Consumer>
         {(ctx) => (
@@ -141,8 +136,8 @@ export class ImageUploader extends React.Component<ImageUploaderProps, ImageUplo
             <label htmlFor={`input-${this.props.field}`}>{this.props.label}</label>
 
             {hasFile && (
-              <div className="preview">
-                <img alt="" onClick={this.openModal} src={this.state.previewURL} style={imgStyles} />
+              <div className="preview h-20">
+                <img alt="" onClick={this.openModal} src={this.state.previewURL} />
                 {!this.props.disabled && (
                   <Button onClick={this.removeFile} variant="danger">
                     X

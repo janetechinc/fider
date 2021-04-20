@@ -71,7 +71,7 @@ export const PostInput = (props: PostInputProps) => {
   const details = () => (
     <>
       <TextArea field="description" onChange={handleDescriptionChange} value={description} minRows={5} placeholder="Describe your suggestion (optional)" />
-      <MultiImageUploader field="attachments" maxUploads={3} previewMaxWidth={100} onChange={setAttachments} />
+      <MultiImageUploader field="attachments" maxUploads={3} onChange={setAttachments} />
       <Button type="submit" variant="primary" onClick={submit}>
         Submit
       </Button>

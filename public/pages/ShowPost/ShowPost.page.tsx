@@ -120,7 +120,7 @@ export default class ShowPostPage extends React.Component<ShowPostPageProps, Sho
           {this.state.editMode ? (
             <Form error={this.state.error}>
               <TextArea field="description" value={this.state.newDescription} onChange={this.setNewDescription} />
-              <MultiImageUploader field="attachments" bkeys={this.props.attachments} maxUploads={3} previewMaxWidth={100} onChange={this.setAttachments} />
+              <MultiImageUploader field="attachments" bkeys={this.props.attachments} maxUploads={3} onChange={this.setAttachments} />
             </Form>
           ) : (
             <>

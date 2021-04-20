@@ -55,7 +55,7 @@ export const PostFilter = (props: PostFilterProps) => {
           <Dropdown2.ListItem onClick={handleChangeView(o)} key={o.value}>
             <HStack spacing={2}>
               <span className={view === o.value ? "text-semibold" : ""}>{o.label}</span>
-              {o.count && o.count > 0 && <span className="bg-gray-200 rounded-full p-1 w-min-5 text-2xs text-center">{o.count}</span>}
+              <div>{o.count && o.count > 0 && <span className="bg-gray-200 rounded-full px-2 py-1 w-min-5 text-2xs text-center">{o.count}</span>}</div>
             </HStack>
           </Dropdown2.ListItem>
         ))}
