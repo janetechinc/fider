@@ -5,7 +5,7 @@
   grid-template-columns: 1fr;
   gap: spacing(4);
 
-  @include media(">=lg") {
+  @include media("lg") {
     grid-template-columns: 1fr 5fr;
   }
 }

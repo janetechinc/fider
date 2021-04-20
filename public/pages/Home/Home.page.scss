@@ -6,7 +6,7 @@
   column-gap: 0;
   row-gap: spacing(6);
 
-  @include media(">=md") {
+  @include media("md") {
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: spacing(6);
     row-gap: 0;

@@ -1,57 +1,57 @@
-@import "~@fider/assets/styles/variables.scss";
+// @import "~@fider/assets/styles/variables.scss";
 
-#p-admin-members {
-  @include media("<=md") {
-    .col-left {
-      .c-list-item:last-child {
-        margin-bottom: 15px;
-      }
-    }
-    .col-right {
-      .c-list-item:first-child {
-        padding-top: 15px;
-        border-top: 1px solid get("colors.gray.200");
-      }
-    }
-  }
+// #p-admin-members {
+//   @include media("<=md") {
+//     .col-left {
+//       .c-list-item:last-child {
+//         margin-bottom: 15px;
+//       }
+//     }
+//     .col-right {
+//       .c-list-item:first-child {
+//         padding-top: 15px;
+//         border-top: 1px solid get("colors.gray.200");
+//       }
+//     }
+//   }
 
-  .l-legend {
-    list-style-type: none;
-    padding-left: 0;
-  }
+//   .l-legend {
+//     list-style-type: none;
+//     padding-left: 0;
+//   }
 
-  .c-list-item {
-    .c-avatar {
-      margin-right: 5px;
-    }
-    .l-user-details {
-      display: inline-block;
-      vertical-align: middle;
-      span {
-        display: block;
-      }
-    }
-    .l-user-actions {
-      display: inline-block;
-      cursor: pointer;
-      vertical-align: middle;
-      margin-left: 5px;
-      .c-dropdown-text {
-        color: get("colors.gray.500");
-      }
-    }
-    .staff {
-      font-size: $font-size-tiny;
-    }
-    .blocked {
-      font-size: $font-size-tiny;
-      color: get("colors.red.400");
-    }
-  }
+//   .c-list-item {
+//     .c-avatar {
+//       margin-right: 5px;
+//     }
+//     .l-user-details {
+//       display: inline-block;
+//       vertical-align: middle;
+//       span {
+//         display: block;
+//       }
+//     }
+//     .l-user-actions {
+//       display: inline-block;
+//       cursor: pointer;
+//       vertical-align: middle;
+//       margin-left: 5px;
+//       .c-dropdown-text {
+//         color: get("colors.gray.500");
+//       }
+//     }
+//     .staff {
+//       font-size: $font-size-tiny;
+//     }
+//     .blocked {
+//       font-size: $font-size-tiny;
+//       color: get("colors.red.400");
+//     }
+//   }
 
-  .l-show-more {
-    cursor: pointer;
-    font-weight: bold;
-    padding-left: 5px;
-  }
-}
+//   .l-show-more {
+//     cursor: pointer;
+//     font-weight: bold;
+//     padding-left: 5px;
+//   }
+// }

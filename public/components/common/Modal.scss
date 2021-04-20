@@ -53,14 +53,14 @@
 
   &.m-small {
     width: 100%;
-    @include media(">=md") {
+    @include media("md") {
       width: 500px;
     }
   }
 
   &.m-large {
     width: 100%;
-    @include media(">=md") {
+    @include media("md") {
       width: 750px;
     }
   }

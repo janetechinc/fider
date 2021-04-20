@@ -1,3 +1,22 @@
+.hidden {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+@each $media in $medias {
+  @include media(#{$media}) {
+    .#{$media}\:hidden {
+      display: none;
+    }
+    .#{$media}\:block {
+      display: block;
+    }
+  }
+}
+
 .container {
   position: relative;
   display: block;
@@ -34,10 +53,6 @@
     margin-left: auto;
     margin-right: auto;
   }
-}
-
-.block {
-  display: block;
 }
 
 .flex {
@@ -125,28 +140,4 @@
 
 .invisible {
   visibility: hidden;
-}
-
-@include media("sm") {
-  .sm\:hidden {
-    display: none;
-  }
-}
-
-@include media("md") {
-  .md\:hidden {
-    display: none;
-  }
-}
-
-@include media("lg") {
-  .lg\:hidden {
-    display: none;
-  }
-}
-
-@include media("xl") {
-  .xl\:hidden {
-    display: none;
-  }
 }

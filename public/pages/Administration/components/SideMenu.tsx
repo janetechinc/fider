@@ -38,8 +38,8 @@ export const SideMenu = (props: SiteMenuProps) => {
   const activeItem = props.activeItem || "general"
 
   return (
-    <div>
-      <VStack spacing={0} className={`c-side-menu shadow ${props.className}`}>
+    <div className="js-admin-menu sm:hidden md:hidden lg:block">
+      <VStack spacing={0} className="c-side-menu shadow">
         <SideMenuItem name="general" title="General" href="/admin" isActive={activeItem === "general"} />
         <SideMenuItem name="privacy" title="Privacy" href="/admin/privacy" isActive={activeItem === "privacy"} />
         <SideMenuItem name="members" title="Members" href="/admin/members" isActive={activeItem === "members"} />
@@ -58,15 +58,17 @@ export const SideMenu = (props: SiteMenuProps) => {
   )
 }
 
-interface SideMenuTogglerProps {
-  onToggle: (active: boolean) => void
-}
-
-export const SideMenuToggler = (props: SideMenuTogglerProps) => {
+export const SideMenuToggler = () => {
   const [isActive, setIsActive] = useState(false)
 
   const toggle = () => {
-    props.onToggle(!isActive)
+    const classes = ["sm:hidden", "md:hidden"]
+    const el = document.querySelector(".js-admin-menu") as HTMLElement
+    if (el && !isActive) {
+      el.classList.remove(...classes)
+    } else if (el && isActive) {
+      el.classList.add(...classes)
+    }
     setIsActive(!isActive)
   }
 
