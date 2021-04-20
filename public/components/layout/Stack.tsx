@@ -11,12 +11,13 @@ interface StackProps {
 }
 
 const Stack = (props: StackProps, dir: "x" | "y") => {
-  const spacing = props.spacing || 1
+  const spacing = props.spacing === undefined ? 1 : props.spacing
   const className = classSet({
     [`${props.className}`]: props.className,
-    [`flex flex--spacing-${spacing}`]: true,
+    flex: true,
     "flex-x": dir === "x",
     "flex-y": dir === "y",
+    [`flex flex--spacing-${spacing}`]: spacing > 0,
     "flex-items-center": dir === "x" && props.center !== false,
     "justify-between": props.justify === "between",
     "justify-evenly": props.justify === "evenly",

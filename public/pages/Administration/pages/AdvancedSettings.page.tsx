@@ -1,5 +1,3 @@
-import "./AdvancedSettings.page.scss"
-
 import React from "react"
 
 import { TextArea, Form, Button } from "@fider/components"

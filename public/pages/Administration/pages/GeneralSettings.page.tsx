@@ -1,5 +1,3 @@
-import "./GeneralSettings.page.scss"
-
 import React from "react"
 
 import { Button, ButtonClickEvent, TextArea, Form, Input, ImageUploader } from "@fider/components"

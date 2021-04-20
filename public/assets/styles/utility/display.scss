@@ -64,7 +64,7 @@
   justify-content: space-evenly;
 }
 
-@for $i from 0 through 8 {
+@for $i from 1 through 8 {
   .flex-x.flex--spacing-#{$i} > * + * {
     margin-left: spacing($i);
   }

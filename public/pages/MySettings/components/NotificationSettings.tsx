@@ -78,40 +78,40 @@ export const NotificationSettings = (props: NotificationSettingsProps) => {
     <>
       <Field label="Notifications">
         <p className="text-muted">Use following panel to choose which events you&apos;d like to receive notification</p>
-      </Field>
 
-      <div className="notifications-settings">
-        <Segments>
-          <Segment>
-            <span>New Post</span>
-            {info("event_notification_new_post", "new posts on this site", "new posts on this site")}
-            <HStack spacing={6}>
-              {icon("event_notification_new_post", WebChannel)}
-              {icon("event_notification_new_post", EmailChannel)}
-            </HStack>
-          </Segment>
-          <Segment>
-            <span>Discussion</span>
-            {info("event_notification_new_comment", "comments on posts you've subscribed to", "comments on all posts unless individually unsubscribed")}
-            <HStack spacing={6}>
-              {icon("event_notification_new_comment", WebChannel)}
-              {icon("event_notification_new_comment", EmailChannel)}
-            </HStack>
-          </Segment>
-          <Segment>
-            <span>Status Changed</span>
-            {info(
-              "event_notification_change_status",
-              "status change on posts you've subscribed to",
-              "status change on all posts unless individually unsubscribed"
-            )}
-            <HStack spacing={6}>
-              {icon("event_notification_change_status", WebChannel)}
-              {icon("event_notification_change_status", EmailChannel)}
-            </HStack>
-          </Segment>
-        </Segments>
-      </div>
+        <div className="notifications-settings">
+          <Segments>
+            <Segment>
+              <div className="mb-1">New Post</div>
+              {info("event_notification_new_post", "new posts on this site", "new posts on this site")}
+              <HStack spacing={6}>
+                {icon("event_notification_new_post", WebChannel)}
+                {icon("event_notification_new_post", EmailChannel)}
+              </HStack>
+            </Segment>
+            <Segment>
+              <div className="mb-1">Discussion</div>
+              {info("event_notification_new_comment", "comments on posts you've subscribed to", "comments on all posts unless individually unsubscribed")}
+              <HStack spacing={6}>
+                {icon("event_notification_new_comment", WebChannel)}
+                {icon("event_notification_new_comment", EmailChannel)}
+              </HStack>
+            </Segment>
+            <Segment>
+              <div className="mb-1">Status Changed</div>
+              {info(
+                "event_notification_change_status",
+                "status change on posts you've subscribed to",
+                "status change on all posts unless individually unsubscribed"
+              )}
+              <HStack spacing={6}>
+                {icon("event_notification_change_status", WebChannel)}
+                {icon("event_notification_change_status", EmailChannel)}
+              </HStack>
+            </Segment>
+          </Segments>
+        </div>
+      </Field>
     </>
   )
 }

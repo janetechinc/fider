@@ -1,5 +1,5 @@
 import React from "react"
-import { Toggle, Form } from "@fider/components"
+import { Toggle, Form, Field } from "@fider/components"
 import { actions, notify, Fider } from "@fider/services"
 import { AdminBasePage } from "@fider/pages/Administration/components/AdminBasePage"
 
@@ -38,14 +38,13 @@ export default class PrivacySettingsPage extends AdminBasePage<any, PrivacySetti
   public content() {
     return (
       <Form>
-        <div className="c-form-field">
-          <label htmlFor="private">Private site</label>
+        <Field label="Private Site">
           <Toggle disabled={!Fider.session.user.isAdministrator} active={this.state.isPrivate} onToggle={this.toggle} />
-          <p className="text-muted">
+          <p className="text-muted mt-1">
             A private site prevents unauthenticated users from viewing or interacting with its content. <br /> If enabled, only already registered and invited
             users will be able to sign in to this site.
           </p>
-        </div>
+        </Field>
       </Form>
     )
   }

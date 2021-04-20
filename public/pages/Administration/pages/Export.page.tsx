@@ -1,7 +1,8 @@
 import React from "react"
 
-import { Button, Form, Field, Segment } from "@fider/components"
+import { Button, Form, Field, Segment, Icon } from "@fider/components"
 import { AdminBasePage } from "../components/AdminBasePage"
+import IconDownload from "@fider/assets/images/heroicons-download.svg"
 
 export default class ExportPage extends AdminBasePage<any, any> {
   public id = "p-admin-export"
@@ -20,8 +21,9 @@ export default class ExportPage extends AdminBasePage<any, any> {
             </p>
           </Field>
           <Field>
-            <Button variant="primary" href="/admin/export/posts.csv">
-              posts.csv
+            <Button variant="secondary" href="/admin/export/posts.csv">
+              <Icon sprite={IconDownload} />
+              <span>posts.csv</span>
             </Button>
           </Field>
         </Segment>
@@ -32,8 +34,9 @@ export default class ExportPage extends AdminBasePage<any, any> {
             </p>
           </Field>
           <Field>
-            <Button variant="primary" href="/admin/export/backup.zip">
-              backup.zip
+            <Button variant="secondary" href="/admin/export/backup.zip">
+              <Icon sprite={IconDownload} />
+              <span>backup.zip</span>
             </Button>
           </Field>
         </Segment>

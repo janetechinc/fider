@@ -83,7 +83,7 @@ ${Fider.session.user.name} (${Fider.session.tenant.name})`,
         <TextArea
           field="recipients"
           label="Send invitations to"
-          placeholder="james@example.com; carol@example.com"
+          placeholder="james@example.com; mary@example.com"
           minRows={1}
           value={this.state.rawRecipients}
           onChange={this.setRecipients}
